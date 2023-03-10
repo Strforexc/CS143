@@ -205,7 +205,7 @@
     | error{};
 
     
-    /* formals  */
+    /* formals   */
     formals : '(' ')' 
     { $$ = nil_Formals();  }
     |'(' formal_list ')'
