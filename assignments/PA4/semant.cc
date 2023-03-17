@@ -95,7 +95,9 @@ ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) 
     for(int i = classes->first() ;classes->more(i);i = classes->next(i)){
         log << classes->nth(i)->Getname() <<std::endl;
         // adasdasdadasdas
-        // adasdasdds
+        // adasdasdds.
+        // adadw
+        // adsadw
         log << "test:" << i << std::endl;
         
     }
