@@ -94,7 +94,8 @@ ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) 
     log << "Now let's build inheritence graph" << std::endl;
     for(int i = classes->first() ;classes->more(i);i = classes->next(i)){
         log << classes->nth(i)->Getname() <<std::endl;
-        
+        // adasdasdadasdas
+        // adasdasdds
         log << "test:" << i << std::endl;
     }
 
