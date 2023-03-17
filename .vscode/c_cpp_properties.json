@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "/root/CS_Study/CS143/include/PA4/**",
+                "~/CS_Study/CS143/include/PA4/**",
+                "${workspaceFolder}/**",
+                "/usr/include/c++/11",
+                "/usr/include/x86_64-linux-gnu/c++/11",
+                "/usr/include/c++/11/backward",
+                "/usr/lib/gcc/x86_64-linux-gnu/11/include",
+                "/usr/local/include",
+                "/usr/include/x86_64-linux-gnu",
+                "/usr/include"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "browse": {
+                "path": [
+                    "/root/CS_Study/CS143/include/PA4"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}

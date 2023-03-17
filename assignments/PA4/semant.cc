@@ -9,6 +9,9 @@
 
 extern int semant_debug;
 extern char *curr_filename;
+static bool TESTING = true;
+static std::ostringstream nop_sstream;
+static std::ostream &log = TESTING ? std::cout : nop_sstream;
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -86,6 +89,10 @@ static void initialize_constants(void)
 ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) {
 
     /* Fill this in */
+    install_basic_classes();
+
+    log << "Now let's build inheritence graph" << std::endl;
+    
 
 }
 
