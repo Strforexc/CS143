@@ -99,6 +99,7 @@ ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) 
         log << "test:" << i << std::endl;
         log << "test:" << i << std::endl;
         log << "test:" << i << std::endl;
+        log << "test:" << i << std::endl;
     }
 
 }
