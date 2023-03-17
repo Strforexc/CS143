@@ -92,7 +92,10 @@ ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) 
     install_basic_classes();
 
     log << "Now let's build inheritence graph" << std::endl;
-    
+    for(int i =0 ;i<5;i++){
+        printf("test");
+    }
+
 
 }
 
