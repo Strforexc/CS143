@@ -6,6 +6,7 @@
 #include "cool-tree.h"
 #include "stringtab.h"
 #include "symtab.h"
+#include <map>
 #include "list.h"
 
 #define TRUE 1
@@ -28,6 +29,7 @@ private:
 public:
   ClassTable(Classes);
   int errors() { return semant_errors; }
+  std::map<Symbol, Class_> m_classes;
   ostream& semant_error();
   ostream& semant_error(Class_ c);
   ostream& semant_error(Symbol filename, tree_node *t);

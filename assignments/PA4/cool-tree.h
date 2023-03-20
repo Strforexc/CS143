@@ -163,6 +163,8 @@ public:
    Class_ copy_Class_();
    void dump(ostream& stream, int n);
    Symbol Getname(){return name;};
+   Symbol Getparent(){return parent;};
+   
 
 #ifdef Class__SHARED_EXTRAS
    Class__SHARED_EXTRAS

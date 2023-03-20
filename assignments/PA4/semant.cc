@@ -51,6 +51,8 @@ static Symbol
     val;
 //
 // Initializing the predefined symbols.
+// idttable is identified table 
+// strtable is string table
 //
 static void initialize_constants(void)
 {
@@ -89,18 +91,23 @@ static void initialize_constants(void)
 ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) {
 
     /* Fill this in */
-    install_basic_classes();
+    
+    install_basic_classes(); // 添加五个基本类
 
     log << "Now let's build inheritence graph" << std::endl;
     for(int i = classes->first() ;classes->more(i);i = classes->next(i)){
         log << classes->nth(i)->Getname() <<std::endl;
-        // adasdasdadasdas
-        
-        log << "test:" << i << std::endl;
-        log << "test:" << i << std::endl;
-        log << "test:" << i << std::endl;
+        if(m_classes.find(classes->nth(i)->Getname()) == m_classes.end())
+        {
+            m_classes.insert(std::make_pair(classes->nth(i)->Getname(),classes->nth(i)));
+        }
+        else{
+            semant_error(classes->nth(i))<< "Error! Class "<<classes->nth(i)->Getname() << " has been defined!"<< std::endl;
+        }
         
     }
+    // check inheritence
+    
 
 }
 
