@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "semant.h"
+#include <list>
+#include <set>
 #include "utilities.h"
 
 
@@ -12,6 +14,12 @@ extern char *curr_filename;
 static bool TESTING = true;
 static std::ostringstream nop_sstream;
 static std::ostream &log = TESTING ? std::cout : nop_sstream;
+static Class_ curr_class = NULL; // show what type about class 
+
+static ClassTable* classtable;
+typedef SymbolTable<Symbol, method_class> MethodTable;
+static std::map<Symbol, MethodTable> methodtables;
+static SymbolTable<Symbol, Symbol> Objecttable;
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -87,7 +95,9 @@ static void initialize_constants(void)
 }
 
 
-
+// – Pass 1: Gather all class names
+//   Pass 2: Do the checking
+// Class
 ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) {
 
     /* Fill this in */
@@ -96,19 +106,98 @@ ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) 
 
     log << "Now let's build inheritence graph" << std::endl;
     for(int i = classes->first() ;classes->more(i);i = classes->next(i)){
-        log << classes->nth(i)->Getname() <<std::endl;
-        if(m_classes.find(classes->nth(i)->Getname()) == m_classes.end())
+        log << classes->nth(i)->GetName() << " parent is " <<classes->nth(i)->Getparent() <<std::endl;
+    
+        if(m_classes.find(classes->nth(i)->GetName()) == m_classes.end())
         {
-            m_classes.insert(std::make_pair(classes->nth(i)->Getname(),classes->nth(i)));
+            m_classes.insert(std::make_pair(classes->nth(i)->GetName(),classes->nth(i)));
         }
         else{
-            semant_error(classes->nth(i))<< "Error! Class "<<classes->nth(i)->Getname() << " has been defined!"<< std::endl;
+            semant_error(classes->nth(i))<< "Error! Class "<<classes->nth(i)->GetName() << " has been defined!"<< std::endl;
+            return;
+        }
+        if(classes->nth(i)->GetName() == SELF_TYPE){
+            semant_error(classes->nth(i))<< "Error! Class "<<classes->nth(i)->GetName() << "class type cannot be SELF_TYPE"<< std::endl;
+            return;
         }
         
     }
-    // check inheritence
-    
 
+
+    if(m_classes.find(Main) == m_classes.end()){
+        semant_error() << "Class Main is not defined." << std::endl;
+    }
+    
+    // check inheritence exist ring,使用拓扑排序
+    // 这里只有一个父节点，我们对每一个节点找其父节点，如果能回来，说明有环，如果没有，说明没有环
+    for(int i = classes->first() ;classes->more(i);i = classes->next(i)){
+        log << "check ring ablout "<<classes->nth(i)->GetName() <<std::endl;
+        curr_class = classes->nth(i);
+        Symbol parent_name= curr_class ->Getparent() ;
+        while(parent_name != Object )
+        {
+            if(parent_name  == classes->nth(i)->GetName() )
+            {
+                semant_error() << "Error! Class "<<classes->nth(i)->GetName() << " has ring!"<< std::endl;
+                return;
+            }
+            parent_name = m_classes[parent_name]->Getparent();            
+        }
+    }
+}
+
+// check classType::CheckInheritance
+// check  whether  A  is the  Subtype of B
+// as the teacher's PPT shows , we will extend subtpype for self_type
+bool ClassTable::Subtype(Symbol A,Symbol B){
+    // Third rule 
+    if(B == SELF_TYPE)
+        return false;
+
+    // seconde rule 
+    Symbol parent_name = A;
+    if(A == SELF_TYPE )
+        parent_name = curr_class->GetName();
+    
+    // fourth rule
+    while(parent_name != No_class){
+        if(parent_name == B){
+            return true;
+        }
+        parent_name = m_classes[parent_name]->Getparent();
+    }
+    return false;
+}
+
+
+// Find the common ancestor 
+// Try to construct path 
+// ACDFEQB
+//RZMDFEQB
+// reverse find  
+
+std::list<Symbol> ClassTable::FindSymbolPath(Symbol A)
+{
+    std::list<Symbol> Path;
+    Symbol parent_name = A;
+    while(parent_name != No_class){
+        Path.push_front(parent_name);
+        parent_name = m_classes[parent_name]->Getparent();
+    }
+
+    return Path;
+}
+Symbol ClassTable::Lub(Symbol A,Symbol B){
+    std::list<Symbol> Path_A = FindSymbolPath(A);
+    std::list<Symbol> Path_B = FindSymbolPath(B);
+    Symbol Tmp;
+    while( Path_A.front() == Path_B.front())
+    {  
+        Tmp = Path_A.front();
+        Path_A.pop_front();
+        Path_B.pop_front();
+    }
+    return Tmp;
 }
 
 void ClassTable::install_basic_classes() {
@@ -134,7 +223,7 @@ void ClassTable::install_basic_classes() {
     //
     // There is no need for method bodies in the basic classes---these
     // are already built in to the runtime system.
-
+    // parent is _no_class
     Class_ Object_class =
 	class_(Object, 
 	       No_class,
@@ -176,7 +265,7 @@ void ClassTable::install_basic_classes() {
 	       single_Features(attr(val, prim_slot, no_expr())),
 	       filename);
 
-    //
+    // 
     // Bool also has only the "val" slot.
     //
     Class_ Bool_class =
@@ -210,6 +299,98 @@ void ClassTable::install_basic_classes() {
 						      Str, 
 						      no_expr()))),
 	       filename);
+    // 添加到classTable
+    m_classes.insert(std::make_pair(Object,Object_class));
+    m_classes.insert(std::make_pair(IO,IO_class));
+    m_classes.insert(std::make_pair(Int,Int_class));
+    m_classes.insert(std::make_pair(Bool,Bool_class));
+    m_classes.insert(std::make_pair(Str,Str_class));
+
+}
+
+// 
+void method_class::AddMethodToTable(Symbol class_name)
+{
+    log << "Adding method : " << name <<endl;
+    methodtables[class_name].addid(name,new method_class(copy_Symbol(name),formals->copy_list(),copy_Symbol(return_type),expr->copy_Expression()));
+}
+
+void attr_class::AddAttribToTable(Symbol class_name)
+{
+    log << "Adding attrib :" << name <<endl;
+    if(name == SELF_TYPE){
+        classtable->semant_error(curr_class)<<"Error self in attribute type"  << curr_class->GetName() << endl;
+    }
+    if(Objecttable.lookup(name) != NULL){
+        classtable->semant_error(curr_class)<<"Error attribute ,already Exsit"  << curr_class->GetName() << endl;
+        return;
+    }
+    Objecttable.addid(name,new Symbol(type_decl));
+
+}
+
+void method_class::CheckFeatureType() {
+    log << "    Checking method \"" << name << "\"" << std::endl;
+
+     //check return type
+    if(classtable->m_classes.find(return_type) == classtable->m_classes.end() && return_type != SELF_TYPE){
+        classtable->semant_error(curr_class) << "Error! Cannot find return_type " << return_type << endl;
+    }
+
+    Objecttable.enterscope();
+    std::set<Symbol> names;
+    // check formals type
+    for(int i = formals->first() ;formals->more(i);i = formals->next(i)){
+        
+        Symbol type = formals->nth(i)->GetType();
+        Symbol name = formals->nth(i)->GetName();
+        if(classtable->m_classes.find(type) == classtable->m_classes.end()){
+            classtable->semant_error(curr_class) << "Error! Cannot find class " << type << endl;
+        } 
+
+        // check same name
+        if(names.find(name) == names.end()){
+            names.insert(name);
+        }
+        else{
+            classtable->semant_error(curr_class) << "Error same name" <<endl;
+        }
+        Objecttable.addid(name,new Symbol(type));
+    }
+    Symbol expr_type = expr->CheckExprType();
+    if(classtable->Subtype(expr_type,return_type) == false){
+        classtable->semant_error(curr_class)<<"Error expr type is not subtype of expr_type"<<endl;
+    }
+
+    Objecttable.exitscope();
+
+}
+
+void attr_class::CheckAttrType(){
+    
+    //check T0 exist
+    log << " checking attribute " << name << endl;
+    if(classtable->m_classes.find(type_decl) == classtable->m_classes.end())
+    {
+        classtable->semant_error(curr_class)<<"Error x's type is not exist";
+    }
+    
+    if(init->CheckExprType() == No_type ){
+        log<<"NO INIT" <<std::endl;
+    }
+
+}
+
+
+
+
+
+
+
+
+Symbol Expression_class::CheckExprType()
+{
+
 }
 
 ////////////////////////////////////////////////////////////////////

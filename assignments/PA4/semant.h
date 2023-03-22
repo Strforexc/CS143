@@ -9,6 +9,7 @@
 #include <map>
 #include "list.h"
 
+
 #define TRUE 1
 #define FALSE 0
 
@@ -30,6 +31,9 @@ public:
   ClassTable(Classes);
   int errors() { return semant_errors; }
   std::map<Symbol, Class_> m_classes;
+  bool Subtype(Symbol A,Symbol B);
+  Symbol Lub(Symbol A,Symbol B);
+  std::list<Symbol> FindSymbolPath(Symbol A);
   ostream& semant_error();
   ostream& semant_error(Class_ c);
   ostream& semant_error(Symbol filename, tree_node *t);

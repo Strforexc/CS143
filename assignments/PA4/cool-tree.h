@@ -35,7 +35,8 @@ class Class__class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Class_(); }
    virtual Class_ copy_Class_() = 0;
-   virtual Symbol Getname() = 0 ;
+   virtual Symbol GetName() = 0 ;
+   virtual Symbol Getparent() = 0 ;
 
 #ifdef Class__EXTRAS
    Class__EXTRAS
@@ -64,6 +65,8 @@ class Formal_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Formal(); }
    virtual Formal copy_Formal() = 0;
+   virtual Symbol GetType() = 0 ;
+   virtual Symbol GetName() = 0 ;
 
 #ifdef Formal_EXTRAS
    Formal_EXTRAS
@@ -78,6 +81,7 @@ class Expression_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Expression(); }
    virtual Expression copy_Expression() = 0;
+   Symbol CheckExprType();
 
 #ifdef Expression_EXTRAS
    Expression_EXTRAS
@@ -162,9 +166,9 @@ public:
    }
    Class_ copy_Class_();
    void dump(ostream& stream, int n);
-   Symbol Getname(){return name;};
+   Symbol GetName(){return name;};
    Symbol Getparent(){return parent;};
-   
+
 
 #ifdef Class__SHARED_EXTRAS
    Class__SHARED_EXTRAS
@@ -191,6 +195,8 @@ public:
    }
    Feature copy_Feature();
    void dump(ostream& stream, int n);
+   void AddMethodToTable(Symbol class_name);
+   void CheckFeatureType();
 
 #ifdef Feature_SHARED_EXTRAS
    Feature_SHARED_EXTRAS
@@ -215,6 +221,8 @@ public:
    }
    Feature copy_Feature();
    void dump(ostream& stream, int n);
+   void AddAttribToTable(Symbol class_name);
+   void CheckAttrType();
 
 #ifdef Feature_SHARED_EXTRAS
    Feature_SHARED_EXTRAS
@@ -237,6 +245,8 @@ public:
    }
    Formal copy_Formal();
    void dump(ostream& stream, int n);
+   Symbol GetType(){return type_decl;};
+
 
 #ifdef Formal_SHARED_EXTRAS
    Formal_SHARED_EXTRAS
@@ -261,6 +271,7 @@ public:
    }
    Case copy_Case();
    void dump(ostream& stream, int n);
+   
 
 #ifdef Case_SHARED_EXTRAS
    Case_SHARED_EXTRAS
@@ -283,7 +294,8 @@ public:
    }
    Expression copy_Expression();
    void dump(ostream& stream, int n);
-
+   void CheckAssignType();
+   
 #ifdef Expression_SHARED_EXTRAS
    Expression_SHARED_EXTRAS
 #endif
