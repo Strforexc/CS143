@@ -81,7 +81,7 @@ class Expression_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Expression(); }
    virtual Expression copy_Expression() = 0;
-   Symbol CheckExprType();
+   virtual Symbol CheckExprType();
 
 #ifdef Expression_EXTRAS
    Expression_EXTRAS
@@ -197,6 +197,8 @@ public:
    void dump(ostream& stream, int n);
    void AddMethodToTable(Symbol class_name);
    void CheckFeatureType();
+   Formals GetFormals(){return formals;};
+   Symbol GetReturnType() { return return_type;};
 
 #ifdef Feature_SHARED_EXTRAS
    Feature_SHARED_EXTRAS
@@ -294,7 +296,7 @@ public:
    }
    Expression copy_Expression();
    void dump(ostream& stream, int n);
-   void CheckAssignType();
+   Symbol CheckAssignType();
    
 #ifdef Expression_SHARED_EXTRAS
    Expression_SHARED_EXTRAS
@@ -321,6 +323,8 @@ public:
    }
    Expression copy_Expression();
    void dump(ostream& stream, int n);
+   Symbol CheckSdispatchType();
+   Symbol GetType_name(){return type_name;};
 
 #ifdef Expression_SHARED_EXTRAS
    Expression_SHARED_EXTRAS
@@ -345,6 +349,7 @@ public:
    }
    Expression copy_Expression();
    void dump(ostream& stream, int n);
+   Symbol CheckDispatchType();
 
 #ifdef Expression_SHARED_EXTRAS
    Expression_SHARED_EXTRAS

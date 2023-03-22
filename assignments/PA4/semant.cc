@@ -372,7 +372,7 @@ void attr_class::CheckAttrType(){
     log << " checking attribute " << name << endl;
     if(classtable->m_classes.find(type_decl) == classtable->m_classes.end())
     {
-        classtable->semant_error(curr_class)<<"Error x's type is not exist";
+        classtable->semant_error(curr_class)<<"Error x's type is not exist"<<endl;
     }
     
     if(init->CheckExprType() == No_type ){
@@ -381,8 +381,173 @@ void attr_class::CheckAttrType(){
 
 }
 
+Symbol assign_class::CheckAssignType()
+{
+    log << " checking assign "<< name <<endl;
+    
+    if(Objecttable.lookup(name) == NULL){
+        // Not Find 
+        classtable->semant_error(curr_class)<<"Value is not define before"<<endl;
+        type = Object;
+        return type;
+    }
+    Objecttable.addid(name,new Symbol(type));
+
+    Symbol value_type = expr->CheckExprType();
+    if(classtable->Subtype(value_type,type) == FALSE){
+
+        classtable->semant_error(curr_class)<<"ValueType is not Subtype of Name type "<<endl;
+        type = Object;
+        return type;
+    }
+    type = value_type;
+    return type;
+}
+
+// e0.f(e1,e2....,en):Tn+1
+
+Symbol dispatch_class::CheckDispatchType()
+{
+    Symbol Type ;
+    bool error = false;
+    log << "checking dispatch type " << name <<endl;
+    
+    // check e0's type
+    Symbol expr_type = expr->CheckExprType();
+    if(expr_type == SELF_TYPE){
+        log << "Dispatch: class = " << SELF_TYPE << "_" << curr_class->GetName() << std::endl;
+        expr_type = curr_class->GetName();
+    }
+    else
+    {
+        log << "Dispatch: class = " << expr_type  << std::endl;
+    }
 
 
+    // check  method
+    method_class * method = NULL;
+    std::list<Symbol> Path = classtable->FindSymbolPath(expr_type);
+    for(std::list<Symbol>::iterator iter = Path.end(); iter != Path.begin(); --iter ){
+        
+        if(methodtables[*iter].lookup(name)!= NULL){    
+            method = methodtables[*iter].lookup(name);
+            break;
+        }
+    }
+    //if Not find ,error;
+    if(method == NULL){
+        error = true;
+        classtable->semant_error(curr_class)<<"Not have this Method name "<<endl;
+    }
+
+    // Check params
+    for(int i = actual->first(); actual->more(i); i = actual->next(i) ){
+        Symbol actual_type = actual->nth(i)->CheckExprType();
+        if(method != NULL)
+        {
+            // check e1-en 's Type exist
+            if(classtable->m_classes.find(actual_type) == classtable->m_classes.end()){
+                error = true;
+                classtable->semant_error(curr_class)<<"classtype Not have this params type "<<endl;
+            }
+            // check the conform
+            Symbol formal_type = method->GetFormals()->nth(i)->GetName();
+
+            if(classtable->Subtype(actual_type,formal_type) == false){
+                classtable->semant_error(curr_class) << "Error! Actual type " << actual_type << " doesn't suit formal type " << formal_type << std::endl;
+                error = true;
+            }
+        }
+    }
+
+    //check return type 
+    Symbol Method_Rtype = method->GetReturnType();
+    if(Method_Rtype == SELF_TYPE){
+        Method_Rtype = expr_type; 
+    }   
+
+    if(error == true){
+        Type = Object;
+    }
+    else{
+        Type  = Method_Rtype;
+    }
+    
+    return Type ;
+}
+
+
+// e0@T.f(e1,,,en):Tn+1
+Symbol static_dispatch_class::CheckSdispatchType()
+{
+    Symbol Type;
+    bool error = false;
+    log << "checking Statuc dispatch type " << name <<endl;
+
+    // Check T exist
+    Symbol T_type = GetType_name();
+    if(classtable->m_classes.find(T_type) == classtable->m_classes.end()){
+        error = true;
+        classtable->semant_error(curr_class) << "Error Can't Find TypeName  " << T_type  << std::endl;
+    }
+    // Check T has method f
+
+    method_class * method = NULL;
+    std::list<Symbol> Path = classtable->FindSymbolPath(T_type);
+    for(std::list<Symbol>::iterator iter = Path.end(); iter != Path.begin(); --iter ){
+        
+        if(methodtables[*iter].lookup(name)!= NULL){    
+            method = methodtables[*iter].lookup(name);
+            break;
+        }
+    }
+    // e0's type should conform T
+    Symbol expr_type = expr->CheckExprType();
+    if(expr_type == SELF_TYPE){
+        error = true;
+        classtable->semant_error(curr_class) << "e0's type  Can't  be Selftype  " << T_type  << std::endl;
+    }
+
+    if(classtable->Subtype(expr_type,T_type) != false){
+        error = true;
+        classtable->semant_error(curr_class) << "e0's type  not conform's  T  " << T_type  << std::endl;
+    }
+
+    // params check 
+    for(int i = actual->first(); actual->more(i); i = actual->next(i) ){
+        Symbol actual_type = actual->nth(i)->CheckExprType();
+        if(method != NULL)
+        {
+            // check e1-en 's Type exist
+            if(classtable->m_classes.find(actual_type) == classtable->m_classes.end()){
+                error = true;
+                classtable->semant_error(curr_class)<<"classtype Not have this params type "<<endl;
+            }
+            // check the conform
+            Symbol formal_type = method->GetFormals()->nth(i)->GetName();
+
+            if(classtable->Subtype(actual_type,formal_type) == false){
+                classtable->semant_error(curr_class) << "Error! Actual type " << actual_type << " doesn't suit formal type " << formal_type << std::endl;
+                error = true;
+            }
+        }
+    }
+    //check return type 
+    Symbol Method_Rtype = method->GetReturnType();
+    if(Method_Rtype == SELF_TYPE){
+        Method_Rtype = expr_type; 
+    }   
+
+    if(error == true){
+        Type = Object;
+    }
+    else{
+        Type  = Method_Rtype;
+    }
+    
+    return Type ;
+
+}
 
 
 
@@ -393,20 +558,20 @@ Symbol Expression_class::CheckExprType()
 
 }
 
-////////////////////////////////////////////////////////////////////
-//
+// //////////////////////////////////////////////////////////////////
+
 // semant_error is an overloaded function for reporting errors
 // during semantic analysis.  There are three versions:
-//
+
 //    ostream& ClassTable::semant_error()                
-//
+
 //    ostream& ClassTable::semant_error(Class_ c)
 //       print line number and filename for `c'
-//
+
 //    ostream& ClassTable::semant_error(Symbol filename, tree_node *t)  
 //       print a line number and filename
-//
-///////////////////////////////////////////////////////////////////
+
+// /////////////////////////////////////////////////////////////////
 
 ostream& ClassTable::semant_error(Class_ c)
 {                                                             
