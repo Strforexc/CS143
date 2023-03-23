@@ -1,7 +1,6 @@
 {
     "files.associations": {
-        "iostream": "cpp",
-        "iosfwd": "cpp",
+        "\"code-runner.executorMap\"": "\"java\": \"cd $dir && javac $fileName && java $fileNameWithoutExt\",",
         "array": "cpp",
         "*.tcc": "cpp",
         "cctype": "cpp",
@@ -12,17 +11,19 @@
         "cstdint": "cpp",
         "cstdio": "cpp",
         "cstdlib": "cpp",
-        "cstring": "cpp",
         "ctime": "cpp",
         "cwchar": "cpp",
         "cwctype": "cpp",
         "list": "cpp",
+        "map": "cpp",
         "set": "cpp",
         "vector": "cpp",
         "exception": "cpp",
         "fstream": "cpp",
         "initializer_list": "cpp",
         "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",
@@ -37,7 +38,6 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp",
-        "map": "cpp"
+        "utility": "cpp"
     }
 }

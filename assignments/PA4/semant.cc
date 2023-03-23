@@ -409,7 +409,6 @@ Symbol assign_class::CheckExprType()
 
 Symbol dispatch_class::CheckExprType()
 {
-    Symbol Type ;
     bool error = false;
     log << "checking dispatch type " << name <<endl;
     
@@ -468,20 +467,19 @@ Symbol dispatch_class::CheckExprType()
     }   
 
     if(error == true){
-        Type = Object;
+        type = Object;
     }
     else{
-        Type  = Method_Rtype;
+        type  = Method_Rtype;
     }
     
-    return Type ;
+    return type ;
 }
 
 
 // e0@T.f(e1,,,en):Tn+1
 Symbol static_dispatch_class::CheckExprType()
 {
-    Symbol Type;
     bool error = false;
     log << "checking Statuc dispatch type " << name <<endl;
 
@@ -540,13 +538,13 @@ Symbol static_dispatch_class::CheckExprType()
     }   
 
     if(error == true){
-        Type = Object;
+        type = Object;
     }
     else{
-        Type  = Method_Rtype;
+        type  = Method_Rtype;
     }
     
-    return Type ;
+    return type ;
 
 }
 
@@ -562,7 +560,6 @@ Symbol cond_class::CheckExprType()
     Symbol then_type = then_exp->CheckExprType();
     Symbol else_type = else_exp->CheckExprType();
     
-    Symbol type; 
     // Lub
     if(else_type == No_type){
         type = then_type;
@@ -586,25 +583,26 @@ Symbol loop_class::CheckExprType()
         classtable->semant_error(curr_class) << "Error! predicate type is not  Bool " << pred_type  << std::endl;
     }
     body->CheckExprType();
-    return Object;
+    type = Object;
+    return type;
     
 }
 
 // { <expr>; ... <expr>; }
 Symbol block_class::CheckExprType()
 {
-    Symbol Type;
+
     for(int i = body->first(); body->more(i); i = body->next(i) ){
-        Type = body->nth(i)->CheckExprType();
+        type = body->nth(i)->CheckExprType();
     }
-    return Type;
+    return type;
 }
 
 
 
 Symbol typcase_class::CheckExprType()
 {
-    Symbol Type;
+    
     Symbol expr_type = expr->CheckExprType();
     Case branch;
     // Lub each one
@@ -613,13 +611,13 @@ Symbol typcase_class::CheckExprType()
         branch = cases->nth(i);
         Symbol Branch_type =  branch->CheckBranchType();
         if(i != cases->first()){
-            Type = classtable->Lub(Type,Branch_type);
+            type = classtable->Lub(type,Branch_type);
         }else{
-            Type = Branch_type;
+            type = Branch_type;
         }
         
     }
-    return Type;
+    return type;
 
 }
 Symbol branch_class::CheckBranchType()
@@ -636,8 +634,6 @@ Symbol branch_class::CheckBranchType()
 
 Symbol let_class::CheckExprType()
 {   
-    Symbol Type;
-    
     // check init
     Symbol init_type = init->CheckExprType();
     if(init_type != No_type){
@@ -649,116 +645,119 @@ Symbol let_class::CheckExprType()
     // O[T0'/x] 
     Objecttable.enterscope();
     Objecttable.addid(identifier,new Symbol(type_decl));
-    body->CheckExprType();
+    type = body->CheckExprType();
     Objecttable.exitscope();
+    
+    return type;
 
 }
 
 Symbol plus_class::CheckExprType()
 {
-    Symbol Type = Int;
+    type = Int;
     if(e1->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     if(e2->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
-        Type = Object;
+        type = Object;
     }
-    return Type;
+    return type;
 }
 
 Symbol plus_class::CheckExprType()
 {
-    Symbol Type = Int;
+    type = Int;
     if(e1->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     if(e2->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
-        Type = Object;
+        type = Object;
     }
-    return Type;
+    return type;
 }
 Symbol mul_class::CheckExprType()
 {
-    Symbol Type = Int;
+    type = Int;
     if(e1->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     if(e2->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
-        Type = Object;
+        type = Object;
     }
-    return Type;
+    return type;
 }
 Symbol divide_class::CheckExprType()
 {
-    Symbol Type = Int;
+    type = Int;
     if(e1->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     if(e2->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
-        Type = Object;
+        type = Object;
     }
-    return Type;
+    return type;
 }
 
 Symbol neg_class::CheckExprType()
 {
-    Symbol Type = Int;
+    type = Int;
     if(e1->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! Neg type is not Int"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     
-    return Type;
+    return type;
 }
 
 Symbol lt_class::CheckExprType()
 {
-    Symbol Type = Bool;
+    type = Bool;
     if(e1->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error!  lt left is not Int"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     if(e2->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error!  lt right is not Int" << std::endl;
-        Type = Object;
+        type = Object;
     }
-    return Type;
+    return type;
 }
 
 
 Symbol leq_class::CheckExprType()
 {
-    Symbol Type = Bool;
+    type = Bool;
     if(e1->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! leq left is not Int"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     if(e2->CheckExprType() != Int ){
         classtable->semant_error(curr_class) << "Error! leq right is not Int" << std::endl;
-        Type = Object;
+        type = Object;
     }
-    return Type;
+    return type;
+
 }
 
 
 
 Symbol comp_class::CheckExprType()
 {
-    Symbol Type = Bool;
+    type = Bool;
     if(e1->CheckExprType() != Bool ){
         classtable->semant_error(curr_class) << "Error! comp(Not) type is not Bool"  << std::endl;
-        Type = Object;
+        type = Object;
     }
     
-    return Type;
+    return type;
 }
 
 
@@ -768,39 +767,48 @@ Symbol eq_class::CheckExprType()
     Symbol RType = e2->CheckExprType();
     if(LType == RType && (LType == Int || LType == Bool || LType == Str))
     {
-        return Bool;
+        type = Bool;
+        
     }else
     {
-        return Object;
+        type = Object;
     }
+
+    return type;
+
 }
 Symbol int_const_class::CheckExprType()
 {
-    return Int;
+    type = Int;
+    return type;
 }
 Symbol bool_const_class::CheckExprType()
 {
-    return Bool;
+    type = Bool;
+    return type;
 }
 Symbol string_const_class::CheckExprType()
-{
-    return Str;
+{   
+    type = Str;
+    return type;
 }
 Symbol isvoid_class::CheckExprType()
 {
     e1->CheckExprType();
-    return Bool;
+    type = Bool;
+    return type;
 }
 Symbol no_expr_class::CheckExprType() 
 {
-    return No_type;
+    type = No_type;
+    return type;
 }
 
 
 Symbol new__class::CheckExprType()
 {
-
-    return type_name;
+    type = type_name;
+    return type;
 }
 
 Symbol object_class::CheckExprType() {
@@ -850,7 +858,7 @@ ostream& ClassTable::semant_error()
     semant_errors++;                            
     return error_stream;
 } 
-// asadasd
+
 
 
 /*   This is the entry point to the semantic checker.
@@ -866,6 +874,8 @@ ostream& ClassTable::semant_error()
      errors. Part 2) can be done in a second stage, when you want
      to build mycoolc.
  */
+
+
 void program_class::semant()
 {
     initialize_constants();
@@ -875,9 +885,10 @@ void program_class::semant()
 
     /* some semantic analysis code may go here */
 
+
     if (classtable->errors()) {
-	cerr << "Compilation halted due to static semantic errors." << endl;
-	exit(1);
+        cerr << "Compilation halted due to static semantic errors." << endl;
+        exit(1);
     }
 }
 
