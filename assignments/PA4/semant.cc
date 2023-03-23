@@ -7,6 +7,7 @@
 #include <list>
 #include <set>
 #include "utilities.h"
+#include <vector>
 
 
 extern int semant_debug;
@@ -149,19 +150,19 @@ ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) 
 // check classType::CheckInheritance
 // check  whether  A  is the  Subtype of B
 // as the teacher's PPT shows , we will extend subtpype for self_type
-bool ClassTable::Subtype(Symbol A,Symbol B){
-    // Third rule 
-    if(B == SELF_TYPE)
-        return false;
+bool ClassTable::Subtype(Symbol child,Symbol ancestor){
+    // First rule && Third rule
+    if(ancestor == SELF_TYPE)
+        return child == SELF_TYPE;
 
-    // seconde rule 
-    Symbol parent_name = A;
-    if(A == SELF_TYPE )
+    // second rule 
+    Symbol parent_name = child;
+    if(child == SELF_TYPE )
         parent_name = curr_class->GetName();
     
     // fourth rule
     while(parent_name != No_class){
-        if(parent_name == B){
+        if(parent_name == ancestor){
             return true;
         }
         parent_name = m_classes[parent_name]->Getparent();
@@ -381,7 +382,7 @@ void attr_class::CheckAttrType(){
 
 }
 
-Symbol assign_class::CheckAssignType()
+Symbol assign_class::CheckExprType()
 {
     log << " checking assign "<< name <<endl;
     
@@ -406,7 +407,7 @@ Symbol assign_class::CheckAssignType()
 
 // e0.f(e1,e2....,en):Tn+1
 
-Symbol dispatch_class::CheckDispatchType()
+Symbol dispatch_class::CheckExprType()
 {
     Symbol Type ;
     bool error = false;
@@ -478,7 +479,7 @@ Symbol dispatch_class::CheckDispatchType()
 
 
 // e0@T.f(e1,,,en):Tn+1
-Symbol static_dispatch_class::CheckSdispatchType()
+Symbol static_dispatch_class::CheckExprType()
 {
     Symbol Type;
     bool error = false;
@@ -549,14 +550,274 @@ Symbol static_dispatch_class::CheckSdispatchType()
 
 }
 
+// if <expr> then <expr> else <expr> fi
 
-
-
-
-Symbol Expression_class::CheckExprType()
+Symbol cond_class::CheckExprType()
 {
+    // check whether pred_type is Bool 
+    Symbol pred_type = pred->CheckExprType();
+    if(pred_type != Bool) {
+        classtable->semant_error(curr_class) << "Error! predicate type is not  Bool " << pred_type  << std::endl;
+    }
+    Symbol then_type = then_exp->CheckExprType();
+    Symbol else_type = else_exp->CheckExprType();
+    
+    Symbol type; 
+    // Lub
+    if(else_type == No_type){
+        type = then_type;
+    }
+    else{
+        type = classtable->Lub(then_type,else_type);
+    }
+
+    return type;
 
 }
+
+
+// while <expr> loop <expr> pool
+
+Symbol loop_class::CheckExprType()
+{
+    //check pred
+    Symbol pred_type = pred->CheckExprType();
+    if(pred_type != Bool) {
+        classtable->semant_error(curr_class) << "Error! predicate type is not  Bool " << pred_type  << std::endl;
+    }
+    body->CheckExprType();
+    return Object;
+    
+}
+
+// { <expr>; ... <expr>; }
+Symbol block_class::CheckExprType()
+{
+    Symbol Type;
+    for(int i = body->first(); body->more(i); i = body->next(i) ){
+        Type = body->nth(i)->CheckExprType();
+    }
+    return Type;
+}
+
+
+
+Symbol typcase_class::CheckExprType()
+{
+    Symbol Type;
+    Symbol expr_type = expr->CheckExprType();
+    Case branch;
+    // Lub each one
+
+    for(int i = cases->first(); cases->more(i); i = cases->next(i)){
+        branch = cases->nth(i);
+        Symbol Branch_type =  branch->CheckBranchType();
+        if(i != cases->first()){
+            Type = classtable->Lub(Type,Branch_type);
+        }else{
+            Type = Branch_type;
+        }
+        
+    }
+    return Type;
+
+}
+Symbol branch_class::CheckBranchType()
+{
+    Symbol Type;
+    Objecttable.enterscope();
+    Objecttable.addid(name,new Symbol (type_decl));
+    Type = expr->CheckExprType();
+    Objecttable.exitscope();
+    return Type;
+
+}
+
+
+Symbol let_class::CheckExprType()
+{   
+    Symbol Type;
+    
+    // check init
+    Symbol init_type = init->CheckExprType();
+    if(init_type != No_type){
+        if(classtable->Lub(init_type,type_decl) == false)
+        {
+            classtable->semant_error(curr_class) << "Error! predicate type is not  Bool " << init_type  << ":" << type_decl << std::endl;
+        }
+    }
+    // O[T0'/x] 
+    Objecttable.enterscope();
+    Objecttable.addid(identifier,new Symbol(type_decl));
+    body->CheckExprType();
+    Objecttable.exitscope();
+
+}
+
+Symbol plus_class::CheckExprType()
+{
+    Symbol Type = Int;
+    if(e1->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
+        Type = Object;
+    }
+    if(e2->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
+        Type = Object;
+    }
+    return Type;
+}
+
+Symbol plus_class::CheckExprType()
+{
+    Symbol Type = Int;
+    if(e1->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
+        Type = Object;
+    }
+    if(e2->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
+        Type = Object;
+    }
+    return Type;
+}
+Symbol mul_class::CheckExprType()
+{
+    Symbol Type = Int;
+    if(e1->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
+        Type = Object;
+    }
+    if(e2->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
+        Type = Object;
+    }
+    return Type;
+}
+Symbol divide_class::CheckExprType()
+{
+    Symbol Type = Int;
+    if(e1->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith left is not Int"  << std::endl;
+        Type = Object;
+    }
+    if(e2->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Arith right is not Int" << std::endl;
+        Type = Object;
+    }
+    return Type;
+}
+
+Symbol neg_class::CheckExprType()
+{
+    Symbol Type = Int;
+    if(e1->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! Neg type is not Int"  << std::endl;
+        Type = Object;
+    }
+    
+    return Type;
+}
+
+Symbol lt_class::CheckExprType()
+{
+    Symbol Type = Bool;
+    if(e1->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error!  lt left is not Int"  << std::endl;
+        Type = Object;
+    }
+    if(e2->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error!  lt right is not Int" << std::endl;
+        Type = Object;
+    }
+    return Type;
+}
+
+
+Symbol leq_class::CheckExprType()
+{
+    Symbol Type = Bool;
+    if(e1->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! leq left is not Int"  << std::endl;
+        Type = Object;
+    }
+    if(e2->CheckExprType() != Int ){
+        classtable->semant_error(curr_class) << "Error! leq right is not Int" << std::endl;
+        Type = Object;
+    }
+    return Type;
+}
+
+
+
+Symbol comp_class::CheckExprType()
+{
+    Symbol Type = Bool;
+    if(e1->CheckExprType() != Bool ){
+        classtable->semant_error(curr_class) << "Error! comp(Not) type is not Bool"  << std::endl;
+        Type = Object;
+    }
+    
+    return Type;
+}
+
+
+Symbol eq_class::CheckExprType()
+{
+    Symbol LType = e1->CheckExprType();
+    Symbol RType = e2->CheckExprType();
+    if(LType == RType && (LType == Int || LType == Bool || LType == Str))
+    {
+        return Bool;
+    }else
+    {
+        return Object;
+    }
+}
+Symbol int_const_class::CheckExprType()
+{
+    return Int;
+}
+Symbol bool_const_class::CheckExprType()
+{
+    return Bool;
+}
+Symbol string_const_class::CheckExprType()
+{
+    return Str;
+}
+Symbol isvoid_class::CheckExprType()
+{
+    e1->CheckExprType();
+    return Bool;
+}
+Symbol no_expr_class::CheckExprType() 
+{
+    return No_type;
+}
+
+
+Symbol new__class::CheckExprType()
+{
+
+    return type_name;
+}
+
+Symbol object_class::CheckExprType() {
+    if (name == self) {
+        type = SELF_TYPE;
+        return type;
+    }
+    Symbol* found_type = Objecttable.lookup(name);
+    if (found_type == NULL) {
+        classtable->semant_error(curr_class) << "Cannot find object " << name << std::endl;
+        type = Object;
+    } else {
+        type = *found_type;
+    }
+    return type;
+}
+
 
 // //////////////////////////////////////////////////////////////////
 
