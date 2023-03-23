@@ -875,17 +875,17 @@ ostream& ClassTable::semant_error()
      to build mycoolc.
  */
 
+// 对每个Class的所有方法进行添加和检查
 void ClassTable::install_Method()
 {
-
+    
 }
 
-
+// 根据我们上面添加的Method，进而来自上而下来进行检查（实际是自下而上，我们编程实现是自上而下）
 void ClassTable::CheckMethod()
 {
 
 }
-
 
 
 void program_class::semant()
@@ -900,10 +900,7 @@ void program_class::semant()
     classtable->install_Method();
     classtable->CheckMethod();
 
-
-
     /* some semantic analysis code may go here */
-
 
     if (classtable->errors()) {
         cerr << "Compilation halted due to static semantic errors." << endl;
