@@ -850,7 +850,7 @@ ostream& ClassTable::semant_error()
     semant_errors++;                            
     return error_stream;
 } 
-
+// asadasd
 
 
 /*   This is the entry point to the semantic checker.
