@@ -330,7 +330,7 @@ void attr_class::AddAttribToTable(Symbol class_name)
 
 }
 
-void method_class::CheckFeatureType() {
+void method_class::CheckFeatureType(){
     log << "    Checking method \"" << name << "\"" << std::endl;
 
      //check return type
@@ -647,7 +647,7 @@ Symbol let_class::CheckExprType()
     Objecttable.addid(identifier,new Symbol(type_decl));
     type = body->CheckExprType();
     Objecttable.exitscope();
-    
+
     return type;
 
 }
@@ -875,13 +875,32 @@ ostream& ClassTable::semant_error()
      to build mycoolc.
  */
 
+void ClassTable::install_Method()
+{
+
+}
+
+
+void ClassTable::CheckMethod()
+{
+
+}
+
+
 
 void program_class::semant()
 {
     initialize_constants();
 
     /* ClassTable constructor may do some semantic analysis */
+    // Install and Check Class
     ClassTable *classtable = new ClassTable(classes);
+
+    // Install and Check Method
+    classtable->install_Method();
+    classtable->CheckMethod();
+
+
 
     /* some semantic analysis code may go here */
 
