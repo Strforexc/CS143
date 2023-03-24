@@ -1,4 +1,3 @@
-	-1 (attroverride)	 Attempt to override parent's attribute
 	-1 (caseidenticalbranch)	 Duplicate branch in a case expr
 	-1 (cells)	 Complex program
 	-1 (classes)	 Various classes with inheritance and overriding (legal)

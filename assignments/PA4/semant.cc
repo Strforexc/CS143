@@ -101,7 +101,7 @@ static void initialize_constants(void)
 ClassTable::ClassTable(Classes classes) : semant_errors(0) , error_stream(cerr) {
 
     /* Fill this in */
-    
+    log << "install_basic_classes" <<endl;
     install_basic_classes(); // 添加五个基本类
 
     log << "Now let's build inheritence graph" << std::endl;
@@ -445,9 +445,9 @@ Symbol dispatch_class::CheckExprType()
     // check  method
     method_class * method = NULL;
     std::list<Symbol> Path = classtable->FindSymbolPath(expr_type);
-    // Path.rbegin();
+    Path.reverse();
 
-    for(auto iter = Path.rbegin(); iter != Path.rend(); ++iter ){
+    for(auto iter = Path.begin(); iter != Path.end(); ++iter ){
         // log<< iter <<endl;
         log << "Find method name " << name<<":" << expr_type << ":" << *iter<<endl;
         if(methodtables[*iter].lookup(name)!= NULL){    
@@ -635,7 +635,7 @@ Symbol block_class::CheckExprType()
 
 Symbol typcase_class::CheckExprType()
 {
-    
+    log << "Checking typcase_class" <<endl;
     Symbol expr_type = expr->CheckExprType();
     Case branch;
     // Lub each one
@@ -656,6 +656,7 @@ Symbol typcase_class::CheckExprType()
 Symbol branch_class::CheckBranchType()
 {
     Symbol Type;
+    log << "Checking branch" <<endl;
     Objecttable.enterscope();
     Objecttable.addid(name,new Symbol (type_decl));
     Type = expr->CheckExprType();
@@ -953,6 +954,7 @@ void ClassTable::CheckMethod()
         curr_class = m_classes[itr->first];
         Features Methods = curr_class->Getfeatures();
         std::list<Symbol> Path = FindSymbolPath(current_class_name);
+        Path.reverse();
         log << "Check Method type :" <<current_class_name  <<endl;
         // Get all Methods
         for(int i = Methods->first();Methods->more(i); i = Methods->next(i)){
@@ -962,7 +964,7 @@ void ClassTable::CheckMethod()
             bool find_flag = false;
             // Get his Parent
             
-            for(auto itr = Path.rbegin(); itr != Path.rend(); itr++){
+            for(auto itr = Path.begin(); itr != Path.end(); itr++){
                 if(current_class_name == *itr)
                     continue;
                     
@@ -1016,6 +1018,10 @@ void ClassTable::CheckMethod()
 
 void program_class::semant()
 {
+    log << "start" <<std::endl;
+    
+    // write(1,"123",4);
+    printf("123");
     initialize_constants();
 
     /* ClassTable constructor may do some semantic analysis */
@@ -1044,8 +1050,45 @@ void program_class::semant()
             }
             else
             {   
-                ((attr_class *)curr_feature)->AddAttribToTable(curr_class->GetName());    
-                ((attr_class *)curr_feature)->CheckAttrType(); 
+                attr_class * curr_attr = ((attr_class *)curr_feature);
+                // check parent class whether has this attribute
+                std::list<Symbol> Parent_class = classtable->FindSymbolPath(curr_class->GetName());
+                bool isfind = false;
+                
+                //reverse ; from lower to parent
+
+                Parent_class.reverse();
+                for(auto itr = Parent_class.begin();itr != Parent_class.end() ; itr++){
+                    
+                    if(*itr == curr_class->GetName())
+                        continue;
+                    Features Parent_features = classtable->m_classes[*itr]->Getfeatures();
+                    for(int i = Parent_features->first();Parent_features->more(i); i = Parent_features->next(i))
+                    {
+                        // find attribute;
+                        if(Parent_features->nth(i)->ismethod())
+                            continue;
+                        else{
+                            if(Parent_features->nth(i)->GetName() == curr_attr->GetName())
+                                isfind = true;
+                        }
+                    }
+
+                }
+
+                if(isfind)
+                {
+                    classtable->semant_error(curr_class) << "Attribute "<<curr_attr->GetName()<<" is an attribute of an inherited class."  << std::endl;
+                }
+                else{
+                    curr_attr->AddAttribToTable(curr_class->GetName());   
+                }
+                 
+                
+                
+                
+                
+                curr_attr->CheckAttrType(); 
                 
             }
             
