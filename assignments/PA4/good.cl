@@ -8,13 +8,6 @@ class C {
 		self;
            }
 	};
-    init(x : Int, y : Bool) : C {
-           {
-		a <- x;
-		b <- y;
-		self;
-           }
-	};
 };
 
 Class Main {

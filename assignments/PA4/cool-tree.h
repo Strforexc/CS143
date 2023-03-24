@@ -37,6 +37,7 @@ public:
    virtual Class_ copy_Class_() = 0;
    virtual Symbol GetName() = 0 ;
    virtual Symbol Getparent() = 0 ;
+   virtual Features Getfeatures() = 0 ;
 
 #ifdef Class__EXTRAS
    Class__EXTRAS
@@ -51,6 +52,13 @@ class Feature_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Feature(); }
    virtual Feature copy_Feature() = 0;
+   virtual Symbol GetName() = 0;
+   // virtual Symbol GetReturnType() = 0;
+   virtual bool ismethod() = 0;
+   virtual void AddMethodToTable(Symbol class_name)=0;
+   virtual void AddAttribToTable(Symbol class_name)=0;
+   // virtual Formals GetFormals() = 0;
+   
 
 #ifdef Feature_EXTRAS
    Feature_EXTRAS
@@ -81,7 +89,7 @@ class Expression_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Expression(); }
    virtual Expression copy_Expression() = 0;
-   virtual Symbol CheckExprType();
+   virtual Symbol CheckExprType() = 0;
 
 #ifdef Expression_EXTRAS
    Expression_EXTRAS
@@ -169,6 +177,7 @@ public:
    void dump(ostream& stream, int n);
    Symbol GetName(){return name;};
    Symbol Getparent(){return parent;};
+   Features Getfeatures(){return features;};
 
 
 #ifdef Class__SHARED_EXTRAS
@@ -196,10 +205,14 @@ public:
    }
    Feature copy_Feature();
    void dump(ostream& stream, int n);
+   bool ismethod(){return true;}
    void AddMethodToTable(Symbol class_name);
+   void AddAttribToTable(Symbol class_name);
    void CheckFeatureType();
+
    Formals GetFormals(){return formals;};
    Symbol GetReturnType() { return return_type;};
+   Symbol GetName() {return name;};
 
 #ifdef Feature_SHARED_EXTRAS
    Feature_SHARED_EXTRAS
@@ -223,9 +236,15 @@ public:
       init = a3;
    }
    Feature copy_Feature();
+   bool ismethod(){return false;}
    void dump(ostream& stream, int n);
+   void AddMethodToTable(Symbol class_name);
    void AddAttribToTable(Symbol class_name);
    void CheckAttrType();
+   // Formals GetFormals(){return  };
+   // Symbol GetReturnType() {};
+   Symbol GetName() {return name;};
+
 
 #ifdef Feature_SHARED_EXTRAS
    Feature_SHARED_EXTRAS
@@ -249,6 +268,7 @@ public:
    Formal copy_Formal();
    void dump(ostream& stream, int n);
    Symbol GetType(){return type_decl;};
+   Symbol GetName(){return name;};
 
 
 #ifdef Formal_SHARED_EXTRAS

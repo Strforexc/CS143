@@ -1,0 +1,3 @@
+./compare.test:5: Illegal comparison with a basic type.
+./compare.test:5: Error expr type is not subtype of expr_type
+Compilation halted due to static semantic errors.

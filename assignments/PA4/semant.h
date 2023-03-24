@@ -8,6 +8,7 @@
 #include "symtab.h"
 #include <map>
 #include "list.h"
+#include <list>
 
 
 #define TRUE 1

@@ -1,0 +1,10 @@
+./hairyscary.cl.test:3: Undeclared identifier g
+./hairyscary.cl.test:3: Dispatch to undefined method doh.
+./hairyscary.cl.test:3: Error! Arith right is not Int
+./hairyscary.cl.test:3: Error! Arith left is not Int
+./hairyscary.cl.test:3: Error! Arith left is not Int
+./hairyscary.cl.test:3: Undeclared identifier h
+./hairyscary.cl.test:3: Error! predicate type is not right Object:Int
+./hairyscary.cl.test:3: Value is not define before
+free(): invalid pointer
+ 
