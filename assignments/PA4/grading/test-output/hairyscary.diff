@@ -1,7 +1,5 @@
-0a1,2
-> filename:line
-> free(): invalid pointer
-2,447d3
+1,447c1,2
+< 
 < _program
 < 
 <   _class
@@ -448,3 +446,6 @@
 <         "do nothing"
 <       : String
 <     )
+---
+> filename:line
+> Compilation halted due to static semantic errors.

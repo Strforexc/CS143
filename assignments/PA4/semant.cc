@@ -12,7 +12,7 @@
 
 extern int semant_debug;
 extern char *curr_filename;
-static bool TESTING = false;
+static bool TESTING = true;
 static std::ostringstream nop_sstream;
 static std::ostream &log = TESTING ? std::cout : nop_sstream;
 static Class_ curr_class = NULL; // show what type about class 
@@ -372,9 +372,9 @@ void method_class::CheckFeatureType(){
     }
     
     // check expr_type 
-    
+    log << "testing... " <<endl;
     Symbol expr_type = expr->CheckExprType();
-
+    log << "testing... end" <<endl;
     if(classtable->Subtype(expr_type,return_type) == false){
         classtable->semant_error(curr_class)<<"Error expr type is not subtype of expr_type"<<endl;
     }
@@ -431,9 +431,10 @@ Symbol dispatch_class::CheckExprType()
     log << "checking dispatch type " << name <<endl;
     
     // check e0's type
+    
     Symbol expr_type = expr->CheckExprType();
     if(expr_type == SELF_TYPE){
-        log << "Dispatch: class = " << SELF_TYPE << "_" << curr_class->GetName() << std::endl;
+        log << "Dispatch: Class_type:" << expr_type <<",functionName:"<<name<< ",curr_class: " << curr_class->GetName() << std::endl;
         expr_type = curr_class->GetName();
     }
     else
@@ -492,9 +493,10 @@ Symbol dispatch_class::CheckExprType()
             }
         }
     }
-
+    // log << "testing... " <<endl;
     //check return type 
     Symbol Method_Rtype = method->GetReturnType();
+
     if(Method_Rtype == SELF_TYPE){
         Method_Rtype = expr_type; 
     }   
@@ -505,7 +507,7 @@ Symbol dispatch_class::CheckExprType()
     else{
         type  = Method_Rtype;
     }
-    
+    // log << "testing... " << type<<endl;
     return type ;
 }
 
@@ -638,11 +640,29 @@ Symbol typcase_class::CheckExprType()
     log << "Checking typcase_class" <<endl;
     Symbol expr_type = expr->CheckExprType();
     Case branch;
-    // Lub each one
+    
 
+    
+    
+
+
+    // Lub each one
+    // Check double type !!!!!
+    std::set<Symbol> typelist;
     for(int i = cases->first(); cases->more(i); i = cases->next(i)){
+
         branch = cases->nth(i);
+        
         Symbol Branch_type =  branch->CheckBranchType();
+        if(typelist.find(Branch_type) ==  typelist.end()){
+            typelist.insert(Branch_type);
+        }
+        else{
+            classtable->semant_error(curr_class)<<"Duplicate branch "<<Branch_type<<" in case statement"<<endl;
+            type = Object;
+            return type; 
+        }
+
         if(i != cases->first()){
             type = classtable->Lub(type,Branch_type);
         }else{
@@ -650,6 +670,7 @@ Symbol typcase_class::CheckExprType()
         }
         
     }
+    // type = Object;
     return type;
 
 }
@@ -661,6 +682,7 @@ Symbol branch_class::CheckBranchType()
     Objecttable.addid(name,new Symbol (type_decl));
     Type = expr->CheckExprType();
     Objecttable.exitscope();
+    log << Type << "：："<< endl;
     return Type;
 
 }
@@ -1021,7 +1043,7 @@ void program_class::semant()
     log << "start" <<std::endl;
     
     // write(1,"123",4);
-    printf("123");
+    
     initialize_constants();
 
     /* ClassTable constructor may do some semantic analysis */
