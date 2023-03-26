@@ -1,3 +1,0 @@
-./list.cl.test:26: classtype Not have this params type 
-./list.cl.test:26: Error expr type is not subtype of expr_type
-Compilation halted due to static semantic errors.

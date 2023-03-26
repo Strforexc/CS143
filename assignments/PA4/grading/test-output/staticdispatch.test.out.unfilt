@@ -1,6 +1,0 @@
-./staticdispatch.test:1: Expression type Bdoes not conform to declared static dispatch type A
-./staticdispatch.test:1: Error! Actual type Int doesn't suit formal type a
-./staticdispatch.test:1: Error! Actual type B doesn't suit formal type b
-./staticdispatch.test:1: Error! Actual type B doesn't suit formal type c
-./staticdispatch.test:1: Error! Actual type B doesn't suit formal type d
-Compilation halted due to static semantic errors.
