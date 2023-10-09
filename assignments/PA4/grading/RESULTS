@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 	-1 (anattributenamedself)	 An attribute named self
 	-1 (assignment)	 Valid assignments
 	-1 (assignnoconform)	 Assignment with non conforming expression
@@ -72,3 +73,24 @@
 	-1 (subtypemethodreturn)	 Returning a subtype of the declared return type (legal)
 	-1 (trickyatdispatch)	 Tricky (legal) static dispatch
 	-1 (trickyatdispatch2)	 Tricky (illegal) static dispatch
+||||||| 2a46ccc
+	-1 (cells)	 Complex program
+	-1 (classes)	 Various classes with inheritance and overriding (legal)
+	-1 (compare)	 Legal equality comparison
+	-1 (hairyscary)	 Messy legal Cool program
+	-1 (inheritsbool)	 Class inherits Bool (illegal)
+	-1 (inheritsselftype)	 Class inherits SELF_TYPE (illegal)
+	-1 (inheritsstring)	 Class inherits String (illegal)
+	-1 (io)	 IO methods
+	-1 (letself)	 Let with self in binding (illegal)
+	-1 (list)	 List program
+	-1 (methodnameclash)	 Two children define a function differently (allowed)
+	-1 (missingclass)	 Inheritance from an undefined class
+	-1 (newselftype)	 Using a new SELF_TYPE expression (legal)
+	-1 (selfinformalparameter)	 Self as name of a formal parameter (illegal)
+	-1 (staticdispatch)	 Simple static dispatch
+	-1 (trickyatdispatch)	 Tricky (legal) static dispatch
+	-1 (trickyatdispatch2)	 Tricky (illegal) static dispatch
+=======
+	(our tests)	Passed all tests -- congratulations!
+>>>>>>> refs/remotes/origin/main

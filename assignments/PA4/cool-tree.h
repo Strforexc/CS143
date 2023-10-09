@@ -295,6 +295,7 @@ public:
    Case copy_Case();
    void dump(ostream& stream, int n);
    Symbol CheckBranchType();
+   Symbol GetType(){return type_decl;};
    
    
 
@@ -373,6 +374,7 @@ public:
    Expression copy_Expression();
    void dump(ostream& stream, int n);
    Symbol CheckExprType();
+   
 
 #ifdef Expression_SHARED_EXTRAS
    Expression_SHARED_EXTRAS

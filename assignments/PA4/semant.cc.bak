@@ -17,8 +17,7 @@ static std::ostringstream nop_sstream;
 static std::ostream &log = TESTING ? std::cout : nop_sstream;
 static Class_ curr_class = NULL; // show what type about class 
 ClassTable* classtable;
-// typedef std::map<Symbol, Symbol>  MyfeatureName;
-typedef SymbolTable<Symbol, Feature_class> MethodTable;
+typedef SymbolTable<Symbol, method_class> MethodTable;
 static std::map<Symbol, MethodTable> methodtables;
 static SymbolTable<Symbol, Symbol> Objecttable;
 
@@ -362,7 +361,6 @@ void attr_class::AddAttribToTable(Symbol class_name)
         classtable->semant_error(curr_class)<<"Error attribute ,already Exsit"  << curr_class->GetName() << endl;
         return;
     }
-    
     Objecttable.addid(name,new Symbol(type_decl));
 
 }
@@ -426,7 +424,6 @@ void attr_class::CheckAttrType(){
         log<<"NO INIT" <<std::endl;
     }
     log << "Checking attribute: " << name <<":"<<type<< " ------end----- " <<  endl;
-
 }
 
 Symbol assign_class::CheckExprType()
@@ -484,7 +481,7 @@ Symbol dispatch_class::CheckExprType()
         // log<< iter <<endl;
         log << "Find method name " << name<<":" << expr_type << ":" << *iter<<endl;
         if(methodtables[*iter].lookup(name)!= NULL){    
-            method = (method_class*)methodtables[*iter].lookup(name);
+            method = methodtables[*iter].lookup(name);
             break;
         }
     }
@@ -569,7 +566,7 @@ Symbol static_dispatch_class::CheckExprType()
     for(auto iter = Path.rbegin(); iter != Path.rend(); ++iter ){
         
         if(methodtables[*iter].lookup(name)!= NULL){    
-            method =(method_class *)methodtables[*iter].lookup(name);
+            method = methodtables[*iter].lookup(name);
             break;
         }
     }
@@ -1066,7 +1063,7 @@ void ClassTable::CheckMethod()
                 MethodTable Parent_table = methodtables[Parent_name];
             
                 // Get Parent method class
-                method_class*  Parent_method = (method_class *)Parent_table.lookup(Method_name);
+                method_class*  Parent_method = Parent_table.lookup(Method_name);
                
                 if(Parent_method != NULL){
                     // exsit overridding
@@ -1138,11 +1135,9 @@ void program_class::semant()
         log <<"----------------"<< "Checking class:"<<curr_class->GetName()<<"----------------"<<endl;
         Features curr_features = curr_class->Getfeatures();
 
-
-
-        
         // Get the inheritance path , add all the attributes
         std::list<Symbol>  attr_path = classtable->FindSymbolPath(curr_class->GetName());
+
 
         for(auto it = attr_path.begin(); it != attr_path.end(); it++){
             
