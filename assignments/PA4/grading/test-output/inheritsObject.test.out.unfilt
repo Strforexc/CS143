@@ -1,0 +1,107 @@
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+A parent is Object
+B parent is Object
+Main parent is Object
+check ring ablout A
+check ring ablout B
+check ring ablout Main
+Now Lets install Method ...
+Current Class:A
+Adding method : main
+Current Class:Object
+Adding method : abort
+Adding method : type_name
+Adding method : copy
+Current Class:Int
+Current Class:B
+Current Class:Main
+Adding method : main
+Current Class:Bool
+Current Class:IO
+Adding method : out_string
+Adding method : out_int
+Adding method : in_string
+Adding method : in_int
+Current Class:String
+Adding method : length
+Adding method : concat
+Adding method : substr
+Check Method type :A
+Check Method type :Object
+Check Method type :Int
+Check Method type :B
+Check Method type :Main
+Check Method type :Bool
+Check Method type :IO
+Check Method type :String
+Adding attribute :foo
+Checking attribute: foo:Int
+NO INIT
+Checking attribute:foo end
+Checking method :main
+testing... 
+testing... end
+Adding attribute :bar
+Checking attribute: bar:Int
+NO INIT
+Checking attribute:bar end
+Checking method :main
+testing... 
+testing... end
+#1
+_program
+  #1
+  _class
+    A
+    Object
+    "./inheritsObject.test"
+    (
+    #3
+    _attr
+      foo
+      Int
+      #0
+      _no_expr
+      : _no_type
+    #5
+    _method
+      main
+      Int
+      #6
+      _int
+        6
+      : Int
+    )
+  #11
+  _class
+    B
+    Object
+    "./inheritsObject.test"
+    (
+    #13
+    _attr
+      bar
+      Int
+      #0
+      _no_expr
+      : _no_type
+    )
+  #17
+  _class
+    Main
+    Object
+    "./inheritsObject.test"
+    (
+    #17
+    _method
+      main
+      Int
+      #17
+      _int
+        6
+      : Int
+    )

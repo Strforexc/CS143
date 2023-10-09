@@ -1,0 +1,49 @@
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+Main parent is Object
+A parent is Object
+check ring ablout Main
+check ring ablout A
+Now Lets install Method ...
+Current Class:Main
+Adding method : main
+Current Class:Object
+Adding method : abort
+Adding method : type_name
+Adding method : copy
+Current Class:Int
+Current Class:A
+Adding method : foo
+Current Class:String
+Adding method : length
+Adding method : concat
+Adding method : substr
+Current Class:Bool
+Current Class:IO
+Adding method : out_string
+Adding method : out_int
+Adding method : in_string
+Adding method : in_int
+Check Method type :Main
+Check Method type :Object
+Check Method type :Int
+Check Method type :A
+Check Method type :String
+Check Method type :Bool
+Check Method type :IO
+Checking method :main
+testing... 
+testing... end
+Adding attribute :x
+Checking attribute: x:String
+NO INIT
+Checking attribute:x end
+Checking method :foo
+Add x:Int into Objecttable
+testing... 
+./badwhilecond.test:3: Error! predicate type is not  Bool Int
+testing... end
+Compilation halted due to static semantic errors.

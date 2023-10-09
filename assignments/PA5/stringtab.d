@@ -1,4 +1,2 @@
-stringtab.o stringtab.d : stringtab.cc ../../include/PA5/copyright.h \
- ../../include/PA5/stringtab_functions.h ../../include/PA5/copyright.h \
- ../../include/PA5/cool-io.h ../../include/PA5/stringtab.h \
- ../../include/PA5/list.h ../../include/PA5/stringtab.h
+stringtab.o stringtab.d : stringtab.cc copyright.h stringtab_functions.h cool-io.h \
+ stringtab.h list.h

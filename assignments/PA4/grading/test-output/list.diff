@@ -1,4 +1,4 @@
-1,383c1,2
+1,383c1,185
 < 
 < _program
 < 
@@ -383,5 +383,188 @@
 <       : Object
 <     )
 ---
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> List parent is Object
+> Cons parent is List
+> Main parent is IO
+> check ring ablout List
+> check ring ablout Cons
+> check ring ablout Main
+> Now Lets install Method ...
+> Current Class:List
+> Adding method : isNil
+> Adding method : head
+> Adding method : tail
+> Adding method : cons
+> Current Class:Object
+> Adding method : abort
+> Adding method : type_name
+> Adding method : copy
+> Current Class:Bool
+> Current Class:Int
+> Current Class:Cons
+> Adding method : isNil
+> Adding method : head
+> Adding method : tail
+> Adding method : init
+> Current Class:Main
+> Adding method : print_list
+> Adding method : main
+> Current Class:IO
+> Adding method : out_string
+> Adding method : out_int
+> Adding method : in_string
+> Adding method : in_int
+> Current Class:String
+> Adding method : length
+> Adding method : concat
+> Adding method : substr
+> Check Method type :List
+> Check Method type :Object
+> Check Method type :Bool
+> Check Method type :Int
+> Check Method type :Cons
+> Check Method type :Main
+> Check Method type :IO
+> Check Method type :String
+> Checking method :isNil
+> testing... 
+> testing... end
+> Checking method :head
+> testing... 
+> checking dispatch type abort
+> Dispatch: Class_type:SELF_TYPE,functionName:abort,curr_class: List
+> Find method name abort:List:List
+> Find method name abort:List:Object
+> testing... end
+> Checking method :tail
+> testing... 
+> checking dispatch type abort
+> Dispatch: Class_type:SELF_TYPE,functionName:abort,curr_class: List
+> Find method name abort:List:List
+> Find method name abort:List:Object
+> testing... end
+> Checking method :cons
+> Add i:Int into Objecttable
+> testing... 
+> checking dispatch type init
+> Dispatch: class = Cons
+> Find method name init:Cons:Cons
+> params type is Int
+> formal_type is Int
+> params type is SELF_TYPE
 > filename:line
+> formal_type is List
+> testing... end
+> Adding attribute :car
+> Checking attribute: car:Int
+> NO INIT
+> Checking attribute:car end
+> Adding attribute :cdr
+> Checking attribute: cdr:List
+> NO INIT
+> Checking attribute:cdr end
+> Checking method :isNil
+> testing... 
+> testing... end
+> Checking method :head
+> testing... 
+> testing... end
+> Checking method :tail
+> testing... 
+> testing... end
+> Checking method :init
+> Add i:Int into Objecttable
+> Add rest:List into Objecttable
+> testing... 
+>  Checking assign car
+>  Checking assign cdr
+> testing... end
+> Adding attribute :mylist
+> Checking attribute: mylist:List
+> NO INIT
+> Checking attribute:mylist end
+> Checking method :print_list
+> Add l:List into Objecttable
+> testing... 
+> checking dispatch type isNil
+> Dispatch: class = List
+> Find method name isNil:List:List
+> checking dispatch type out_string
+> Dispatch: Class_type:SELF_TYPE,functionName:out_string,curr_class: Main
+> Find method name out_string:Main:Main
+> Find method name out_string:Main:IO
+> check str:String
+> params type is String
+> formal_type is String
+> checking dispatch type out_int
+> Dispatch: Class_type:SELF_TYPE,functionName:out_int,curr_class: Main
+> Find method name out_int:Main:Main
+> Find method name out_int:Main:IO
+> checking dispatch type head
+> Dispatch: class = List
+> Find method name head:List:List
+> params type is Int
+> formal_type is Int
+> checking dispatch type out_string
+> Dispatch: Class_type:SELF_TYPE,functionName:out_string,curr_class: Main
+> Find method name out_string:Main:Main
+> Find method name out_string:Main:IO
+> check str:String
+> params type is String
+> formal_type is String
+> checking dispatch type print_list
+> Dispatch: Class_type:SELF_TYPE,functionName:print_list,curr_class: Main
+> Find method name print_list:Main:Main
+> checking dispatch type tail
+> Dispatch: class = List
+> Find method name tail:List:List
+> params type is List
+> formal_type is List
+> testing... end
+> Checking method :main
+> testing... 
+>  Checking assign mylist
+> checking dispatch type cons
+> checking dispatch type cons
+> checking dispatch type cons
+> checking dispatch type cons
+> checking dispatch type cons
+> Dispatch: class = List
+> Find method name cons:List:List
+> params type is Int
+> formal_type is Int
+> Dispatch: class = List
+> Find method name cons:List:List
+> params type is Int
+> formal_type is Int
+> Dispatch: class = List
+> Find method name cons:List:List
+> params type is Int
+> formal_type is Int
+> Dispatch: class = List
+> Find method name cons:List:List
+> params type is Int
+> formal_type is Int
+> Dispatch: class = List
+> Find method name cons:List:List
+> params type is Int
+> formal_type is Int
+> checking dispatch type isNil
+> Dispatch: class = List
+> Find method name isNil:List:List
+> checking dispatch type print_list
+> Dispatch: Class_type:SELF_TYPE,functionName:print_list,curr_class: Main
+> Find method name print_list:Main:Main
+> params type is List
+> formal_type is List
+>  Checking assign mylist
+> checking dispatch type tail
+> Dispatch: class = List
+> Find method name tail:List:List
+> testing... end
 > Compilation halted due to static semantic errors.

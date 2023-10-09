@@ -1,0 +1,66 @@
+0a1,50
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> Main parent is Object
+> A parent is Object
+> B parent is A
+> C parent is B
+> D parent is Object
+> E parent is D
+> check ring ablout Main
+> check ring ablout A
+> check ring ablout B
+> check ring ablout C
+> check ring ablout D
+> check ring ablout E
+> Now Lets install Method ...
+> Current Class:Main
+> Adding method : main
+> Current Class:Object
+> Adding method : abort
+> Adding method : type_name
+> Adding method : copy
+> Current Class:Int
+> Current Class:A
+> Current Class:B
+> Current Class:C
+> Current Class:D
+> Adding method : inky
+> Current Class:E
+> Adding method : inky
+> Current Class:Bool
+> Current Class:IO
+> Adding method : out_string
+> Adding method : out_int
+> Adding method : in_string
+> Adding method : in_int
+> Current Class:String
+> Adding method : length
+> Adding method : concat
+> Adding method : substr
+> Check Method type :Main
+> Check Method type :Object
+> Check Method type :Int
+> Check Method type :A
+> Check Method type :B
+> Check Method type :C
+> Check Method type :D
+> Check Method type :E
+1a52,65
+> Check Method type :Bool
+> Check Method type :IO
+> Check Method type :String
+> Checking method :main
+> testing... 
+> testing... end
+> Checking method :inky
+> Add b:B into Objecttable
+> testing... 
+> testing... end
+> Checking method :inky
+> Add b:C into Objecttable
+> testing... 
+> testing... end

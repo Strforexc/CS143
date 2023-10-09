@@ -1,0 +1,46 @@
+0a1,45
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> Main parent is IO
+> check ring ablout Main
+> Now Lets install Method ...
+> Current Class:Main
+> Adding method : main
+> Adding method : foo
+> Current Class:IO
+> Adding method : out_string
+> Adding method : out_int
+> Adding method : in_string
+> Adding method : in_int
+> Current Class:Bool
+> Current Class:Object
+> Adding method : abort
+> Adding method : type_name
+> Adding method : copy
+> Current Class:Int
+> Current Class:String
+> Adding method : length
+> Adding method : concat
+> Adding method : substr
+> Check Method type :Main
+> Check Method type :IO
+> Check Method type :Bool
+> Check Method type :Object
+> Check Method type :Int
+> Check Method type :String
+> Adding attribute :x
+> Checking attribute: x:Bool
+> NO INIT
+> Checking attribute:x end
+> Checking method :main
+> testing... 
+> checking dispatch type foo
+> Dispatch: Class_type:SELF_TYPE,functionName:foo,curr_class: Main
+> Find method name foo:Main:Main
+> testing... end
+> Checking method :foo
+> testing... 
+> testing... end

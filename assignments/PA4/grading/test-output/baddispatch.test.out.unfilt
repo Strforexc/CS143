@@ -1,0 +1,61 @@
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+Main parent is Object
+Animal parent is Object
+Cow parent is Animal
+Blerg parent is Object
+check ring ablout Main
+check ring ablout Animal
+check ring ablout Cow
+check ring ablout Blerg
+Now Lets install Method ...
+Current Class:Main
+Adding method : main
+Current Class:Object
+Adding method : abort
+Adding method : type_name
+Adding method : copy
+Current Class:Animal
+Current Class:Cow
+Adding method : moo
+Current Class:String
+Adding method : length
+Adding method : concat
+Adding method : substr
+Current Class:Blerg
+Adding method : foo
+Current Class:Bool
+Current Class:Int
+Current Class:IO
+Adding method : out_string
+Adding method : out_int
+Adding method : in_string
+Adding method : in_int
+Check Method type :Main
+Check Method type :Object
+Check Method type :Animal
+Check Method type :Cow
+Check Method type :String
+Check Method type :Blerg
+Check Method type :Bool
+Check Method type :Int
+Check Method type :IO
+Checking method :main
+testing... 
+testing... end
+Checking method :moo
+testing... 
+check str:String
+testing... end
+Checking method :foo
+testing... 
+checking dispatch type moo
+Dispatch: class = Animal
+Find method name moo:Animal:Animal
+Find method name moo:Animal:Object
+./baddispatch.test:9: Dispatch to undefined method moo.
+testing... end
+Compilation halted due to static semantic errors.

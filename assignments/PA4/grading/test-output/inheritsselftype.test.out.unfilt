@@ -1,1 +1,8 @@
- 
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+Main parent is SELF_TYPE
+check ring ablout Main
+  (core dumped)

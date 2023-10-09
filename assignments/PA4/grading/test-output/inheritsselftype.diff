@@ -1,5 +1,12 @@
-1,2c1
+1,2c1,8
 < filename:line
 < Compilation halted due to static semantic errors.
 ---
->  
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> Main parent is SELF_TYPE
+> check ring ablout Main
+>   (core dumped)

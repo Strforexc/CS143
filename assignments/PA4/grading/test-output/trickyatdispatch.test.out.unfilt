@@ -1,3 +1,67 @@
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+Main parent is Object
+A parent is Object
+B parent is A
+C parent is Object
+check ring ablout Main
+check ring ablout A
+check ring ablout B
+check ring ablout C
+Now Lets install Method ...
+Current Class:Main
+Adding method : main
+Current Class:Object
+Adding method : abort
+Adding method : type_name
+Adding method : copy
+Current Class:Int
+Current Class:A
+Adding method : inky
+Current Class:B
+Adding method : binky
+Current Class:String
+Adding method : length
+Adding method : concat
+Adding method : substr
+Current Class:C
+Adding method : winky
+Current Class:Bool
+Current Class:IO
+Adding method : out_string
+Adding method : out_int
+Adding method : in_string
+Adding method : in_int
+Check Method type :Main
+Check Method type :Object
+Check Method type :Int
+Check Method type :A
+Check Method type :B
+Check Method type :String
+Check Method type :C
+Check Method type :Bool
+Check Method type :IO
+Checking method :main
+testing... 
+testing... end
+Checking method :inky
+testing... 
+testing... end
+Checking method :binky
+testing... 
+check str:String
+testing... end
+Adding attribute :b
+Checking attribute: b:B
+NO INIT
+Checking attribute:b end
+Checking method :winky
+testing... 
+checking Statuc dispatch type inky
 ./trickyatdispatch.test:11: Expression type Bdoes not conform to declared static dispatch type B
+testing... end
 ./trickyatdispatch.test:11: Error expr type is not subtype of expr_type
 Compilation halted due to static semantic errors.

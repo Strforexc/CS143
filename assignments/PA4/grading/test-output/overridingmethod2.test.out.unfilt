@@ -1,0 +1,144 @@
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+Main parent is Object
+A parent is Object
+B parent is A
+check ring ablout Main
+check ring ablout A
+check ring ablout B
+Now Lets install Method ...
+Current Class:Main
+Adding method : main
+Current Class:Object
+Adding method : abort
+Adding method : type_name
+Adding method : copy
+Current Class:Int
+Current Class:A
+Adding method : inky
+Current Class:String
+Adding method : length
+Adding method : concat
+Adding method : substr
+Current Class:Bool
+Current Class:B
+Adding method : inky
+Current Class:IO
+Adding method : out_string
+Adding method : out_int
+Adding method : in_string
+Adding method : in_int
+Check Method type :Main
+Check Method type :Object
+Check Method type :Int
+Check Method type :A
+Check Method type :String
+Check Method type :Bool
+Check Method type :B
+Check Method type :IO
+Checking method :main
+testing... 
+testing... end
+Checking method :inky
+Add a:Int into Objecttable
+Add b:String into Objecttable
+Add c:A into Objecttable
+Add d:Bool into Objecttable
+testing... 
+testing... end
+Checking method :inky
+Add a:Int into Objecttable
+Add b:String into Objecttable
+Add c:A into Objecttable
+Add d:Bool into Objecttable
+testing... 
+testing... end
+#1
+_program
+  #1
+  _class
+    Main
+    Object
+    "./overridingmethod2.test"
+    (
+    #1
+    _method
+      main
+      Int
+      #1
+      _int
+        0
+      : Int
+    )
+  #3
+  _class
+    A
+    Object
+    "./overridingmethod2.test"
+    (
+    #4
+    _method
+      inky
+      #4
+      _formal
+        a
+        Int
+      #4
+      _formal
+        b
+        String
+      #4
+      _formal
+        c
+        A
+      #4
+      _formal
+        d
+        Bool
+      Int
+      #4
+      _object
+        a
+      : Int
+    )
+  #7
+  _class
+    B
+    A
+    "./overridingmethod2.test"
+    (
+    #8
+    _method
+      inky
+      #8
+      _formal
+        a
+        Int
+      #8
+      _formal
+        b
+        String
+      #8
+      _formal
+        c
+        A
+      #8
+      _formal
+        d
+        Bool
+      Int
+      #8
+      _plus
+        #8
+        _object
+          a
+        : Int
+        #8
+        _int
+          1
+        : Int
+      : Int
+    )

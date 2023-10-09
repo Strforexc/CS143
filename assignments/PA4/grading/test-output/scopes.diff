@@ -1,0 +1,70 @@
+0a1,69
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> Main parent is Object
+> A parent is Object
+> check ring ablout Main
+> check ring ablout A
+> Now Lets install Method ...
+> Current Class:Main
+> Adding method : main
+> Current Class:Object
+> Adding method : abort
+> Adding method : type_name
+> Adding method : copy
+> Current Class:Int
+> Current Class:A
+> Adding method : f
+> Adding method : g
+> Adding method : h
+> Current Class:String
+> Adding method : length
+> Adding method : concat
+> Adding method : substr
+> Current Class:Bool
+> Current Class:IO
+> Adding method : out_string
+> Adding method : out_int
+> Adding method : in_string
+> Adding method : in_int
+> Check Method type :Main
+> Check Method type :Object
+> Check Method type :Int
+> Check Method type :A
+> Check Method type :String
+> Check Method type :Bool
+> Check Method type :IO
+> Checking method :main
+> testing... 
+> testing... end
+> Adding attribute :x
+> Checking attribute: x:Int
+> NO INIT
+> Checking attribute:x end
+> Checking method :f
+> Add x:A into Objecttable
+> testing... 
+> check str:String
+> testing... end
+> Checking method :g
+> Add x:Bool into Objecttable
+> testing... 
+> testing... end
+> Checking method :h
+> testing... 
+> checking dispatch type f
+> Dispatch: Class_type:SELF_TYPE,functionName:f,curr_class: A
+> Find method name f:A:A
+> checking dispatch type g
+> Dispatch: Class_type:SELF_TYPE,functionName:g,curr_class: A
+> Find method name g:A:A
+> params type is Bool
+> formal_type is Bool
+> params type is A
+> formal_type is A
+>  Checking assign x
+> check str:String
+> testing... end

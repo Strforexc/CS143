@@ -1,0 +1,51 @@
+0a1,48
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> Main parent is Object
+> Cow parent is Object
+> Chicken parent is Object
+> check ring ablout Main
+> check ring ablout Cow
+> check ring ablout Chicken
+> Now Lets install Method ...
+> Current Class:Main
+> Adding method : main
+> Current Class:Object
+> Adding method : abort
+> Adding method : type_name
+> Adding method : copy
+> Current Class:Cow
+> Current Class:Chicken
+> Current Class:Bool
+> Current Class:Int
+> Current Class:IO
+> Adding method : out_string
+> Adding method : out_int
+> Adding method : in_string
+> Adding method : in_int
+> Current Class:String
+> Adding method : length
+> Adding method : concat
+> Adding method : substr
+> Check Method type :Main
+> Check Method type :Object
+> Check Method type :Cow
+> Check Method type :Chicken
+> Check Method type :Bool
+> Check Method type :Int
+> Check Method type :IO
+> Check Method type :String
+> Checking method :main
+> testing... 
+> testing... end
+> Adding attribute :moo
+> Checking attribute: moo:Object
+> NO INIT
+> Checking attribute:moo end
+> Adding attribute :sound
+> Checking attribute: sound:Object
+1a50
+> Checking attribute:sound end

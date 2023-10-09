@@ -1,0 +1,91 @@
+0a1,90
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> Main parent is Object
+> Z parent is Object
+> A parent is Z
+> B parent is Z
+> C parent is B
+> D parent is B
+> Test parent is Object
+> check ring ablout Main
+> check ring ablout Z
+> check ring ablout A
+> check ring ablout B
+> check ring ablout C
+> check ring ablout D
+> check ring ablout Test
+> Now Lets install Method ...
+> Current Class:Main
+> Adding method : main
+> Current Class:Object
+> Adding method : abort
+> Adding method : type_name
+> Adding method : copy
+> Current Class:Int
+> Current Class:Z
+> Current Class:A
+> Current Class:B
+> Current Class:C
+> Current Class:D
+> Current Class:Test
+> Adding method : f
+> Adding method : g
+> Adding method : h
+> Current Class:Bool
+> Current Class:IO
+> Adding method : out_string
+> Adding method : out_int
+> Adding method : in_string
+> Adding method : in_int
+> Current Class:String
+> Adding method : length
+> Adding method : concat
+> Adding method : substr
+> Check Method type :Main
+> Check Method type :Object
+> Check Method type :Int
+> Check Method type :Z
+> Check Method type :A
+> Check Method type :B
+> Check Method type :C
+> Check Method type :D
+> Check Method type :Test
+> Check Method type :Bool
+> Check Method type :IO
+> Check Method type :String
+> Checking method :main
+> testing... 
+> testing... end
+> Adding attribute :a
+> Checking attribute: a:A
+> NO INIT
+> Checking attribute:a end
+> Adding attribute :b
+> Checking attribute: b:B
+> NO INIT
+> Checking attribute:b end
+> Adding attribute :c
+> Checking attribute: c:C
+> NO INIT
+> Checking attribute:c end
+> Adding attribute :d
+> Checking attribute: d:D
+> NO INIT
+> Checking attribute:d end
+> Adding attribute :z
+> Checking attribute: z:Z
+> NO INIT
+> Checking attribute:z end
+> Checking method :f
+> testing... 
+> testing... end
+> Checking method :g
+> testing... 
+> testing... end
+> Checking method :h
+> testing... 
+> testing... end

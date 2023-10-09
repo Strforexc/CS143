@@ -11,8 +11,10 @@
 
 #include "tree.h"
 #include "cool-tree.handcode.h"
+#include <vector>
 
 
+class Environment;
 // define the class for phylum
 // define simple phylum - Program
 typedef class Program_class *Program;
@@ -49,6 +51,7 @@ class Feature_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Feature(); }
    virtual Feature copy_Feature() = 0;
+   virtual bool IsMethod() = 0;
 
 #ifdef Feature_EXTRAS
    Feature_EXTRAS
@@ -63,6 +66,8 @@ class Formal_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Formal(); }
    virtual Formal copy_Formal() = 0;
+   virtual Symbol Getname() = 0;
+   virtual Symbol Gettype() = 0;
 
 #ifdef Formal_EXTRAS
    Formal_EXTRAS
@@ -77,6 +82,7 @@ class Expression_class : public tree_node {
 public:
    tree_node *copy()		 { return copy_Expression(); }
    virtual Expression copy_Expression() = 0;
+   virtual bool isEmpty(){ return false;}
 
 #ifdef Expression_EXTRAS
    Expression_EXTRAS
@@ -186,7 +192,15 @@ public:
       expr = a4;
    }
    Feature copy_Feature();
+   bool IsMethod() { return true; }
    void dump(ostream& stream, int n);
+   int GetArgNum(){
+     int num = 0;
+     for(int i = formals->first(); formals->more(i); i = formals->next(i)){
+       num++;
+     }
+     return num;
+   }
 
 #ifdef Feature_SHARED_EXTRAS
    Feature_SHARED_EXTRAS
@@ -210,6 +224,7 @@ public:
       init = a3;
    }
    Feature copy_Feature();
+   bool IsMethod() { return false;}
    void dump(ostream& stream, int n);
 
 #ifdef Feature_SHARED_EXTRAS
@@ -233,6 +248,8 @@ public:
    }
    Formal copy_Formal();
    void dump(ostream& stream, int n);
+   Symbol Getname(){return name;}
+   Symbol Gettype(){return type_decl;}
 
 #ifdef Formal_SHARED_EXTRAS
    Formal_SHARED_EXTRAS
@@ -397,6 +414,14 @@ public:
    }
    Expression copy_Expression();
    void dump(ostream& stream, int n);
+   std::vector<branch_class*> Getcases(){
+      std::vector<branch_class*> m_cases;
+      for(int i = cases->first(); cases->more(i); i = cases->next(i)){
+        Case _case = cases->nth(i);
+        m_cases.push_back((branch_class *)_case);
+     }
+      return m_cases;
+   }
 
 #ifdef Expression_SHARED_EXTRAS
    Expression_SHARED_EXTRAS
@@ -755,6 +780,7 @@ public:
    }
    Expression copy_Expression();
    void dump(ostream& stream, int n);
+   bool isEmpty(){return true;}
 
 #ifdef Expression_SHARED_EXTRAS
    Expression_SHARED_EXTRAS

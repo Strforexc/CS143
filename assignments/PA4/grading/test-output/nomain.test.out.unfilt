@@ -1,0 +1,32 @@
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+A parent is Object
+Class Main is not defined.
+check ring ablout A
+Now Lets install Method ...
+Current Class:A
+Current Class:Object
+Adding method : abort
+Adding method : type_name
+Adding method : copy
+Current Class:Bool
+Current Class:Int
+Current Class:IO
+Adding method : out_string
+Adding method : out_int
+Adding method : in_string
+Adding method : in_int
+Current Class:String
+Adding method : length
+Adding method : concat
+Adding method : substr
+Check Method type :A
+Check Method type :Object
+Check Method type :Bool
+Check Method type :Int
+Check Method type :IO
+Check Method type :String
+Compilation halted due to static semantic errors.

@@ -11,11 +11,11 @@
 	.globl	_bool_tag
 	.globl	_string_tag
 _int_tag:
-	.word	5
+	.word	2
 _bool_tag:
-	.word	6
+	.word	3
 _string_tag:
-	.word	7
+	.word	4
 	.globl	_MemMgr_INITIALIZER
 _MemMgr_INITIALIZER:
 	.word	_NoGC_Init
@@ -26,16 +26,43 @@ _MemMgr_COLLECTOR:
 _MemMgr_TEST:
 	.word	0
 	.word	-1
-str_const11:
-	.word	7
+str_const14:
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const5
 	.byte	0	
 	.align	2
 	.word	-1
+str_const13:
+	.word	4
+	.word	6
+	.word	String_dispTab
+	.word	int_const1
+	.ascii	"Main"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const12:
+	.word	4
+	.word	5
+	.word	String_dispTab
+	.word	int_const0
+	.ascii	"B"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const11:
+	.word	4
+	.word	5
+	.word	String_dispTab
+	.word	int_const0
+	.ascii	"A"
+	.byte	0	
+	.align	2
+	.word	-1
 str_const10:
-	.word	7
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const6
@@ -44,7 +71,7 @@ str_const10:
 	.align	2
 	.word	-1
 str_const9:
-	.word	7
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const1
@@ -53,7 +80,7 @@ str_const9:
 	.align	2
 	.word	-1
 str_const8:
-	.word	7
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const4
@@ -62,34 +89,7 @@ str_const8:
 	.align	2
 	.word	-1
 str_const7:
-	.word	7
-	.word	6
-	.word	String_dispTab
-	.word	int_const1
-	.ascii	"Main"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const6:
-	.word	7
-	.word	5
-	.word	String_dispTab
-	.word	int_const0
-	.ascii	"B"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const5:
-	.word	7
-	.word	5
-	.word	String_dispTab
-	.word	int_const0
-	.ascii	"A"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const4:
-	.word	7
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const7
@@ -97,8 +97,8 @@ str_const4:
 	.byte	0	
 	.align	2
 	.word	-1
-str_const3:
-	.word	7
+str_const6:
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const6
@@ -106,17 +106,44 @@ str_const3:
 	.byte	0	
 	.align	2
 	.word	-1
-str_const2:
+str_const5:
+	.word	4
 	.word	7
-	.word	8
 	.word	String_dispTab
 	.word	int_const8
+	.ascii	"_prim_slot"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const4:
+	.word	4
+	.word	7
+	.word	String_dispTab
+	.word	int_const9
+	.ascii	"SELF_TYPE"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const3:
+	.word	4
+	.word	7
+	.word	String_dispTab
+	.word	int_const9
+	.ascii	"_no_class"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const2:
+	.word	4
+	.word	8
+	.word	String_dispTab
+	.word	int_const10
 	.ascii	"<basic class>"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const1:
-	.word	7
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -125,167 +152,227 @@ str_const1:
 	.align	2
 	.word	-1
 str_const0:
-	.word	7
+	.word	4
 	.word	12
 	.word	String_dispTab
-	.word	int_const9
+	.word	int_const11
 	.ascii	"./multiple-static-dispatch.cl"
 	.byte	0	
 	.align	2
 	.word	-1
-int_const9:
-	.word	5
+int_const11:
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	29
 	.word	-1
-int_const8:
-	.word	5
+int_const10:
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	13
 	.word	-1
+int_const9:
+	.word	2
+	.word	4
+	.word	Int_dispTab
+	.word	9
+	.word	-1
+int_const8:
+	.word	2
+	.word	4
+	.word	Int_dispTab
+	.word	10
+	.word	-1
 int_const7:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	2
 	.word	-1
 int_const6:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	6
 	.word	-1
 int_const5:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	0
 	.word	-1
 int_const4:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	3
 	.word	-1
 int_const3:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	5
 	.word	-1
 int_const2:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	8
 	.word	-1
 int_const1:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	4
 	.word	-1
 int_const0:
-	.word	5
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	1
 	.word	-1
 bool_const0:
-	.word	6
+	.word	3
 	.word	4
 	.word	Bool_dispTab
 	.word	0
 	.word	-1
 bool_const1:
-	.word	6
+	.word	3
 	.word	4
 	.word	Bool_dispTab
 	.word	1
 class_nameTab:
-	.word	str_const3
-	.word	str_const4
-	.word	str_const5
 	.word	str_const6
 	.word	str_const7
 	.word	str_const8
 	.word	str_const9
 	.word	str_const10
+	.word	str_const11
+	.word	str_const12
+	.word	str_const13
 class_objTab:
 	.word	Object_protObj
 	.word	Object_init
 	.word	IO_protObj
 	.word	IO_init
-	.word	A_protObj
-	.word	A_init
-	.word	B_protObj
-	.word	B_init
-	.word	Main_protObj
-	.word	Main_init
 	.word	Int_protObj
 	.word	Int_init
 	.word	Bool_protObj
 	.word	Bool_init
 	.word	String_protObj
 	.word	String_init
+	.word	A_protObj
+	.word	A_init
+	.word	B_protObj
+	.word	B_init
+	.word	Main_protObj
+	.word	Main_init
 Object_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
 IO_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
+	# metho # 3
 	.word	IO.out_string
+	# metho # 4
 	.word	IO.out_int
+	# metho # 5
 	.word	IO.in_string
+	# metho # 6
 	.word	IO.in_int
-A_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	A.f
-	.word	A.g
-B_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	B.f
-	.word	A.g
-Main_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	Main.main
 Int_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
 Bool_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
 String_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
+	# metho # 3
 	.word	String.length
+	# metho # 4
 	.word	String.concat
+	# metho # 5
 	.word	String.substr
+A_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	A.f
+	# metho # 8
+	.word	A.g
+B_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	B.f
+	# metho # 8
+	.word	A.g
+Main_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	Main.main
 	.word	-1
 Object_protObj:
 	.word	0
@@ -297,42 +384,42 @@ IO_protObj:
 	.word	3
 	.word	IO_dispTab
 	.word	-1
-A_protObj:
+Int_protObj:
 	.word	2
 	.word	4
-	.word	A_dispTab
-	.word	int_const5
-	.word	-1
-B_protObj:
-	.word	3
-	.word	4
-	.word	B_dispTab
-	.word	int_const5
-	.word	-1
-Main_protObj:
-	.word	4
-	.word	4
-	.word	Main_dispTab
-	.word	0
-	.word	-1
-Int_protObj:
-	.word	5
-	.word	4
 	.word	Int_dispTab
-	.word	0
+	.word	0	# val(0)
 	.word	-1
 Bool_protObj:
-	.word	6
+	.word	3
 	.word	4
 	.word	Bool_dispTab
-	.word	0
+	.word	0	# val(0)
 	.word	-1
 String_protObj:
-	.word	7
+	.word	4
 	.word	5
 	.word	String_dispTab
-	.word	int_const5
-	.word	0
+	.word	int_const5	# int(0)
+	.word	0	# str(0)
+	.word	-1
+A_protObj:
+	.word	5
+	.word	4
+	.word	A_dispTab
+	.word	int_const5	# int(0)
+	.word	-1
+B_protObj:
+	.word	6
+	.word	4
+	.word	B_dispTab
+	.word	int_const5	# int(0)
+	.word	-1
+Main_protObj:
+	.word	7
+	.word	4
+	.word	Main_dispTab
+	.word	0	# void
 	.globl	heap_start
 heap_start:
 	.word	0
@@ -354,7 +441,7 @@ Object_init:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 IO_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -362,13 +449,61 @@ IO_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	Object_init
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
+Int_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	Object_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+Bool_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	Object_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+String_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	Object_init
+	la	$a0 int_const5
+	sw	$a0 12($s0)
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
 A_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -376,7 +511,9 @@ A_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	IO_init
+	# int_const_class:1
 	la	$a0 int_const0
 	sw	$a0 12($s0)
 	move	$a0 $s0
@@ -384,7 +521,7 @@ A_init:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 B_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -392,13 +529,14 @@ B_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	A_init
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 Main_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -406,7 +544,9 @@ Main_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	IO_init
+	# new__class
 	la	$a0 B_protObj
 	jal	Object.copy
 	jal	B_init
@@ -416,190 +556,299 @@ Main_init:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
-Int_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Object_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Bool_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Object_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-String_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Object_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 A.f:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
-	sw	$s1 0($fp)
-	lw	$s1 12($s0)
-	lw	$a0 16($fp)
-	jal	Object.copy
-	lw	$t2 12($a0)
-	lw	$t1 12($s1)
-	add	$t1 $t1 $t2
-	sw	$t1 12($a0)
-	sw	$a0 12($s0)
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# plus_class 
+	# First Eval e1 and push
+	# Object_class:
+	# It is a attrib:x
 	lw	$a0 12($s0)
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# Then eval e2 and make a copy for res 
+	# Object_class:
+	# It is a param:y:0
+	lw	$a0 12($fp)
+	jal	Object.copy
+	# Let's pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	# extract the int inside the object
+	lw	$t1 12($t1)
+	lw	$t2 12($t2)
+	# Modify the int inside t2
+	add	$t3 $t1 $t2
+	sw	$t3 12($a0)
+	# Now find the lvalue.
+	# It is an attribute.x
+	sw	$a0 12($s0)
+	# dispatch_class
+	# First eval param
+	# Int
+	# Object_class:
+	# It is a attrib:x
+	lw	$a0 12($s0)
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label0
 	la	$a0 str_const0
-	li	$t1 5
+	li	$t1 1
 	jal	_dispatch_abort
 label0:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::A
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
 	lw	$t1 16($t1)
+	# jmptp out_int
 	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
 	la	$a0 str_const1
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label1
 	la	$a0 str_const0
-	li	$t1 6
+	li	$t1 1
 	jal	_dispatch_abort
 label1:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::A
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
 	lw	$t1 12($t1)
+	# jmptp out_string
 	jalr		$t1
+	# Object_class:
+	# It is self
 	move	$a0 $s0
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
 A.g:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
-	sw	$s1 0($fp)
-	lw	$s1 12($s0)
-	lw	$a0 16($fp)
-	jal	Object.copy
-	lw	$t2 12($a0)
-	lw	$t1 12($s1)
-	sub	$t1 $t1 $t2
-	sw	$t1 12($a0)
-	sw	$a0 12($s0)
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# sub
+	# eval e1 and push
+	# Object_class:
+	# It is a attrib:x
 	lw	$a0 12($s0)
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# eval e2 and make a copy for result
+	# Object_class:
+	# It is a param:y:0
+	lw	$a0 12($fp)
+	jal	Object.copy
+	# pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	 # extract the int inside the object
+	lw	$t1 12($t1)
+	lw	$t2 12($t2)
+	sub	$t3 $t1 $t2
+	sw	$t3 12($a0)
+	# Now find the lvalue.
+	# It is an attribute.x
+	sw	$a0 12($s0)
+	# dispatch_class
+	# First eval param
+	# Int
+	# Object_class:
+	# It is a attrib:x
+	lw	$a0 12($s0)
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label2
 	la	$a0 str_const0
-	li	$t1 11
+	li	$t1 1
 	jal	_dispatch_abort
 label2:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::A
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
 	lw	$t1 16($t1)
+	# jmptp out_int
 	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
 	la	$a0 str_const1
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label3
 	la	$a0 str_const0
-	li	$t1 12
+	li	$t1 1
 	jal	_dispatch_abort
 label3:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::A
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
 	lw	$t1 12($t1)
+	# jmptp out_string
 	jalr		$t1
+	# Object_class:
+	# It is self
 	move	$a0 $s0
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
 B.f:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
-	sw	$s1 0($fp)
-	lw	$s1 12($s0)
-	lw	$a0 16($fp)
-	jal	Object.copy
-	lw	$t2 12($a0)
-	lw	$t1 12($s1)
-	mul	$t1 $t1 $t2
-	sw	$t1 12($a0)
-	sw	$a0 12($s0)
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# mul
+	# eval e1 and push
+	# Object_class:
+	# It is a attrib:x
 	lw	$a0 12($s0)
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# eval e2 and make a copy for result
+	# Object_class:
+	# It is a param:y:0
+	lw	$a0 12($fp)
+	jal	Object.copy
+	# pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	# extract the int inside the object
+	lw	$t1 12($t1)
+	lw	$t2 12($t2)
+	mul	$t3 $t1 $t2
+	sw	$t3 12($a0)
+	# Now find the lvalue.
+	# It is an attribute.x
+	sw	$a0 12($s0)
+	# dispatch_class
+	# First eval param
+	# Int
+	# Object_class:
+	# It is a attrib:x
+	lw	$a0 12($s0)
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label4
 	la	$a0 str_const0
-	li	$t1 20
+	li	$t1 1
 	jal	_dispatch_abort
 label4:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::B
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
 	lw	$t1 16($t1)
+	# jmptp out_int
 	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
 	la	$a0 str_const1
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label5
 	la	$a0 str_const0
-	li	$t1 21
+	li	$t1 1
 	jal	_dispatch_abort
 label5:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::B
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
 	lw	$t1 12($t1)
+	# jmptp out_string
 	jalr		$t1
+	# Object_class:
+	# It is self
 	move	$a0 $s0
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
 Main.main:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -607,15 +856,35 @@ Main.main:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# static_dispatch_class 
+	# First eval param
+	# int_const_class:3
 	la	$a0 int_const4
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in static_dispatch_class
+	# dispatch_class
+	# First eval param
+	# Int
+	# int_const_class:5
 	la	$a0 int_const3
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# static_dispatch_class 
+	# First eval param
+	# int_const_class:8
 	la	$a0 int_const2
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in static_dispatch_class
+	# dispatch_class
+	# First eval param
+	# Int
+	# neg_class
+	# eval e1 and make a copy for result
+	# int_const_class:4
 	la	$a0 int_const1
 	jal	Object.copy
 	lw	$t1 12($a0)
@@ -623,36 +892,57 @@ Main.main:
 	sw	$t1 12($a0)
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:b
 	lw	$a0 12($s0)
+	# if obj = void
 	bne	$a0 $zero label6
 	la	$a0 str_const0
-	li	$t1 29
+	li	$t1 1
 	jal	_dispatch_abort
 label6:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::B
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
 	lw	$t1 32($t1)
+	# jmptp g
 	jalr		$t1
+	# if obj = void
 	bne	$a0 $zero label7
 	la	$a0 str_const0
-	li	$t1 29
+	li	$t1 2
 	jal	_dispatch_abort
 label7:
+	# now locate the method in the dispatch table
 	la	$t1 A_dispTab
 	lw	$t1 28($t1)
 	jalr		$t1
+	# if obj = void
 	bne	$a0 $zero label8
 	la	$a0 str_const0
-	li	$t1 29
+	li	$t1 1
 	jal	_dispatch_abort
 label8:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::B
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
 	lw	$t1 28($t1)
+	# jmptp f
 	jalr		$t1
+	# if obj = void
 	bne	$a0 $zero label9
 	la	$a0 str_const0
-	li	$t1 29
+	li	$t1 2
 	jal	_dispatch_abort
 label9:
+	# now locate the method in the dispatch table
 	la	$t1 A_dispTab
 	lw	$t1 32($t1)
 	jalr		$t1
@@ -660,6 +950,7 @@ label9:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 
 # end of generated code

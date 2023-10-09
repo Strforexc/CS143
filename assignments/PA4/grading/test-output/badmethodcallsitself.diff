@@ -1,0 +1,55 @@
+0a1,52
+> start
+> install_basic_classes
+> Add basic classTable... 
+> End 
+> Now let's build inheritence graph
+> Main parent is Object
+> A parent is Object
+> check ring ablout Main
+> check ring ablout A
+> Now Lets install Method ...
+> Current Class:Main
+> Adding method : main
+> Current Class:Object
+> Adding method : abort
+> Adding method : type_name
+> Adding method : copy
+> Current Class:Int
+> Current Class:A
+> Adding method : f
+> Current Class:Bool
+> Current Class:IO
+> Adding method : out_string
+> Adding method : out_int
+> Adding method : in_string
+> Adding method : in_int
+> Current Class:String
+> Adding method : length
+> Adding method : concat
+> Adding method : substr
+> Check Method type :Main
+> Check Method type :Object
+> Check Method type :Int
+> Check Method type :A
+> Check Method type :Bool
+> Check Method type :IO
+> Check Method type :String
+> Checking method :main
+> testing... 
+> testing... end
+> Checking method :f
+> Add a:Int into Objecttable
+> testing... 
+> checking dispatch type f
+> Dispatch: Class_type:SELF_TYPE,functionName:f,curr_class: A
+> Find method name f:A:A
+> checking dispatch type f
+> Dispatch: Class_type:SELF_TYPE,functionName:f,curr_class: A
+> Find method name f:A:A
+> params type is Int
+> formal_type is Int
+> params type is Object
+> formal_type is Int
+1a54
+> testing... end

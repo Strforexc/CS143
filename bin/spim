@@ -15,15 +15,15 @@ while [ -h "$PRG" ]; do
 	link=`/usr/bin/expr "$ls" : '.*-> \(.*\)$'`
 	# If the link is absolute, use it as is; otherwise, substitute it
 	# into the leafname part of $PRG.
-	case $link in 
+	case $link in
 	    /*) PRG="$link";;
 	     *) PRG="`/usr/bin/dirname $PRG`/$link"
 	esac
 done
 
-#COOL_INST=`/usr/bin/dirname "$PRG"`/..
-COOL_INST=$(cd `dirname $0` && pwd)/..
+COOL_INST=/usr/class/cs143/cool
 
+#COOL_INST=$(cd `dirname $0` && pwd)/..
 # set environment for spim/xspim
 DEFAULT_TRAP_HANDLER=$COOL_INST/lib/trap.handler
 export DEFAULT_TRAP_HANDLER
@@ -60,7 +60,7 @@ if [ ${1:0:1} != "-" ]; then
     fi
     set -- "$abspath" "${@:2}"
 fi
-for ((i=1; i<=$#; i++))  
+for ((i=1; i<=$#; i++))
 do
     if [ "${!i}" == "-file" -o "${!i}" == "-execute" -o "${!i}" == "-trap_file" ]; then
         next=$(($i+1))
@@ -79,7 +79,7 @@ xname=$COOL_INST/bin/.$arch/spim
 cd $COOL_INST/bin
 
 if [ -x $xname ]; then
-  exec $xname "$@"
+  exec $xname -trap_file $COOL_INST/lib/trap.handler  "$@"
 else
   echo spim is not compiled for $arch
 fi

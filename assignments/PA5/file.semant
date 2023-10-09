@@ -1,17 +1,372 @@
-#1
+#5
 _program
-  #1
+  #5
+  _class
+    A
+    Object
+    "example.cl"
+    (
+    #7
+    _method
+      add
+      #7
+      _formal
+        p
+        Int
+      Int
+      #8
+      _int
+        1
+      : Int
+    #11
+    _method
+      sub
+      #11
+      _formal
+        p
+        Int
+      Int
+      #12
+      _int
+        3
+      : Int
+    )
+  #17
+  _class
+    B
+    A
+    "example.cl"
+    (
+    #18
+    _method
+      add
+      #18
+      _formal
+        p
+        Int
+      Int
+      #19
+      _int
+        2
+      : Int
+    )
+  #23
+  _class
+    C
+    Object
+    "example.cl"
+    (
+    #24
+    _attr
+      p
+      A
+      #24
+      _new
+        B
+      : B
+    #26
+    _method
+      func
+      Object
+      #27
+      _dispatch
+        #27
+        _object
+          p
+        : A
+        add
+        (
+        #27
+        _int
+          1
+        : Int
+        )
+      : Int
+    )
+  #32
+  _class
+    E
+    Object
+    "example.cl"
+    (
+    #33
+    _attr
+      a
+      Int
+      #33
+      _int
+        1
+      : Int
+    #34
+    _attr
+      b
+      Int
+      #34
+      _int
+        2
+      : Int
+    #35
+    _attr
+      c
+      Int
+      #35
+      _plus
+        #35
+        _object
+          a
+        : Int
+        #35
+        _object
+          b
+        : Int
+      : Int
+    )
+  #38
+  _class
+    F
+    E
+    "example.cl"
+    (
+    )
+  #41
   _class
     Main
     Object
     "example.cl"
     (
-    #2
+    #42
+    _attr
+      a
+      Int
+      #42
+      _int
+        1
+      : Int
+    #43
+    _attr
+      b
+      Int
+      #43
+      _int
+        2
+      : Int
+    #44
+    _attr
+      c
+      Int
+      #44
+      _plus
+        #44
+        _object
+          a
+        : Int
+        #44
+        _object
+          b
+        : Int
+      : Int
+    #46
+    _method
+      add
+      #46
+      _formal
+        p1
+        Int
+      #46
+      _formal
+        p2
+        Int
+      #46
+      _formal
+        p3
+        Int
+      Int
+      #47
+      _plus
+        #47
+        _plus
+          #47
+          _plus
+            #47
+            _object
+              a
+            : Int
+            #47
+            _object
+              p1
+            : Int
+          : Int
+          #47
+          _object
+            p2
+          : Int
+        : Int
+        #47
+        _object
+          p3
+        : Int
+      : Int
+    #50
+    _method
+      test
+      #50
+      _formal
+        p
+        Int
+      Int
+      #51
+      _cond
+        #51
+        _lt
+          #51
+          _object
+            p
+          : Int
+          #51
+          _int
+            1
+          : Int
+        : Bool
+        #52
+        _object
+          p
+        : Int
+        #54
+        _int
+          1
+        : Int
+      : Int
+    #58
+    _method
+      test2
+      Object
+      #59
+      _typcase
+        #59
+        _int
+          1
+        : Int
+        #60
+        _branch
+          e1
+          Int
+          #60
+          _int
+            1
+          : Int
+        #61
+        _branch
+          e2
+          Object
+          #61
+          _object
+            e2
+          : Object
+      : Object
+    #65
+    _method
+      test3
+      #65
+      _formal
+        p1
+        Int
+      #65
+      _formal
+        p2
+        Int
+      Int
+      #66
+      _plus
+        #66
+        _object
+          p1
+        : Int
+        #66
+        _object
+          p2
+        : Int
+      : Int
+    #69
+    _method
+      test4
+      #69
+      _formal
+        p1
+        Int
+      #69
+      _formal
+        p2
+        Int
+      Bool
+      #70
+      _lt
+        #70
+        _object
+          p1
+        : Int
+        #70
+        _object
+          p2
+        : Int
+      : Bool
+    #73
+    _method
+      test5
+      Int
+      #74
+      _new
+        Int
+      : Int
+    #77
+    _method
+      test6
+      #77
+      _formal
+        p
+        Int
+      Int
+      #78
+      _cond
+        #78
+        _isvoid
+          #78
+          _object
+            p
+          : Int
+        : Bool
+        #79
+        _int
+          1
+        : Int
+        #81
+        _int
+          0
+        : Int
+      : Int
+    #85
     _method
       main
-      Int
-      #2
-      _int
-        0
+      Object
+      #86
+      _dispatch
+        #86
+        _object
+          self
+        : SELF_TYPE
+        add
+        (
+        #86
+        _object
+          a
+        : Int
+        #86
+        _object
+          b
+        : Int
+        #86
+        _object
+          c
+        : Int
+        )
       : Int
     )

@@ -11,11 +11,11 @@
 	.globl	_bool_tag
 	.globl	_string_tag
 _int_tag:
-	.word	10
+	.word	2
 _bool_tag:
-	.word	11
+	.word	3
 _string_tag:
-	.word	12
+	.word	4
 	.globl	_MemMgr_INITIALIZER
 _MemMgr_INITIALIZER:
 	.word	_GenGC_Init
@@ -26,124 +26,97 @@ _MemMgr_COLLECTOR:
 _MemMgr_TEST:
 	.word	0
 	.word	-1
-str_const72:
-	.word	12
+str_const75:
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const1
 	.byte	0	
 	.align	2
 	.word	-1
-str_const71:
-	.word	12
-	.word	8
+str_const74:
+	.word	4
+	.word	6
 	.word	String_dispTab
 	.word	int_const2
-	.ascii	"LambdaListRef"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const70:
-	.word	12
-	.word	8
-	.word	String_dispTab
-	.word	int_const3
-	.ascii	"LambdaListNE"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const69:
-	.word	12
-	.word	7
-	.word	String_dispTab
-	.word	int_const4
-	.ascii	"LambdaList"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const68:
-	.word	12
-	.word	6
-	.word	String_dispTab
-	.word	int_const5
-	.ascii	"String"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const67:
-	.word	12
-	.word	6
-	.word	String_dispTab
-	.word	int_const6
-	.ascii	"Bool"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const66:
-	.word	12
-	.word	5
-	.word	String_dispTab
-	.word	int_const7
-	.ascii	"Int"
-	.byte	0	
-	.align	2
-	.word	-1
-str_const65:
-	.word	12
-	.word	6
-	.word	String_dispTab
-	.word	int_const6
 	.ascii	"Main"
 	.byte	0	
 	.align	2
 	.word	-1
-str_const64:
-	.word	12
+str_const73:
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const6
+	.word	int_const2
 	.ascii	"Term"
 	.byte	0	
 	.align	2
 	.word	-1
-str_const63:
-	.word	12
+str_const72:
+	.word	4
 	.word	5
 	.word	String_dispTab
-	.word	int_const7
+	.word	int_const3
 	.ascii	"App"
 	.byte	0	
 	.align	2
 	.word	-1
-str_const62:
-	.word	12
+str_const71:
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const5
+	.word	int_const4
 	.ascii	"Lambda"
 	.byte	0	
 	.align	2
 	.word	-1
-str_const61:
-	.word	12
+str_const70:
+	.word	4
 	.word	7
 	.word	String_dispTab
-	.word	int_const8
+	.word	int_const5
 	.ascii	"Variable"
 	.byte	0	
 	.align	2
 	.word	-1
-str_const60:
-	.word	12
+str_const69:
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const6
+	.word	int_const2
 	.ascii	"Expr"
 	.byte	0	
 	.align	2
 	.word	-1
-str_const59:
-	.word	12
+str_const68:
+	.word	4
+	.word	8
+	.word	String_dispTab
+	.word	int_const6
+	.ascii	"LambdaListRef"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const67:
+	.word	4
+	.word	8
+	.word	String_dispTab
+	.word	int_const7
+	.ascii	"LambdaListNE"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const66:
+	.word	4
+	.word	7
+	.word	String_dispTab
+	.word	int_const8
+	.ascii	"LambdaList"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const65:
+	.word	4
 	.word	7
 	.word	String_dispTab
 	.word	int_const9
@@ -151,8 +124,8 @@ str_const59:
 	.byte	0	
 	.align	2
 	.word	-1
-str_const58:
-	.word	12
+str_const64:
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const10
@@ -160,8 +133,35 @@ str_const58:
 	.byte	0	
 	.align	2
 	.word	-1
-str_const57:
-	.word	12
+str_const63:
+	.word	4
+	.word	6
+	.word	String_dispTab
+	.word	int_const4
+	.ascii	"String"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const62:
+	.word	4
+	.word	6
+	.word	String_dispTab
+	.word	int_const2
+	.ascii	"Bool"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const61:
+	.word	4
+	.word	5
+	.word	String_dispTab
+	.word	int_const3
+	.ascii	"Int"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const60:
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const11
@@ -169,26 +169,53 @@ str_const57:
 	.byte	0	
 	.align	2
 	.word	-1
-str_const56:
-	.word	12
+str_const59:
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const5
+	.word	int_const4
 	.ascii	"Object"
 	.byte	0	
 	.align	2
 	.word	-1
+str_const58:
+	.word	4
+	.word	7
+	.word	String_dispTab
+	.word	int_const8
+	.ascii	"_prim_slot"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const57:
+	.word	4
+	.word	7
+	.word	String_dispTab
+	.word	int_const9
+	.ascii	"SELF_TYPE"
+	.byte	0	
+	.align	2
+	.word	-1
+str_const56:
+	.word	4
+	.word	7
+	.word	String_dispTab
+	.word	int_const9
+	.ascii	"_no_class"
+	.byte	0	
+	.align	2
+	.word	-1
 str_const55:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const2
+	.word	int_const6
 	.ascii	"<basic class>"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const54:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const10
@@ -197,7 +224,7 @@ str_const54:
 	.align	2
 	.word	-1
 str_const53:
-	.word	12
+	.word	4
 	.word	11
 	.word	String_dispTab
 	.word	int_const12
@@ -206,16 +233,16 @@ str_const53:
 	.align	2
 	.word	-1
 str_const52:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const2
+	.word	int_const6
 	.ascii	"class Main {\n"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const51:
-	.word	12
+	.word	4
 	.word	17
 	.word	String_dispTab
 	.word	int_const13
@@ -224,7 +251,7 @@ str_const51:
 	.align	2
 	.word	-1
 str_const50:
-	.word	12
+	.word	4
 	.word	16
 	.word	String_dispTab
 	.word	int_const14
@@ -233,7 +260,7 @@ str_const50:
 	.align	2
 	.word	-1
 str_const49:
-	.word	12
+	.word	4
 	.word	10
 	.word	String_dispTab
 	.word	int_const15
@@ -242,7 +269,7 @@ str_const49:
 	.align	2
 	.word	-1
 str_const48:
-	.word	12
+	.word	4
 	.word	20
 	.word	String_dispTab
 	.word	int_const16
@@ -251,7 +278,7 @@ str_const48:
 	.align	2
 	.word	-1
 str_const47:
-	.word	12
+	.word	4
 	.word	19
 	.word	String_dispTab
 	.word	int_const17
@@ -260,7 +287,7 @@ str_const47:
 	.align	2
 	.word	-1
 str_const46:
-	.word	12
+	.word	4
 	.word	12
 	.word	String_dispTab
 	.word	int_const18
@@ -269,7 +296,7 @@ str_const46:
 	.align	2
 	.word	-1
 str_const45:
-	.word	12
+	.word	4
 	.word	14
 	.word	String_dispTab
 	.word	int_const19
@@ -278,7 +305,7 @@ str_const45:
 	.align	2
 	.word	-1
 str_const44:
-	.word	12
+	.word	4
 	.word	9
 	.word	String_dispTab
 	.word	int_const20
@@ -287,7 +314,7 @@ str_const44:
 	.align	2
 	.word	-1
 str_const43:
-	.word	12
+	.word	4
 	.word	10
 	.word	String_dispTab
 	.word	int_const15
@@ -296,7 +323,7 @@ str_const43:
 	.align	2
 	.word	-1
 str_const42:
-	.word	12
+	.word	4
 	.word	14
 	.word	String_dispTab
 	.word	int_const21
@@ -305,7 +332,7 @@ str_const42:
 	.align	2
 	.word	-1
 str_const41:
-	.word	12
+	.word	4
 	.word	16
 	.word	String_dispTab
 	.word	int_const14
@@ -314,7 +341,7 @@ str_const41:
 	.align	2
 	.word	-1
 str_const40:
-	.word	12
+	.word	4
 	.word	12
 	.word	String_dispTab
 	.word	int_const22
@@ -323,25 +350,25 @@ str_const40:
 	.align	2
 	.word	-1
 str_const39:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const6
+	.word	int_const2
 	.ascii	" =>\n"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const38:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const2
+	.word	int_const6
 	.ascii	"beta-reduce: "
 	.byte	0	
 	.align	2
 	.word	-1
 str_const37:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -350,7 +377,7 @@ str_const37:
 	.align	2
 	.word	-1
 str_const36:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -359,7 +386,7 @@ str_const36:
 	.align	2
 	.word	-1
 str_const35:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -368,7 +395,7 @@ str_const35:
 	.align	2
 	.word	-1
 str_const34:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const10
@@ -377,7 +404,7 @@ str_const34:
 	.align	2
 	.word	-1
 str_const33:
-	.word	12
+	.word	4
 	.word	17
 	.word	String_dispTab
 	.word	int_const23
@@ -386,7 +413,7 @@ str_const33:
 	.align	2
 	.word	-1
 str_const32:
-	.word	12
+	.word	4
 	.word	12
 	.word	String_dispTab
 	.word	int_const22
@@ -395,25 +422,25 @@ str_const32:
 	.align	2
 	.word	-1
 str_const31:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const3
+	.word	int_const7
 	.ascii	"  case x of\n"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const30:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const6
+	.word	int_const2
 	.ascii	" in\n"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const29:
-	.word	12
+	.word	4
 	.word	10
 	.word	String_dispTab
 	.word	int_const24
@@ -422,7 +449,7 @@ str_const29:
 	.align	2
 	.word	-1
 str_const28:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const11
@@ -431,7 +458,7 @@ str_const28:
 	.align	2
 	.word	-1
 str_const27:
-	.word	12
+	.word	4
 	.word	10
 	.word	String_dispTab
 	.word	int_const24
@@ -440,7 +467,7 @@ str_const27:
 	.align	2
 	.word	-1
 str_const26:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const11
@@ -449,16 +476,16 @@ str_const26:
 	.align	2
 	.word	-1
 str_const25:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
-	.word	int_const7
+	.word	int_const3
 	.ascii	")@("
 	.byte	0	
 	.align	2
 	.word	-1
 str_const24:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const11
@@ -467,16 +494,16 @@ str_const24:
 	.align	2
 	.word	-1
 str_const23:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
-	.word	int_const7
+	.word	int_const3
 	.ascii	"};\n"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const22:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const25
@@ -485,7 +512,7 @@ str_const22:
 	.align	2
 	.word	-1
 str_const21:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
 	.word	int_const26
@@ -494,17 +521,17 @@ str_const21:
 	.align	2
 	.word	-1
 str_const20:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const5
+	.word	int_const4
 	.byte	92
 	.ascii	"n\");\n"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const19:
-	.word	12
+	.word	4
 	.word	13
 	.word	String_dispTab
 	.word	int_const27
@@ -513,7 +540,7 @@ str_const19:
 	.align	2
 	.word	-1
 str_const18:
-	.word	12
+	.word	4
 	.word	14
 	.word	String_dispTab
 	.word	int_const28
@@ -522,7 +549,7 @@ str_const18:
 	.align	2
 	.word	-1
 str_const17:
-	.word	12
+	.word	4
 	.word	10
 	.word	String_dispTab
 	.word	int_const15
@@ -531,34 +558,34 @@ str_const17:
 	.align	2
 	.word	-1
 str_const16:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const2
+	.word	int_const6
 	.ascii	"class Closure"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const15:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
-	.word	int_const5
+	.word	int_const4
 	.ascii	"self))"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const14:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const2
+	.word	int_const6
 	.ascii	"new Closure))"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const13:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const10
@@ -567,16 +594,16 @@ str_const13:
 	.align	2
 	.word	-1
 str_const12:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const2
+	.word	int_const6
 	.ascii	"((new Closure"
 	.byte	0	
 	.align	2
 	.word	-1
 str_const11:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -585,7 +612,7 @@ str_const11:
 	.align	2
 	.word	-1
 str_const10:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -594,7 +621,7 @@ str_const10:
 	.align	2
 	.word	-1
 str_const9:
-	.word	12
+	.word	4
 	.word	6
 	.word	String_dispTab
 	.word	int_const10
@@ -603,7 +630,7 @@ str_const9:
 	.align	2
 	.word	-1
 str_const8:
-	.word	12
+	.word	4
 	.word	11
 	.word	String_dispTab
 	.word	int_const29
@@ -612,16 +639,16 @@ str_const8:
 	.align	2
 	.word	-1
 str_const7:
-	.word	12
+	.word	4
 	.word	8
 	.word	String_dispTab
-	.word	int_const2
+	.word	int_const6
 	.ascii	"get_parent()."
 	.byte	0	
 	.align	2
 	.word	-1
 str_const6:
-	.word	12
+	.word	4
 	.word	16
 	.word	String_dispTab
 	.word	int_const30
@@ -630,7 +657,7 @@ str_const6:
 	.align	2
 	.word	-1
 str_const5:
-	.word	12
+	.word	4
 	.word	16
 	.word	String_dispTab
 	.word	int_const31
@@ -639,7 +666,7 @@ str_const5:
 	.align	2
 	.word	-1
 str_const4:
-	.word	12
+	.word	4
 	.word	17
 	.word	String_dispTab
 	.word	int_const23
@@ -648,7 +675,7 @@ str_const4:
 	.align	2
 	.word	-1
 str_const3:
-	.word	12
+	.word	4
 	.word	16
 	.word	String_dispTab
 	.word	int_const31
@@ -657,7 +684,7 @@ str_const3:
 	.align	2
 	.word	-1
 str_const2:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -666,7 +693,7 @@ str_const2:
 	.align	2
 	.word	-1
 str_const1:
-	.word	12
+	.word	4
 	.word	5
 	.word	String_dispTab
 	.word	int_const0
@@ -675,7 +702,7 @@ str_const1:
 	.align	2
 	.word	-1
 str_const0:
-	.word	12
+	.word	4
 	.word	7
 	.word	String_dispTab
 	.word	int_const32
@@ -684,218 +711,215 @@ str_const0:
 	.align	2
 	.word	-1
 int_const32:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	11
 	.word	-1
 int_const31:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	47
 	.word	-1
 int_const30:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	45
 	.word	-1
 int_const29:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	27
 	.word	-1
 int_const28:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	39
 	.word	-1
 int_const27:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	35
 	.word	-1
 int_const26:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	14
 	.word	-1
 int_const25:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	5
 	.word	-1
 int_const24:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	23
 	.word	-1
 int_const23:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	48
 	.word	-1
 int_const22:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	31
 	.word	-1
 int_const21:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	36
 	.word	-1
 int_const20:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	18
 	.word	-1
 int_const19:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	37
 	.word	-1
 int_const18:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	30
 	.word	-1
 int_const17:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	56
 	.word	-1
 int_const16:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	61
 	.word	-1
 int_const15:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	20
 	.word	-1
 int_const14:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	46
 	.word	-1
 int_const13:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	50
 	.word	-1
 int_const12:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	24
 	.word	-1
 int_const11:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	2
 	.word	-1
 int_const10:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	7
 	.word	-1
 int_const9:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	9
 	.word	-1
 int_const8:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
-	.word	8
+	.word	10
 	.word	-1
 int_const7:
-	.word	10
-	.word	4
-	.word	Int_dispTab
-	.word	3
-	.word	-1
-int_const6:
-	.word	10
-	.word	4
-	.word	Int_dispTab
-	.word	4
-	.word	-1
-int_const5:
-	.word	10
-	.word	4
-	.word	Int_dispTab
-	.word	6
-	.word	-1
-int_const4:
-	.word	10
-	.word	4
-	.word	Int_dispTab
-	.word	10
-	.word	-1
-int_const3:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	12
 	.word	-1
-int_const2:
-	.word	10
+int_const6:
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	13
 	.word	-1
+int_const5:
+	.word	2
+	.word	4
+	.word	Int_dispTab
+	.word	8
+	.word	-1
+int_const4:
+	.word	2
+	.word	4
+	.word	Int_dispTab
+	.word	6
+	.word	-1
+int_const3:
+	.word	2
+	.word	4
+	.word	Int_dispTab
+	.word	3
+	.word	-1
+int_const2:
+	.word	2
+	.word	4
+	.word	Int_dispTab
+	.word	4
+	.word	-1
 int_const1:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	0
 	.word	-1
 int_const0:
-	.word	10
+	.word	2
 	.word	4
 	.word	Int_dispTab
 	.word	1
 	.word	-1
 bool_const0:
-	.word	11
+	.word	3
 	.word	4
 	.word	Bool_dispTab
 	.word	0
 	.word	-1
 bool_const1:
-	.word	11
+	.word	3
 	.word	4
 	.word	Bool_dispTab
 	.word	1
 class_nameTab:
-	.word	str_const56
-	.word	str_const57
-	.word	str_const58
 	.word	str_const59
 	.word	str_const60
 	.word	str_const61
@@ -909,15 +933,30 @@ class_nameTab:
 	.word	str_const69
 	.word	str_const70
 	.word	str_const71
+	.word	str_const72
+	.word	str_const73
+	.word	str_const74
 class_objTab:
 	.word	Object_protObj
 	.word	Object_init
 	.word	IO_protObj
 	.word	IO_init
+	.word	Int_protObj
+	.word	Int_init
+	.word	Bool_protObj
+	.word	Bool_init
+	.word	String_protObj
+	.word	String_init
 	.word	VarList_protObj
 	.word	VarList_init
 	.word	VarListNE_protObj
 	.word	VarListNE_init
+	.word	LambdaList_protObj
+	.word	LambdaList_init
+	.word	LambdaListNE_protObj
+	.word	LambdaListNE_init
+	.word	LambdaListRef_protObj
+	.word	LambdaListRef_init
 	.word	Expr_protObj
 	.word	Expr_init
 	.word	Variable_protObj
@@ -930,190 +969,334 @@ class_objTab:
 	.word	Term_init
 	.word	Main_protObj
 	.word	Main_init
-	.word	Int_protObj
-	.word	Int_init
-	.word	Bool_protObj
-	.word	Bool_init
-	.word	String_protObj
-	.word	String_init
-	.word	LambdaList_protObj
-	.word	LambdaList_init
-	.word	LambdaListNE_protObj
-	.word	LambdaListNE_init
-	.word	LambdaListRef_protObj
-	.word	LambdaListRef_init
 Object_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
 IO_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
+	# metho # 3
 	.word	IO.out_string
+	# metho # 4
 	.word	IO.out_int
+	# metho # 5
 	.word	IO.in_string
+	# metho # 6
 	.word	IO.in_int
-VarList_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	VarList.isNil
-	.word	VarList.head
-	.word	VarList.tail
-	.word	VarList.add
-	.word	VarList.print
-VarListNE_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	VarListNE.isNil
-	.word	VarListNE.head
-	.word	VarListNE.tail
-	.word	VarList.add
-	.word	VarListNE.print
-	.word	VarListNE.init
-Expr_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	Expr.print_self
-	.word	Expr.beta
-	.word	Expr.substitute
-	.word	Expr.gen_code
-Variable_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	Variable.print_self
-	.word	Variable.beta
-	.word	Variable.substitute
-	.word	Variable.gen_code
-	.word	Variable.init
-Lambda_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	Lambda.print_self
-	.word	Lambda.beta
-	.word	Lambda.substitute
-	.word	Lambda.gen_code
-	.word	Lambda.init
-	.word	Lambda.apply
-	.word	Lambda.gen_closure_code
-App_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	App.print_self
-	.word	App.beta
-	.word	App.substitute
-	.word	App.gen_code
-	.word	App.init
-Term_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	Term.var
-	.word	Term.lam
-	.word	Term.app
-	.word	Term.i
-	.word	Term.k
-	.word	Term.s
-Main_dispTab:
-	.word	Object.abort
-	.word	Object.type_name
-	.word	Object.copy
-	.word	IO.out_string
-	.word	IO.out_int
-	.word	IO.in_string
-	.word	IO.in_int
-	.word	Term.var
-	.word	Term.lam
-	.word	Term.app
-	.word	Term.i
-	.word	Term.k
-	.word	Term.s
-	.word	Main.beta_reduce
-	.word	Main.eval_class
-	.word	Main.closure_class
-	.word	Main.gen_code
-	.word	Main.main
 Int_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
 Bool_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
 String_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
+	# metho # 3
 	.word	String.length
+	# metho # 4
 	.word	String.concat
+	# metho # 5
 	.word	String.substr
-LambdaList_dispTab:
+VarList_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	VarList.isNil
+	# metho # 8
+	.word	VarList.head
+	# metho # 9
+	.word	VarList.tail
+	# metho # 10
+	.word	VarList.add
+	# metho # 11
+	.word	VarList.print
+VarListNE_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	VarListNE.isNil
+	# metho # 8
+	.word	VarListNE.head
+	# metho # 9
+	.word	VarListNE.tail
+	# metho # 10
+	.word	VarList.add
+	# metho # 11
+	.word	VarListNE.print
+	# metho # 12
+	.word	VarListNE.init
+LambdaList_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
 	.word	LambdaList.isNil
+	# metho # 4
 	.word	LambdaList.headE
+	# metho # 5
 	.word	LambdaList.headC
+	# metho # 6
 	.word	LambdaList.headN
+	# metho # 7
 	.word	LambdaList.tail
+	# metho # 8
 	.word	LambdaList.add
 LambdaListNE_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
+	# metho # 3
 	.word	LambdaListNE.isNil
+	# metho # 4
 	.word	LambdaListNE.headE
+	# metho # 5
 	.word	LambdaListNE.headC
+	# metho # 6
 	.word	LambdaListNE.headN
+	# metho # 7
 	.word	LambdaListNE.tail
+	# metho # 8
 	.word	LambdaList.add
+	# metho # 9
 	.word	LambdaListNE.init
 LambdaListRef_dispTab:
+	# metho # 0
 	.word	Object.abort
+	# metho # 1
 	.word	Object.type_name
+	# metho # 2
 	.word	Object.copy
+	# metho # 3
 	.word	LambdaListRef.isNil
+	# metho # 4
 	.word	LambdaListRef.headE
+	# metho # 5
 	.word	LambdaListRef.headC
+	# metho # 6
 	.word	LambdaListRef.headN
+	# metho # 7
 	.word	LambdaListRef.reset
+	# metho # 8
 	.word	LambdaListRef.add
+	# metho # 9
 	.word	LambdaListRef.removeHead
+Expr_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	Expr.print_self
+	# metho # 8
+	.word	Expr.beta
+	# metho # 9
+	.word	Expr.substitute
+	# metho # 10
+	.word	Expr.gen_code
+Variable_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	Variable.print_self
+	# metho # 8
+	.word	Variable.beta
+	# metho # 9
+	.word	Variable.substitute
+	# metho # 10
+	.word	Variable.gen_code
+	# metho # 11
+	.word	Variable.init
+Lambda_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	Lambda.print_self
+	# metho # 8
+	.word	Lambda.beta
+	# metho # 9
+	.word	Lambda.substitute
+	# metho # 10
+	.word	Lambda.gen_code
+	# metho # 11
+	.word	Lambda.init
+	# metho # 12
+	.word	Lambda.apply
+	# metho # 13
+	.word	Lambda.gen_closure_code
+App_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	App.print_self
+	# metho # 8
+	.word	App.beta
+	# metho # 9
+	.word	App.substitute
+	# metho # 10
+	.word	App.gen_code
+	# metho # 11
+	.word	App.init
+Term_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	Term.var
+	# metho # 8
+	.word	Term.lam
+	# metho # 9
+	.word	Term.app
+	# metho # 10
+	.word	Term.i
+	# metho # 11
+	.word	Term.k
+	# metho # 12
+	.word	Term.s
+Main_dispTab:
+	# metho # 0
+	.word	Object.abort
+	# metho # 1
+	.word	Object.type_name
+	# metho # 2
+	.word	Object.copy
+	# metho # 3
+	.word	IO.out_string
+	# metho # 4
+	.word	IO.out_int
+	# metho # 5
+	.word	IO.in_string
+	# metho # 6
+	.word	IO.in_int
+	# metho # 7
+	.word	Term.var
+	# metho # 8
+	.word	Term.lam
+	# metho # 9
+	.word	Term.app
+	# metho # 10
+	.word	Term.i
+	# metho # 11
+	.word	Term.k
+	# metho # 12
+	.word	Term.s
+	# metho # 13
+	.word	Main.beta_reduce
+	# metho # 14
+	.word	Main.eval_class
+	# metho # 15
+	.word	Main.closure_class
+	# metho # 16
+	.word	Main.gen_code
+	# metho # 17
+	.word	Main.main
 	.word	-1
 Object_protObj:
 	.word	0
@@ -1125,92 +1308,92 @@ IO_protObj:
 	.word	3
 	.word	IO_dispTab
 	.word	-1
-VarList_protObj:
+Int_protObj:
 	.word	2
+	.word	4
+	.word	Int_dispTab
+	.word	0	# val(0)
+	.word	-1
+Bool_protObj:
+	.word	3
+	.word	4
+	.word	Bool_dispTab
+	.word	0	# val(0)
+	.word	-1
+String_protObj:
+	.word	4
+	.word	5
+	.word	String_dispTab
+	.word	int_const1	# int(0)
+	.word	0	# str(0)
+	.word	-1
+VarList_protObj:
+	.word	5
 	.word	3
 	.word	VarList_dispTab
 	.word	-1
 VarListNE_protObj:
-	.word	3
-	.word	5
-	.word	VarListNE_dispTab
-	.word	0
-	.word	0
-	.word	-1
-Expr_protObj:
-	.word	4
-	.word	3
-	.word	Expr_dispTab
-	.word	-1
-Variable_protObj:
-	.word	5
-	.word	4
-	.word	Variable_dispTab
-	.word	str_const72
-	.word	-1
-Lambda_protObj:
 	.word	6
 	.word	5
-	.word	Lambda_dispTab
-	.word	0
-	.word	0
-	.word	-1
-App_protObj:
-	.word	7
-	.word	5
-	.word	App_dispTab
-	.word	0
-	.word	0
-	.word	-1
-Term_protObj:
-	.word	8
-	.word	3
-	.word	Term_dispTab
-	.word	-1
-Main_protObj:
-	.word	9
-	.word	3
-	.word	Main_dispTab
-	.word	-1
-Int_protObj:
-	.word	10
-	.word	4
-	.word	Int_dispTab
-	.word	0
-	.word	-1
-Bool_protObj:
-	.word	11
-	.word	4
-	.word	Bool_dispTab
-	.word	0
-	.word	-1
-String_protObj:
-	.word	12
-	.word	5
-	.word	String_dispTab
-	.word	int_const1
-	.word	0
+	.word	VarListNE_dispTab
+	.word	0	# void
+	.word	0	# void
 	.word	-1
 LambdaList_protObj:
-	.word	13
+	.word	7
 	.word	3
 	.word	LambdaList_dispTab
 	.word	-1
 LambdaListNE_protObj:
-	.word	14
+	.word	8
 	.word	7
 	.word	LambdaListNE_dispTab
-	.word	0
-	.word	int_const1
-	.word	0
-	.word	0
+	.word	0	# void
+	.word	int_const1	# int(0)
+	.word	0	# void
+	.word	0	# void
 	.word	-1
 LambdaListRef_protObj:
-	.word	15
+	.word	9
 	.word	5
 	.word	LambdaListRef_dispTab
-	.word	int_const1
-	.word	0
+	.word	int_const1	# int(0)
+	.word	0	# void
+	.word	-1
+Expr_protObj:
+	.word	10
+	.word	3
+	.word	Expr_dispTab
+	.word	-1
+Variable_protObj:
+	.word	11
+	.word	4
+	.word	Variable_dispTab
+	.word	str_const75
+	.word	-1
+Lambda_protObj:
+	.word	12
+	.word	5
+	.word	Lambda_dispTab
+	.word	0	# void
+	.word	0	# void
+	.word	-1
+App_protObj:
+	.word	13
+	.word	5
+	.word	App_dispTab
+	.word	0	# void
+	.word	0	# void
+	.word	-1
+Term_protObj:
+	.word	14
+	.word	3
+	.word	Term_dispTab
+	.word	-1
+Main_protObj:
+	.word	15
+	.word	3
+	.word	Main_dispTab
 	.globl	heap_start
 heap_start:
 	.word	0
@@ -1232,7 +1415,7 @@ Object_init:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 IO_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1240,125 +1423,14 @@ IO_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	Object_init
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
-VarList_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	IO_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-VarListNE_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	VarList_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Expr_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	IO_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Variable_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Expr_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Lambda_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Expr_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-App_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Expr_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Term_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	IO_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Main_init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	jal	Term_init
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 Int_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1366,13 +1438,14 @@ Int_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	Object_init
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 Bool_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1380,13 +1453,14 @@ Bool_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	Object_init
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 String_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1394,13 +1468,46 @@ String_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	Object_init
+	la	$a0 int_const1
+	sw	$a0 12($s0)
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
+VarList_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	IO_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+VarListNE_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	VarList_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
 LambdaList_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1408,13 +1515,14 @@ LambdaList_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	Object_init
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 LambdaListNE_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1422,13 +1530,16 @@ LambdaListNE_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	LambdaList_init
+	la	$a0 int_const1
+	sw	$a0 16($s0)
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
 LambdaListRef_init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1436,7 +1547,9 @@ LambdaListRef_init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# init parent
 	jal	Object_init
+	# int_const_class:0
 	la	$a0 int_const1
 	sw	$a0 12($s0)
 	addiu	$a1 $s0 12
@@ -1446,7 +1559,99 @@ LambdaListRef_init:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	jalr		$ra
+Expr_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	IO_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+Variable_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	Expr_init
+	la	$a0 str_const75
+	sw	$a0 12($s0)
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+Lambda_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	Expr_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+App_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	Expr_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+Term_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	IO_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
+Main_init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# init parent
+	jal	Term_init
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	jalr		$ra
 VarList.isNil:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1454,12 +1659,15 @@ VarList.isNil:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# bool_const_class:1
 	la	$a0 bool_const1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 VarList.head:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1467,15 +1675,30 @@ VarList.head:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label0
 	la	$a0 str_const0
-	li	$t1 23
+	li	$t1 1
 	jal	_dispatch_abort
 label0:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
 	lw	$t1 0($t1)
+	# jmptp abort
 	jalr		$t1
+	# new__class
 	la	$a0 Variable_protObj
 	jal	Object.copy
 	jal	Variable_init
@@ -1483,7 +1706,8 @@ label0:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 VarList.tail:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1491,15 +1715,30 @@ VarList.tail:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label1
 	la	$a0 str_const0
-	li	$t1 24
+	li	$t1 1
 	jal	_dispatch_abort
 label1:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
 	lw	$t1 0($t1)
+	# jmptp abort
 	jalr		$t1
+	# new__class
 	la	$a0 VarList_protObj
 	jal	Object.copy
 	jal	VarList_init
@@ -1507,7 +1746,8 @@ label1:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 VarList.add:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1515,28 +1755,49 @@ VarList.add:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a param:x:0
 	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# SELF_TYPE
+	# Object_class:
+	# It is self
 	move	$a0 $s0
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# new__class
 	la	$a0 VarListNE_protObj
 	jal	Object.copy
 	jal	VarListNE_init
+	# if obj = void
 	bne	$a0 $zero label2
 	la	$a0 str_const0
-	li	$t1 25
+	li	$t1 1
 	jal	_dispatch_abort
 label2:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarListNE
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
 	lw	$t1 48($t1)
+	# jmptp init
 	jalr		$t1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
-	addiu	$sp $sp 16
-	jr	$ra	
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
 VarList.print:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1544,23 +1805,39 @@ VarList.print:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
 	la	$a0 str_const1
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label3
 	la	$a0 str_const0
-	li	$t1 26
+	li	$t1 1
 	jal	_dispatch_abort
 label3:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
 	lw	$t1 12($t1)
+	# jmptp out_string
 	jalr		$t1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 VarListNE.isNil:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1568,12 +1845,15 @@ VarListNE.isNil:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# bool_const_class:0
 	la	$a0 bool_const0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 VarListNE.head:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1581,12 +1861,18 @@ VarListNE.head:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is a attrib:x
 	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 VarListNE.tail:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1594,12 +1880,18 @@ VarListNE.tail:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is a attrib:rest
 	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 VarListNE.init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1607,20 +1899,41 @@ VarListNE.init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:y:1
 	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.x
 	sw	$a0 12($s0)
 	addiu	$a1 $s0 12
 	jal	_GenGC_Assign
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:r:0
 	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.rest
 	sw	$a0 16($s0)
 	addiu	$a1 $s0 16
 	jal	_GenGC_Assign
+	# Object_class:
+	# It is self
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
 VarListNE.print:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -1628,2765 +1941,89 @@ VarListNE.print:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:x
 	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# if obj = void
 	bne	$a0 $zero label4
 	la	$a0 str_const0
-	li	$t1 36
+	li	$t1 1
 	jal	_dispatch_abort
 label4:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
 	lw	$t1 28($t1)
+	# jmptp print_self
 	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
 	la	$a0 str_const2
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
+	# if obj = void
 	bne	$a0 $zero label5
 	la	$a0 str_const0
-	li	$t1 36
+	li	$t1 1
 	jal	_dispatch_abort
 label5:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarListNE
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
 	lw	$t1 12($t1)
+	# jmptp out_string
 	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:rest
 	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
 	bne	$a0 $zero label6
 	la	$a0 str_const0
-	li	$t1 37
+	li	$t1 1
 	jal	_dispatch_abort
 label6:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
 	lw	$t1 44($t1)
+	# jmptp print
 	jalr		$t1
+	# Object_class:
+	# It is self
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
-Expr.print_self:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const3
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label7
-	la	$a0 str_const0
-	li	$t1 116
-	jal	_dispatch_abort
-label7:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label8
-	la	$a0 str_const0
-	li	$t1 117
-	jal	_dispatch_abort
-label8:
-	lw	$t1 8($a0)
-	lw	$t1 0($t1)
-	jalr		$t1
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Expr.beta:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const4
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label9
-	la	$a0 str_const0
-	li	$t1 125
-	jal	_dispatch_abort
-label9:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label10
-	la	$a0 str_const0
-	li	$t1 126
-	jal	_dispatch_abort
-label10:
-	lw	$t1 8($a0)
-	lw	$t1 0($t1)
-	jalr		$t1
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Expr.substitute:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const5
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label11
-	la	$a0 str_const0
-	li	$t1 134
-	jal	_dispatch_abort
-label11:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label12
-	la	$a0 str_const0
-	li	$t1 135
-	jal	_dispatch_abort
-label12:
-	lw	$t1 8($a0)
-	lw	$t1 0($t1)
-	jalr		$t1
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-Expr.gen_code:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const6
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label13
-	la	$a0 str_const0
-	li	$t1 143
-	jal	_dispatch_abort
-label13:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label14
-	la	$a0 str_const0
-	li	$t1 144
-	jal	_dispatch_abort
-label14:
-	lw	$t1 8($a0)
-	lw	$t1 0($t1)
-	jalr		$t1
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-Variable.init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	lw	$a0 12($fp)
-	sw	$a0 12($s0)
-	addiu	$a1 $s0 12
-	jal	_GenGC_Assign
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 16
-	jr	$ra	
-Variable.print_self:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	lw	$a0 12($s0)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label15
-	la	$a0 str_const0
-	li	$t1 164
-	jal	_dispatch_abort
-label15:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Variable.beta:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Variable.substitute:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 0($fp)
-	lw	$s1 20($fp)
-	move	$t2 $s0
-	move	$t1 $s1
-	la	$a0 bool_const1
-	beq	$t1 $t2 label18
-	la	$a1 bool_const0
-	jal	equality_test
-label18:
-	lw	$t1 12($a0)
-	beqz	$t1 label16
-	lw	$a0 16($fp)
-	b	label17
-label16:
-	move	$a0 $s0
-label17:
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
-Variable.gen_code:
-	addiu	$sp $sp -20
-	sw	$fp 20($sp)
-	sw	$s0 16($sp)
-	sw	$ra 12($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 4($fp)
-	sw	$s2 0($fp)
-	lw	$s2 24($fp)
-label19:
-	move	$a0 $s2
-	bne	$a0 $zero label23
-	la	$a0 str_const0
-	li	$t1 175
-	jal	_dispatch_abort
-label23:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	lw	$t1 12($a0)
-	beqz	$t1 label21
-	la	$a0 bool_const0
-	b	label22
-label21:
-	move	$a0 $s2
-	bne	$a0 $zero label26
-	la	$a0 str_const0
-	li	$t1 178
-	jal	_dispatch_abort
-label26:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	move	$s1 $a0
-	move	$t2 $s0
-	move	$t1 $s1
-	la	$a0 bool_const1
-	beq	$t1 $t2 label25
-	la	$a1 bool_const0
-	jal	equality_test
-label25:
-	lw	$t1 12($a0)
-	la	$a0 bool_const1
-	beqz	$t1 label24
-	la	$a0 bool_const0
-label24:
-label22:
-	lw	$t1 12($a0)
-	beq	$t1 $zero label20
-	la	$a0 str_const7
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label27
-	la	$a0 str_const0
-	li	$t1 180
-	jal	_dispatch_abort
-label27:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s2
-	bne	$a0 $zero label28
-	la	$a0 str_const0
-	li	$t1 181
-	jal	_dispatch_abort
-label28:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	move	$s2 $a0
-	b	label19
-label20:
-	move	$a0 $zero
-	move	$a0 $s2
-	bne	$a0 $zero label31
-	la	$a0 str_const0
-	li	$t1 184
-	jal	_dispatch_abort
-label31:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	lw	$t1 12($a0)
-	beqz	$t1 label29
-	la	$a0 str_const8
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label32
-	la	$a0 str_const0
-	li	$t1 185
-	jal	_dispatch_abort
-label32:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label33
-	la	$a0 str_const0
-	li	$t1 186
-	jal	_dispatch_abort
-label33:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label34
-	la	$a0 str_const0
-	li	$t1 187
-	jal	_dispatch_abort
-label34:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label35
-	la	$a0 str_const0
-	li	$t1 188
-	jal	_dispatch_abort
-label35:
-	lw	$t1 8($a0)
-	lw	$t1 0($t1)
-	jalr		$t1
-	move	$a0 $s0
-	b	label30
-label29:
-	la	$a0 str_const9
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label36
-	la	$a0 str_const0
-	li	$t1 192
-	jal	_dispatch_abort
-label36:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-label30:
-	lw	$s1 4($fp)
-	lw	$s2 0($fp)
-	lw	$fp 20($sp)
-	lw	$s0 16($sp)
-	lw	$ra 12($sp)
-	addiu	$sp $sp 28
-	jr	$ra	
-Lambda.init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	lw	$a0 16($fp)
-	sw	$a0 12($s0)
-	addiu	$a1 $s0 12
-	jal	_GenGC_Assign
-	lw	$a0 12($fp)
-	sw	$a0 16($s0)
-	addiu	$a1 $s0 16
-	jal	_GenGC_Assign
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-Lambda.print_self:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const10
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label37
-	la	$a0 str_const0
-	li	$t1 215
-	jal	_dispatch_abort
-label37:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 12($s0)
-	bne	$a0 $zero label38
-	la	$a0 str_const0
-	li	$t1 216
-	jal	_dispatch_abort
-label38:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const11
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label39
-	la	$a0 str_const0
-	li	$t1 217
-	jal	_dispatch_abort
-label39:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 16($s0)
-	bne	$a0 $zero label40
-	la	$a0 str_const0
-	li	$t1 218
-	jal	_dispatch_abort
-label40:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Lambda.beta:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Lambda.apply:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	lw	$a0 12($s0)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 12($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($s0)
-	bne	$a0 $zero label41
-	la	$a0 str_const0
-	li	$t1 226
-	jal	_dispatch_abort
-label41:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 16
-	jr	$ra	
-Lambda.substitute:
-	addiu	$sp $sp -20
-	sw	$fp 20($sp)
-	sw	$s0 16($sp)
-	sw	$ra 12($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 4($fp)
-	sw	$s2 0($fp)
-	lw	$s2 24($fp)
-	lw	$t2 12($s0)
-	move	$t1 $s2
-	la	$a0 bool_const1
-	beq	$t1 $t2 label44
-	la	$a1 bool_const0
-	jal	equality_test
-label44:
-	lw	$t1 12($a0)
-	beqz	$t1 label42
-	move	$a0 $s0
-	b	label43
-label42:
-	lw	$a0 24($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 20($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($s0)
-	bne	$a0 $zero label45
-	la	$a0 str_const0
-	li	$t1 234
-	jal	_dispatch_abort
-label45:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	move	$s2 $a0
-	la	$a0 Lambda_protObj
-	jal	Object.copy
-	jal	Lambda_init
-	move	$s1 $a0
-	lw	$a0 12($s0)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	sw	$s2 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s1
-	bne	$a0 $zero label46
-	la	$a0 str_const0
-	li	$t1 236
-	jal	_dispatch_abort
-label46:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-label43:
-	lw	$s1 4($fp)
-	lw	$s2 0($fp)
-	lw	$fp 20($sp)
-	lw	$s0 16($sp)
-	lw	$ra 12($sp)
-	addiu	$sp $sp 28
-	jr	$ra	
-Lambda.gen_code:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const12
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label47
-	la	$a0 str_const0
-	li	$t1 242
-	jal	_dispatch_abort
-label47:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 16($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 12($fp)
-	bne	$a0 $zero label48
-	la	$a0 str_const0
-	li	$t1 243
-	jal	_dispatch_abort
-label48:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label49
-	la	$a0 str_const0
-	li	$t1 243
-	jal	_dispatch_abort
-label49:
-	lw	$t1 8($a0)
-	lw	$t1 16($t1)
-	jalr		$t1
-	la	$a0 str_const13
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label50
-	la	$a0 str_const0
-	li	$t1 244
-	jal	_dispatch_abort
-label50:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 16($fp)
-	bne	$a0 $zero label53
-	la	$a0 str_const0
-	li	$t1 245
-	jal	_dispatch_abort
-label53:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	lw	$t1 12($a0)
-	beqz	$t1 label51
-	la	$a0 str_const14
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label54
-	la	$a0 str_const0
-	li	$t1 246
-	jal	_dispatch_abort
-label54:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	b	label52
-label51:
-	la	$a0 str_const15
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label55
-	la	$a0 str_const0
-	li	$t1 248
-	jal	_dispatch_abort
-label55:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-label52:
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-Lambda.gen_closure_code:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const16
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label56
-	la	$a0 str_const0
-	li	$t1 256
-	jal	_dispatch_abort
-label56:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 20($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label57
-	la	$a0 str_const0
-	li	$t1 257
-	jal	_dispatch_abort
-label57:
-	lw	$t1 8($a0)
-	lw	$t1 16($t1)
-	jalr		$t1
-	la	$a0 str_const17
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label58
-	la	$a0 str_const0
-	li	$t1 258
-	jal	_dispatch_abort
-label58:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const18
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label59
-	la	$a0 str_const0
-	li	$t1 259
-	jal	_dispatch_abort
-label59:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const19
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label60
-	la	$a0 str_const0
-	li	$t1 260
-	jal	_dispatch_abort
-label60:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 20($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label61
-	la	$a0 str_const0
-	li	$t1 261
-	jal	_dispatch_abort
-label61:
-	lw	$t1 8($a0)
-	lw	$t1 16($t1)
-	jalr		$t1
-	la	$a0 str_const20
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label62
-	la	$a0 str_const0
-	li	$t1 262
-	jal	_dispatch_abort
-label62:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const21
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label63
-	la	$a0 str_const0
-	li	$t1 263
-	jal	_dispatch_abort
-label63:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 12($s0)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($fp)
-	bne	$a0 $zero label64
-	la	$a0 str_const0
-	li	$t1 264
-	jal	_dispatch_abort
-label64:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 12($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($s0)
-	bne	$a0 $zero label65
-	la	$a0 str_const0
-	li	$t1 264
-	jal	_dispatch_abort
-label65:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	la	$a0 str_const22
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label66
-	la	$a0 str_const0
-	li	$t1 265
-	jal	_dispatch_abort
-label66:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const23
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label67
-	la	$a0 str_const0
-	li	$t1 266
-	jal	_dispatch_abort
-label67:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
-App.init:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	lw	$a0 16($fp)
-	sw	$a0 12($s0)
-	addiu	$a1 $s0 12
-	jal	_GenGC_Assign
-	lw	$a0 12($fp)
-	sw	$a0 16($s0)
-	addiu	$a1 $s0 16
-	jal	_GenGC_Assign
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-App.print_self:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const24
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label68
-	la	$a0 str_const0
-	li	$t1 288
-	jal	_dispatch_abort
-label68:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 12($s0)
-	bne	$a0 $zero label69
-	la	$a0 str_const0
-	li	$t1 289
-	jal	_dispatch_abort
-label69:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const25
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label70
-	la	$a0 str_const0
-	li	$t1 290
-	jal	_dispatch_abort
-label70:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 16($s0)
-	bne	$a0 $zero label71
-	la	$a0 str_const0
-	li	$t1 291
-	jal	_dispatch_abort
-label71:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const26
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label72
-	la	$a0 str_const0
-	li	$t1 292
-	jal	_dispatch_abort
-label72:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-App.beta:
-	addiu	$sp $sp -24
-	sw	$fp 24($sp)
-	sw	$s0 20($sp)
-	sw	$ra 16($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 8($fp)
-	sw	$s2 4($fp)
-	sw	$s3 0($fp)
-	lw	$a0 12($s0)
-	bne	$a0 $zero label74
-	la	$a0 str_const0
-	li	$t1 298
-	jal	_case_abort2
-label74:
-	lw	$t2 0($a0)
-	blt	$t2 6 label75
-	bgt	$t2 6 label75
-	move	$s3 $a0
-	lw	$a0 16($s0)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s3
-	bne	$a0 $zero label76
-	la	$a0 str_const0
-	li	$t1 299
-	jal	_dispatch_abort
-label76:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	b	label73
-label75:
-	blt	$t2 4 label77
-	bgt	$t2 7 label77
-	move	$s3 $a0
-	lw	$a0 12($s0)
-	bne	$a0 $zero label78
-	la	$a0 str_const0
-	li	$t1 301
-	jal	_dispatch_abort
-label78:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	move	$s2 $a0
-	la	$a0 App_protObj
-	jal	Object.copy
-	jal	App_init
-	move	$s1 $a0
-	sw	$s2 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($s0)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s1
-	bne	$a0 $zero label79
-	la	$a0 str_const0
-	li	$t1 303
-	jal	_dispatch_abort
-label79:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	b	label73
-label77:
-	jal	_case_abort
-label73:
-	lw	$s1 8($fp)
-	lw	$s2 4($fp)
-	lw	$s3 0($fp)
-	lw	$fp 24($sp)
-	lw	$s0 20($sp)
-	lw	$ra 16($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
-App.substitute:
-	addiu	$sp $sp -24
-	sw	$fp 24($sp)
-	sw	$s0 20($sp)
-	sw	$ra 16($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 8($fp)
-	sw	$s2 4($fp)
-	sw	$s3 0($fp)
-	lw	$a0 28($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 24($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 12($s0)
-	bne	$a0 $zero label80
-	la	$a0 str_const0
-	li	$t1 308
-	jal	_dispatch_abort
-label80:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	move	$s3 $a0
-	lw	$a0 28($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 24($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($s0)
-	bne	$a0 $zero label81
-	la	$a0 str_const0
-	li	$t1 309
-	jal	_dispatch_abort
-label81:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	move	$s2 $a0
-	la	$a0 App_protObj
-	jal	Object.copy
-	jal	App_init
-	move	$s1 $a0
-	sw	$s3 0($sp)
-	addiu	$sp $sp -4
-	sw	$s2 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s1
-	bne	$a0 $zero label82
-	la	$a0 str_const0
-	li	$t1 311
-	jal	_dispatch_abort
-label82:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	lw	$s1 8($fp)
-	lw	$s2 4($fp)
-	lw	$s3 0($fp)
-	lw	$fp 24($sp)
-	lw	$s0 20($sp)
-	lw	$ra 16($sp)
-	addiu	$sp $sp 32
-	jr	$ra	
-App.gen_code:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const27
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label83
-	la	$a0 str_const0
-	li	$t1 316
-	jal	_dispatch_abort
-label83:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 16($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 12($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 12($s0)
-	bne	$a0 $zero label84
-	la	$a0 str_const0
-	li	$t1 317
-	jal	_dispatch_abort
-label84:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	la	$a0 str_const28
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label85
-	la	$a0 str_const0
-	li	$t1 318
-	jal	_dispatch_abort
-label85:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const29
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label86
-	la	$a0 str_const0
-	li	$t1 319
-	jal	_dispatch_abort
-label86:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 16($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 12($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($s0)
-	bne	$a0 $zero label87
-	la	$a0 str_const0
-	li	$t1 320
-	jal	_dispatch_abort
-label87:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	la	$a0 str_const30
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label88
-	la	$a0 str_const0
-	li	$t1 321
-	jal	_dispatch_abort
-label88:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const31
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label89
-	la	$a0 str_const0
-	li	$t1 322
-	jal	_dispatch_abort
-label89:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const32
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label90
-	la	$a0 str_const0
-	li	$t1 323
-	jal	_dispatch_abort
-label90:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const33
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label91
-	la	$a0 str_const0
-	li	$t1 324
-	jal	_dispatch_abort
-label91:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const34
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label92
-	la	$a0 str_const0
-	li	$t1 325
-	jal	_dispatch_abort
-label92:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-Term.var:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 0($fp)
-	la	$a0 Variable_protObj
-	jal	Object.copy
-	jal	Variable_init
-	move	$s1 $a0
-	lw	$a0 16($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s1
-	bne	$a0 $zero label93
-	la	$a0 str_const0
-	li	$t1 341
-	jal	_dispatch_abort
-label93:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-Term.lam:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 0($fp)
-	la	$a0 Lambda_protObj
-	jal	Object.copy
-	jal	Lambda_init
-	move	$s1 $a0
-	lw	$a0 20($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s1
-	bne	$a0 $zero label94
-	la	$a0 str_const0
-	li	$t1 346
-	jal	_dispatch_abort
-label94:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
-Term.app:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 0($fp)
-	la	$a0 App_protObj
-	jal	Object.copy
-	jal	App_init
-	move	$s1 $a0
-	lw	$a0 20($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 16($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s1
-	bne	$a0 $zero label95
-	la	$a0 str_const0
-	li	$t1 351
-	jal	_dispatch_abort
-label95:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
-Term.i:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 0($fp)
-	la	$a0 str_const35
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label96
-	la	$a0 str_const0
-	li	$t1 358
-	jal	_dispatch_abort
-label96:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$s1 $a0
-	sw	$s1 0($sp)
-	addiu	$sp $sp -4
-	sw	$s1 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label97
-	la	$a0 str_const0
-	li	$t1 359
-	jal	_dispatch_abort
-label97:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 16
-	jr	$ra	
-Term.k:
-	addiu	$sp $sp -20
-	sw	$fp 20($sp)
-	sw	$s0 16($sp)
-	sw	$ra 12($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 4($fp)
-	sw	$s2 0($fp)
-	la	$a0 str_const35
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label98
-	la	$a0 str_const0
-	li	$t1 363
-	jal	_dispatch_abort
-label98:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$s2 $a0
-	la	$a0 str_const36
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label99
-	la	$a0 str_const0
-	li	$t1 364
-	jal	_dispatch_abort
-label99:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$s1 $a0
-	sw	$s2 0($sp)
-	addiu	$sp $sp -4
-	sw	$s1 0($sp)
-	addiu	$sp $sp -4
-	sw	$s2 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label100
-	la	$a0 str_const0
-	li	$t1 365
-	jal	_dispatch_abort
-label100:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label101
-	la	$a0 str_const0
-	li	$t1 365
-	jal	_dispatch_abort
-label101:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	lw	$s1 4($fp)
-	lw	$s2 0($fp)
-	lw	$fp 20($sp)
-	lw	$s0 16($sp)
-	lw	$ra 12($sp)
-	addiu	$sp $sp 20
-	jr	$ra	
-Term.s:
-	addiu	$sp $sp -24
-	sw	$fp 24($sp)
-	sw	$s0 20($sp)
-	sw	$ra 16($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 8($fp)
-	sw	$s2 4($fp)
-	sw	$s3 0($fp)
-	la	$a0 str_const35
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label102
-	la	$a0 str_const0
-	li	$t1 369
-	jal	_dispatch_abort
-label102:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$s3 $a0
-	la	$a0 str_const36
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label103
-	la	$a0 str_const0
-	li	$t1 370
-	jal	_dispatch_abort
-label103:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$s2 $a0
-	la	$a0 str_const37
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label104
-	la	$a0 str_const0
-	li	$t1 371
-	jal	_dispatch_abort
-label104:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$s1 $a0
-	sw	$s3 0($sp)
-	addiu	$sp $sp -4
-	sw	$s2 0($sp)
-	addiu	$sp $sp -4
-	sw	$s1 0($sp)
-	addiu	$sp $sp -4
-	sw	$s3 0($sp)
-	addiu	$sp $sp -4
-	sw	$s1 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label105
-	la	$a0 str_const0
-	li	$t1 372
-	jal	_dispatch_abort
-label105:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	sw	$s2 0($sp)
-	addiu	$sp $sp -4
-	sw	$s1 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label106
-	la	$a0 str_const0
-	li	$t1 372
-	jal	_dispatch_abort
-label106:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label107
-	la	$a0 str_const0
-	li	$t1 372
-	jal	_dispatch_abort
-label107:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label108
-	la	$a0 str_const0
-	li	$t1 372
-	jal	_dispatch_abort
-label108:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label109
-	la	$a0 str_const0
-	li	$t1 372
-	jal	_dispatch_abort
-label109:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label110
-	la	$a0 str_const0
-	li	$t1 372
-	jal	_dispatch_abort
-label110:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	lw	$s1 8($fp)
-	lw	$s2 4($fp)
-	lw	$s3 0($fp)
-	lw	$fp 24($sp)
-	lw	$s0 20($sp)
-	lw	$ra 16($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
-Main.beta_reduce:
-	addiu	$sp $sp -24
-	sw	$fp 24($sp)
-	sw	$s0 20($sp)
-	sw	$ra 16($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 8($fp)
-	sw	$s2 4($fp)
-	sw	$s3 0($fp)
-	la	$a0 str_const38
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label111
-	la	$a0 str_const0
-	li	$t1 387
-	jal	_dispatch_abort
-label111:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 24($fp)
-	bne	$a0 $zero label112
-	la	$a0 str_const0
-	li	$t1 388
-	jal	_dispatch_abort
-label112:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$s3 bool_const0
-	move	$s2 $zero
-label113:
-	lw	$t1 12($s3)
-	la	$a0 bool_const1
-	beqz	$t1 label115
-	la	$a0 bool_const0
-label115:
-	lw	$t1 12($a0)
-	beq	$t1 $zero label114
-	lw	$a0 24($fp)
-	bne	$a0 $zero label116
-	la	$a0 str_const0
-	li	$t1 394
-	jal	_dispatch_abort
-label116:
-	lw	$t1 8($a0)
-	lw	$t1 32($t1)
-	jalr		$t1
-	move	$s2 $a0
-	move	$s1 $s2
-	lw	$t2 24($fp)
-	move	$t1 $s1
-	la	$a0 bool_const1
-	beq	$t1 $t2 label119
-	la	$a1 bool_const0
-	jal	equality_test
-label119:
-	lw	$t1 12($a0)
-	beqz	$t1 label117
-	la	$s3 bool_const1
-	move	$a0 $s3
-	b	label118
-label117:
-	sw	$s2 24($fp)
-	la	$a0 str_const39
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label120
-	la	$a0 str_const0
-	li	$t1 400
-	jal	_dispatch_abort
-label120:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 24($fp)
-	bne	$a0 $zero label121
-	la	$a0 str_const0
-	li	$t1 401
-	jal	_dispatch_abort
-label121:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-label118:
-	b	label113
-label114:
-	move	$a0 $zero
-	la	$a0 str_const1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label122
-	la	$a0 str_const0
-	li	$t1 406
-	jal	_dispatch_abort
-label122:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 24($fp)
-	lw	$s1 8($fp)
-	lw	$s2 4($fp)
-	lw	$s3 0($fp)
-	lw	$fp 24($sp)
-	lw	$s0 20($sp)
-	lw	$ra 16($sp)
-	addiu	$sp $sp 28
-	jr	$ra	
-Main.eval_class:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const40
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label123
-	la	$a0 str_const0
-	li	$t1 414
-	jal	_dispatch_abort
-label123:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const41
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label124
-	la	$a0 str_const0
-	li	$t1 415
-	jal	_dispatch_abort
-label124:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const23
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label125
-	la	$a0 str_const0
-	li	$t1 416
-	jal	_dispatch_abort
-label125:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Main.closure_class:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	la	$a0 str_const42
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label126
-	la	$a0 str_const0
-	li	$t1 422
-	jal	_dispatch_abort
-label126:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const43
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label127
-	la	$a0 str_const0
-	li	$t1 423
-	jal	_dispatch_abort
-label127:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const44
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label128
-	la	$a0 str_const0
-	li	$t1 424
-	jal	_dispatch_abort
-label128:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const45
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label129
-	la	$a0 str_const0
-	li	$t1 425
-	jal	_dispatch_abort
-label129:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const46
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label130
-	la	$a0 str_const0
-	li	$t1 426
-	jal	_dispatch_abort
-label130:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const47
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label131
-	la	$a0 str_const0
-	li	$t1 427
-	jal	_dispatch_abort
-label131:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const48
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label132
-	la	$a0 str_const0
-	li	$t1 428
-	jal	_dispatch_abort
-label132:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const23
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label133
-	la	$a0 str_const0
-	li	$t1 429
-	jal	_dispatch_abort
-label133:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
-Main.gen_code:
-	addiu	$sp $sp -28
-	sw	$fp 28($sp)
-	sw	$s0 24($sp)
-	sw	$ra 20($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	sw	$s1 12($fp)
-	sw	$s2 8($fp)
-	sw	$s3 4($fp)
-	sw	$s4 0($fp)
-	la	$a0 LambdaListRef_protObj
-	jal	Object.copy
-	jal	LambdaListRef_init
-	bne	$a0 $zero label134
-	la	$a0 str_const0
-	li	$t1 434
-	jal	_dispatch_abort
-label134:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	move	$s4 $a0
-	la	$a0 str_const49
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label135
-	la	$a0 str_const0
-	li	$t1 436
-	jal	_dispatch_abort
-label135:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$a0 28($fp)
-	bne	$a0 $zero label136
-	la	$a0 str_const0
-	li	$t1 437
-	jal	_dispatch_abort
-label136:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const50
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label137
-	la	$a0 str_const0
-	li	$t1 438
-	jal	_dispatch_abort
-label137:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const51
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label138
-	la	$a0 str_const0
-	li	$t1 439
-	jal	_dispatch_abort
-label138:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label139
-	la	$a0 str_const0
-	li	$t1 440
-	jal	_dispatch_abort
-label139:
-	lw	$t1 8($a0)
-	lw	$t1 56($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label140
-	la	$a0 str_const0
-	li	$t1 441
-	jal	_dispatch_abort
-label140:
-	lw	$t1 8($a0)
-	lw	$t1 60($t1)
-	jalr		$t1
-	la	$a0 str_const52
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label141
-	la	$a0 str_const0
-	li	$t1 442
-	jal	_dispatch_abort
-label141:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 str_const53
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label142
-	la	$a0 str_const0
-	li	$t1 443
-	jal	_dispatch_abort
-label142:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	la	$a0 VarList_protObj
-	jal	Object.copy
-	jal	VarList_init
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	sw	$s4 0($sp)
-	addiu	$sp $sp -4
-	lw	$a0 28($fp)
-	bne	$a0 $zero label143
-	la	$a0 str_const0
-	li	$t1 444
-	jal	_dispatch_abort
-label143:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	la	$a0 str_const54
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label144
-	la	$a0 str_const0
-	li	$t1 445
-	jal	_dispatch_abort
-label144:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-label145:
-	move	$a0 $s4
-	bne	$a0 $zero label148
-	la	$a0 str_const0
-	li	$t1 446
-	jal	_dispatch_abort
-label148:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$t1 12($a0)
-	la	$a0 bool_const1
-	beqz	$t1 label147
-	la	$a0 bool_const0
-label147:
-	lw	$t1 12($a0)
-	beq	$t1 $zero label146
-	move	$a0 $s4
-	bne	$a0 $zero label149
-	la	$a0 str_const0
-	li	$t1 447
-	jal	_dispatch_abort
-label149:
-	lw	$t1 8($a0)
-	lw	$t1 16($t1)
-	jalr		$t1
-	move	$s3 $a0
-	move	$a0 $s4
-	bne	$a0 $zero label150
-	la	$a0 str_const0
-	li	$t1 448
-	jal	_dispatch_abort
-label150:
-	lw	$t1 8($a0)
-	lw	$t1 20($t1)
-	jalr		$t1
-	move	$s2 $a0
-	move	$a0 $s4
-	bne	$a0 $zero label151
-	la	$a0 str_const0
-	li	$t1 449
-	jal	_dispatch_abort
-label151:
-	lw	$t1 8($a0)
-	lw	$t1 24($t1)
-	jalr		$t1
-	move	$s1 $a0
-	move	$a0 $s4
-	bne	$a0 $zero label152
-	la	$a0 str_const0
-	li	$t1 451
-	jal	_dispatch_abort
-label152:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$s1 0($sp)
-	addiu	$sp $sp -4
-	sw	$s3 0($sp)
-	addiu	$sp $sp -4
-	sw	$s4 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s2
-	bne	$a0 $zero label153
-	la	$a0 str_const0
-	li	$t1 452
-	jal	_dispatch_abort
-label153:
-	lw	$t1 8($a0)
-	lw	$t1 52($t1)
-	jalr		$t1
-	b	label145
-label146:
-	move	$a0 $zero
-	la	$a0 str_const50
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label154
-	la	$a0 str_const0
-	li	$t1 455
-	jal	_dispatch_abort
-label154:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	lw	$s1 12($fp)
-	lw	$s2 8($fp)
-	lw	$s3 4($fp)
-	lw	$s4 0($fp)
-	lw	$fp 28($sp)
-	lw	$s0 24($sp)
-	lw	$ra 20($sp)
-	addiu	$sp $sp 32
-	jr	$ra	
-Main.main:
-	addiu	$sp $sp -12
-	sw	$fp 12($sp)
-	sw	$s0 8($sp)
-	sw	$ra 4($sp)
-	addiu	$fp $sp 4
-	move	$s0 $a0
-	move	$a0 $s0
-	bne	$a0 $zero label155
-	la	$a0 str_const0
-	li	$t1 461
-	jal	_dispatch_abort
-label155:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	bne	$a0 $zero label156
-	la	$a0 str_const0
-	li	$t1 461
-	jal	_dispatch_abort
-label156:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label157
-	la	$a0 str_const0
-	li	$t1 462
-	jal	_dispatch_abort
-label157:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label158
-	la	$a0 str_const0
-	li	$t1 463
-	jal	_dispatch_abort
-label158:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	bne	$a0 $zero label159
-	la	$a0 str_const0
-	li	$t1 463
-	jal	_dispatch_abort
-label159:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label160
-	la	$a0 str_const0
-	li	$t1 464
-	jal	_dispatch_abort
-label160:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label161
-	la	$a0 str_const0
-	li	$t1 465
-	jal	_dispatch_abort
-label161:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	bne	$a0 $zero label162
-	la	$a0 str_const0
-	li	$t1 465
-	jal	_dispatch_abort
-label162:
-	lw	$t1 8($a0)
-	lw	$t1 28($t1)
-	jalr		$t1
-	la	$a0 str_const1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label163
-	la	$a0 str_const0
-	li	$t1 466
-	jal	_dispatch_abort
-label163:
-	lw	$t1 8($a0)
-	lw	$t1 12($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label164
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label164:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label165
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label165:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label166
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label166:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label167
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label167:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label168
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label168:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label169
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label169:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label170
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label170:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label171
-	la	$a0 str_const0
-	li	$t1 467
-	jal	_dispatch_abort
-label171:
-	lw	$t1 8($a0)
-	lw	$t1 52($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label172
-	la	$a0 str_const0
-	li	$t1 468
-	jal	_dispatch_abort
-label172:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label173
-	la	$a0 str_const0
-	li	$t1 468
-	jal	_dispatch_abort
-label173:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label174
-	la	$a0 str_const0
-	li	$t1 468
-	jal	_dispatch_abort
-label174:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label175
-	la	$a0 str_const0
-	li	$t1 468
-	jal	_dispatch_abort
-label175:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label176
-	la	$a0 str_const0
-	li	$t1 468
-	jal	_dispatch_abort
-label176:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label177
-	la	$a0 str_const0
-	li	$t1 468
-	jal	_dispatch_abort
-label177:
-	lw	$t1 8($a0)
-	lw	$t1 52($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label178
-	la	$a0 str_const0
-	li	$t1 469
-	jal	_dispatch_abort
-label178:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label179
-	la	$a0 str_const0
-	li	$t1 469
-	jal	_dispatch_abort
-label179:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label180
-	la	$a0 str_const0
-	li	$t1 469
-	jal	_dispatch_abort
-label180:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label181
-	la	$a0 str_const0
-	li	$t1 469
-	jal	_dispatch_abort
-label181:
-	lw	$t1 8($a0)
-	lw	$t1 64($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label182
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label182:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label183
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label183:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label184
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label184:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label185
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label185:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label186
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label186:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label187
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label187:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label188
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label188:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label189
-	la	$a0 str_const0
-	li	$t1 470
-	jal	_dispatch_abort
-label189:
-	lw	$t1 8($a0)
-	lw	$t1 64($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label190
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label190:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label191
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label191:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label192
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label192:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label193
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label193:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label194
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label194:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label195
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label195:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label196
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label196:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label197
-	la	$a0 str_const0
-	li	$t1 472
-	jal	_dispatch_abort
-label197:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label198
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label198:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label199
-	la	$a0 str_const0
-	li	$t1 472
-	jal	_dispatch_abort
-label199:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label200
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label200:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label201
-	la	$a0 str_const0
-	li	$t1 472
-	jal	_dispatch_abort
-label201:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label202
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label202:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label203
-	la	$a0 str_const0
-	li	$t1 472
-	jal	_dispatch_abort
-label203:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label204
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label204:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label205
-	la	$a0 str_const0
-	li	$t1 472
-	jal	_dispatch_abort
-label205:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label206
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label206:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label207
-	la	$a0 str_const0
-	li	$t1 471
-	jal	_dispatch_abort
-label207:
-	lw	$t1 8($a0)
-	lw	$t1 64($t1)
-	jalr		$t1
-	move	$a0 $s0
-	bne	$a0 $zero label208
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label208:
-	lw	$t1 8($a0)
-	lw	$t1 40($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label209
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label209:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label210
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label210:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label211
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label211:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label212
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label212:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label213
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label213:
-	lw	$t1 8($a0)
-	lw	$t1 44($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label214
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label214:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label215
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label215:
-	lw	$t1 8($a0)
-	lw	$t1 48($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label216
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label216:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label217
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label217:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label218
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label218:
-	lw	$t1 8($a0)
-	lw	$t1 36($t1)
-	jalr		$t1
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
-	move	$a0 $s0
-	bne	$a0 $zero label219
-	la	$a0 str_const0
-	li	$t1 473
-	jal	_dispatch_abort
-label219:
-	lw	$t1 8($a0)
-	lw	$t1 64($t1)
-	jalr		$t1
-	la	$a0 int_const1
-	lw	$fp 12($sp)
-	lw	$s0 8($sp)
-	lw	$ra 4($sp)
-	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaList.isNil:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4394,12 +2031,15 @@ LambdaList.isNil:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# bool_const_class:1
 	la	$a0 bool_const1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaList.headE:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4407,15 +2047,30 @@ LambdaList.headE:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
-	bne	$a0 $zero label220
+	# if obj = void
+	bne	$a0 $zero label7
 	la	$a0 str_const0
-	li	$t1 46
+	li	$t1 1
 	jal	_dispatch_abort
-label220:
+label7:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
 	lw	$t1 0($t1)
+	# jmptp abort
 	jalr		$t1
+	# new__class
 	la	$a0 VarList_protObj
 	jal	Object.copy
 	jal	VarList_init
@@ -4423,7 +2078,8 @@ label220:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaList.headC:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4431,15 +2087,30 @@ LambdaList.headC:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
-	bne	$a0 $zero label221
+	# if obj = void
+	bne	$a0 $zero label8
 	la	$a0 str_const0
-	li	$t1 47
+	li	$t1 1
 	jal	_dispatch_abort
-label221:
+label8:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
 	lw	$t1 0($t1)
+	# jmptp abort
 	jalr		$t1
+	# new__class
 	la	$a0 Lambda_protObj
 	jal	Object.copy
 	jal	Lambda_init
@@ -4447,7 +2118,8 @@ label221:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaList.headN:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4455,21 +2127,37 @@ LambdaList.headN:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
-	bne	$a0 $zero label222
+	# if obj = void
+	bne	$a0 $zero label9
 	la	$a0 str_const0
-	li	$t1 48
+	li	$t1 1
 	jal	_dispatch_abort
-label222:
+label9:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
 	lw	$t1 0($t1)
+	# jmptp abort
 	jalr		$t1
+	# int_const_class:0
 	la	$a0 int_const1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaList.tail:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4477,15 +2165,30 @@ LambdaList.tail:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
 	move	$a0 $s0
-	bne	$a0 $zero label223
+	# if obj = void
+	bne	$a0 $zero label10
 	la	$a0 str_const0
-	li	$t1 49
+	li	$t1 1
 	jal	_dispatch_abort
-label223:
+label10:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
 	lw	$t1 0($t1)
+	# jmptp abort
 	jalr		$t1
+	# new__class
 	la	$a0 LambdaList_protObj
 	jal	Object.copy
 	jal	LambdaList_init
@@ -4493,7 +2196,8 @@ label223:
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaList.add:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4501,34 +2205,65 @@ LambdaList.add:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# VarList
+	# Object_class:
+	# It is a param:e:2
 	lw	$a0 20($fp)
+	addiu	$a1 $fp 20
+	jal	_GenGC_Assign
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# Lambda
+	# Object_class:
+	# It is a param:x:1
 	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# Int
+	# Object_class:
+	# It is a param:n:0
 	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# SELF_TYPE
+	# Object_class:
+	# It is self
 	move	$a0 $s0
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# new__class
 	la	$a0 LambdaListNE_protObj
 	jal	Object.copy
 	jal	LambdaListNE_init
-	bne	$a0 $zero label224
+	# if obj = void
+	bne	$a0 $zero label11
 	la	$a0 str_const0
-	li	$t1 51
+	li	$t1 1
 	jal	_dispatch_abort
-label224:
+label11:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListNE
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
 	lw	$t1 36($t1)
+	# jmptp init
 	jalr		$t1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
+	addiu	$sp $sp 12
+	addiu	$sp $sp 12
+	jalr		$ra
 LambdaListNE.isNil:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4536,12 +2271,15 @@ LambdaListNE.isNil:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# bool_const_class:0
 	la	$a0 bool_const0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListNE.headE:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4549,12 +2287,18 @@ LambdaListNE.headE:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is a attrib:env
 	lw	$a0 20($s0)
+	addiu	$a1 $s0 20
+	jal	_GenGC_Assign
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListNE.headC:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4562,12 +2306,18 @@ LambdaListNE.headC:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is a attrib:lam
 	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListNE.headN:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4575,12 +2325,18 @@ LambdaListNE.headN:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is a attrib:num
 	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListNE.tail:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4588,12 +2344,18 @@ LambdaListNE.tail:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is a attrib:rest
 	lw	$a0 24($s0)
+	addiu	$a1 $s0 24
+	jal	_GenGC_Assign
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListNE.init:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4601,28 +2363,65 @@ LambdaListNE.init:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:e:3
 	lw	$a0 24($fp)
+	addiu	$a1 $fp 24
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.env
 	sw	$a0 20($s0)
 	addiu	$a1 $s0 20
 	jal	_GenGC_Assign
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:l:2
 	lw	$a0 20($fp)
+	addiu	$a1 $fp 20
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.lam
 	sw	$a0 12($s0)
 	addiu	$a1 $s0 12
 	jal	_GenGC_Assign
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:n:1
 	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.num
 	sw	$a0 16($s0)
 	addiu	$a1 $s0 16
 	jal	_GenGC_Assign
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:r:0
 	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.rest
 	sw	$a0 24($s0)
 	addiu	$a1 $s0 24
 	jal	_GenGC_Assign
+	# Object_class:
+	# It is self
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
-	addiu	$sp $sp 28
-	jr	$ra	
+	addiu	$sp $sp 12
+	addiu	$sp $sp 16
+	jalr		$ra
 LambdaListRef.isNil:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4630,20 +2429,36 @@ LambdaListRef.isNil:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:l
 	lw	$a0 16($s0)
-	bne	$a0 $zero label225
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label12
 	la	$a0 str_const0
-	li	$t1 79
+	li	$t1 1
 	jal	_dispatch_abort
-label225:
+label12:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
 	lw	$t1 12($t1)
+	# jmptp isNil
 	jalr		$t1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListRef.headE:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4651,20 +2466,36 @@ LambdaListRef.headE:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:l
 	lw	$a0 16($s0)
-	bne	$a0 $zero label226
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label13
 	la	$a0 str_const0
-	li	$t1 80
+	li	$t1 1
 	jal	_dispatch_abort
-label226:
+label13:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
 	lw	$t1 16($t1)
+	# jmptp headE
 	jalr		$t1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListRef.headC:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4672,20 +2503,36 @@ LambdaListRef.headC:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:l
 	lw	$a0 16($s0)
-	bne	$a0 $zero label227
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label14
 	la	$a0 str_const0
-	li	$t1 81
+	li	$t1 1
 	jal	_dispatch_abort
-label227:
+label14:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]5
 	lw	$t1 20($t1)
+	# jmptp headC
 	jalr		$t1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListRef.headN:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4693,20 +2540,36 @@ LambdaListRef.headN:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:l
 	lw	$a0 16($s0)
-	bne	$a0 $zero label228
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label15
 	la	$a0 str_const0
-	li	$t1 82
+	li	$t1 1
 	jal	_dispatch_abort
-label228:
+label15:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]6
 	lw	$t1 24($t1)
+	# jmptp headN
 	jalr		$t1
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListRef.reset:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4714,74 +2577,158 @@ LambdaListRef.reset:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# int_const_class:0
 	la	$a0 int_const1
+	# Now find the lvalue.
+	# It is an attribute.nextNum
 	sw	$a0 12($s0)
 	addiu	$a1 $s0 12
 	jal	_GenGC_Assign
+	# assign_class
+	# first eval expression 
+	# new__class
 	la	$a0 LambdaList_protObj
 	jal	Object.copy
 	jal	LambdaList_init
+	# Now find the lvalue.
+	# It is an attribute.l
 	sw	$a0 16($s0)
 	addiu	$a1 $s0 16
 	jal	_GenGC_Assign
+	# Object_class:
+	# It is self
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
 LambdaListRef.add:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
-	sw	$s1 0($fp)
-	lw	$a0 20($fp)
-	sw	$a0 0($sp)
-	addiu	$sp $sp -4
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# dispatch_class
+	# First eval param
+	# VarList
+	# Object_class:
+	# It is a param:env:1
 	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# Lambda
+	# Object_class:
+	# It is a param:c:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Int
+	# Object_class:
+	# It is a attrib:nextNum
 	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
 	sw	$a0 0($sp)
 	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:l
 	lw	$a0 16($s0)
-	bne	$a0 $zero label229
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label16
 	la	$a0 str_const0
-	li	$t1 92
+	li	$t1 1
 	jal	_dispatch_abort
-label229:
+label16:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
 	lw	$t1 32($t1)
+	# jmptp add
 	jalr		$t1
+	# Now find the lvalue.
+	# It is an attribute.l
 	sw	$a0 16($s0)
 	addiu	$a1 $s0 16
 	jal	_GenGC_Assign
-	lw	$s1 12($s0)
+	# assign_class
+	# first eval expression 
+	# plus_class 
+	# First Eval e1 and push
+	# Object_class:
+	# It is a attrib:nextNum
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Then eval e2 and make a copy for res 
+	# int_const_class:1
 	la	$a0 int_const0
 	jal	Object.copy
-	lw	$t2 12($a0)
-	lw	$t1 12($s1)
-	add	$t1 $t1 $t2
-	sw	$t1 12($a0)
+	# Let's pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	# extract the int inside the object
+	lw	$t1 12($t1)
+	lw	$t2 12($t2)
+	# Modify the int inside t2
+	add	$t3 $t1 $t2
+	sw	$t3 12($a0)
+	# Now find the lvalue.
+	# It is an attribute.nextNum
 	sw	$a0 12($s0)
 	addiu	$a1 $s0 12
 	jal	_GenGC_Assign
-	lw	$s1 12($s0)
+	# sub
+	# eval e1 and push
+	# Object_class:
+	# It is a attrib:nextNum
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# eval e2 and make a copy for result
+	# int_const_class:1
 	la	$a0 int_const0
 	jal	Object.copy
-	lw	$t2 12($a0)
-	lw	$t1 12($s1)
-	sub	$t1 $t1 $t2
-	sw	$t1 12($a0)
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 24
-	jr	$ra	
+	# pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	 # extract the int inside the object
+	lw	$t1 12($t1)
+	lw	$t2 12($t2)
+	sub	$t3 $t1 $t2
+	sw	$t3 12($a0)
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
 LambdaListRef.removeHead:
 	addiu	$sp $sp -12
 	sw	$fp 12($sp)
@@ -4789,23 +2736,5895 @@ LambdaListRef.removeHead:
 	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:l
 	lw	$a0 16($s0)
-	bne	$a0 $zero label230
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label17
 	la	$a0 str_const0
-	li	$t1 99
+	li	$t1 1
 	jal	_dispatch_abort
-label230:
+label17:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaList
+	# t1 = self.dispTab
 	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
 	lw	$t1 28($t1)
+	# jmptp tail
 	jalr		$t1
+	# Now find the lvalue.
+	# It is an attribute.l
 	sw	$a0 16($s0)
 	addiu	$a1 $s0 16
 	jal	_GenGC_Assign
+	# Object_class:
+	# It is self
 	move	$a0 $s0
 	lw	$fp 12($sp)
 	lw	$s0 8($sp)
 	lw	$ra 4($sp)
 	addiu	$sp $sp 12
-	jr	$ra	
+	addiu	$sp $sp 0
+	jalr		$ra
+Expr.print_self:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const3
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label18
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label18:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label19
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label19:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
+	lw	$t1 0($t1)
+	# jmptp abort
+	jalr		$t1
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Expr.beta:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const4
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label20
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label20:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label21
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label21:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
+	lw	$t1 0($t1)
+	# jmptp abort
+	jalr		$t1
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Expr.substitute:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const5
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label22
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label22:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label23
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label23:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
+	lw	$t1 0($t1)
+	# jmptp abort
+	jalr		$t1
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Expr.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const6
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label24
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label24:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label25
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label25:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
+	lw	$t1 0($t1)
+	# jmptp abort
+	jalr		$t1
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Variable.init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:n:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.name
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
+Variable.print_self:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# String
+	# Object_class:
+	# It is a attrib:name
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label26
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label26:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Variable.beta:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Variable.substitute:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	 # cond_class
+	# eval pred
+	# eq_class
+	# eval e1 and push
+	# Object_class:
+	# It is a param:x:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# eval e2
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	la	$a0 bool_const1
+	beq	$t1 $t2 label29
+	la	$a0 bool_const0
+label29:
+	# -----
+	# extract 
+	lw	$t1 12($a0)
+	# beq jump else
+	beq	$t1 $zero label27
+	# eval then
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	b	label28
+	# eval else
+label27:
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+label28:
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Variable.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# Object_class:
+	# It is a param:env:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# block_class
+	# loop_class
+	# start label
+label30:
+	# eval pred
+	 # cond_class
+	# eval pred
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cur_env
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label34
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label34:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp isNil
+	jalr		$t1
+	# -----
+	# extract 
+	lw	$t1 12($a0)
+	# beq jump else
+	beq	$t1 $zero label32
+	# eval then
+	# bool_const_class:0
+	la	$a0 bool_const0
+	b	label33
+	# eval else
+label32:
+	# comp_class
+	# eq_class
+	# eval e1 and push
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cur_env
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label35
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label35:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp head
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# eval e2
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	la	$a0 bool_const1
+	beq	$t1 $t2 label36
+	la	$a0 bool_const0
+label36:
+	# move ACC  to T1
+	lw	$t1 12($a0)
+	# load True
+	la	$a0 bool_const1
+	# if T1 == false, jumpto finish
+	beq	$t1 $zero label37
+	# load false
+	la	$a0 bool_const0
+	# finish
+label37:
+label33:
+	lw	$t1 12($a0)
+	# t1==0, then jump to finish
+	beq	$t1 $zero label31
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const7
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label38
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label38:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# assign_class
+	# first eval expression 
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cur_env
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label39
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label39:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp tail
+	jalr		$t1
+	# Now find the lvalue.
+	# It is a let variable.cur_env
+	sw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# jump to start
+	b	label30
+label31:
+	move	$a0 $zero
+	 # cond_class
+	# eval pred
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cur_env
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label42
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label42:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp isNil
+	jalr		$t1
+	# -----
+	# extract 
+	lw	$t1 12($a0)
+	# beq jump else
+	beq	$t1 $zero label40
+	# eval then
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const8
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label43
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label43:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label44
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label44:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label45
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label45:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label46
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label46:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]0
+	lw	$t1 0($t1)
+	# jmptp abort
+	jalr		$t1
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	b	label41
+	# eval else
+label40:
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const9
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label47
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label47:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+label41:
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Lambda.init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:a:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.arg
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:b:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.body
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Lambda.print_self:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const10
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label48
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label48:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label49
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label49:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const11
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label50
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label50:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:body
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label51
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label51:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Lambda.beta:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Lambda.apply:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a param:actual:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:body
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label52
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label52:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp substitute
+	jalr		$t1
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
+Lambda.substitute:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	 # cond_class
+	# eval pred
+	# eq_class
+	# eval e1 and push
+	# Object_class:
+	# It is a param:x:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# eval e2
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	la	$a0 bool_const1
+	beq	$t1 $t2 label55
+	la	$a0 bool_const0
+label55:
+	# -----
+	# extract 
+	lw	$t1 12($a0)
+	# beq jump else
+	beq	$t1 $zero label53
+	# eval then
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	b	label54
+	# eval else
+label53:
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a param:x:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:body
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label56
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label56:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp substitute
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# new__class
+	la	$a0 Lambda_protObj
+	jal	Object.copy
+	jal	Lambda_init
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a let var:new_body
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:new_lam
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label57
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label57:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp init
+	jalr		$t1
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+label54:
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Lambda.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const12
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label58
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label58:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# Int
+	# dispatch_class
+	# First eval param
+	# VarList
+	# Object_class:
+	# It is a param:env:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# SELF_TYPE
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:closures:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label59
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label59:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListRef
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp add
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label60
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label60:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
+	lw	$t1 16($t1)
+	# jmptp out_int
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const13
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label61
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label61:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	 # cond_class
+	# eval pred
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:env:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label64
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label64:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp isNil
+	jalr		$t1
+	# -----
+	# extract 
+	lw	$t1 12($a0)
+	# beq jump else
+	beq	$t1 $zero label62
+	# eval then
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const14
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label65
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label65:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	b	label63
+	# eval else
+label62:
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const15
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label66
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label66:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+label63:
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Lambda.gen_closure_code:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const16
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label67
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label67:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# Int
+	# Object_class:
+	# It is a param:n:2
+	lw	$a0 20($fp)
+	addiu	$a1 $fp 20
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label68
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label68:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
+	lw	$t1 16($t1)
+	# jmptp out_int
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const17
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label69
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label69:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const18
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label70
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label70:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const19
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label71
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label71:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# Int
+	# Object_class:
+	# It is a param:n:2
+	lw	$a0 20($fp)
+	addiu	$a1 $fp 20
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label72
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label72:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
+	lw	$t1 16($t1)
+	# jmptp out_int
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const20
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label73
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label73:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const21
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label74
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label74:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# VarList
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:env:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label75
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label75:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::VarList
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp add
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# LambdaListRef
+	# Object_class:
+	# It is a param:closures:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:body
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label76
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label76:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const22
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label77
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label77:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const23
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label78
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label78:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 12
+	jalr		$ra
+App.init:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:f:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.fun
+	sw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a param:a:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is an attribute.arg
+	sw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+App.print_self:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const24
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label79
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label79:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:fun
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label80
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label80:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const25
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label81
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label81:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label82
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label82:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const26
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label83
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label83:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+App.beta:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# typecase_class
+	# eval expr
+	# Object_class:
+	# It is a attrib:fun
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# if e0 == void, abort
+	bne	$a0 $zero label84
+	la	$a0 str_const0
+	li	$t1 59
+	jal	_case_abort2
+label84:
+	# T1 = type(acc)
+	lw	$t1 0($a0)
+	# tag =12 : goto case 0
+	li	$t2 12
+	beq	$t1 $t2 label85
+	# tag =10 : goto case 1
+	li	$t2 10
+	beq	$t1 $t2 label86
+	# -------------------------
+	# tag =11 : goto case 1
+	li	$t2 11
+	beq	$t1 $t2 label86
+	# tag =12 : goto case 1
+	li	$t2 12
+	beq	$t1 $t2 label86
+	# tag =13 : goto case 1
+	li	$t2 13
+	beq	$t1 $t2 label86
+	# -------------------------
+	# No match
+	jal	_case_abort
+	b	label87
+	# eval expr
+label85:
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Expr
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:l
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label88
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label88:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp apply
+	jalr		$t1
+	addiu	$sp $sp 4
+	b	label87
+	# eval expr
+label86:
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:fun
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label89
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label89:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp beta
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# new__class
+	la	$a0 App_protObj
+	jal	Object.copy
+	jal	App_init
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Expr
+	# Object_class:
+	# It is a let var:new_fun
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:new_app
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label90
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label90:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp init
+	jalr		$t1
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	b	label87
+	# finish:
+label87:
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+App.substitute:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a param:x:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:fun
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label91
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label91:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp substitute
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a param:x:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label92
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label92:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp substitute
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# new__class
+	la	$a0 App_protObj
+	jal	Object.copy
+	jal	App_init
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Expr
+	# Object_class:
+	# It is a let var:new_fun
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a let var:new_arg
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:new_app
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label93
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label93:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp init
+	jalr		$t1
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+App.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const27
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label94
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label94:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# VarList
+	# Object_class:
+	# It is a param:env:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# LambdaListRef
+	# Object_class:
+	# It is a param:closures:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:fun
+	lw	$a0 12($s0)
+	addiu	$a1 $s0 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label95
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label95:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const28
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label96
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label96:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const29
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label97
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label97:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# VarList
+	# Object_class:
+	# It is a param:env:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# LambdaListRef
+	# Object_class:
+	# It is a param:closures:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a attrib:arg
+	lw	$a0 16($s0)
+	addiu	$a1 $s0 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label98
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label98:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const30
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label99
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label99:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const31
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label100
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label100:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const32
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label101
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label101:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const33
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label102
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label102:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const34
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label103
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label103:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Term.var:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# new__class
+	la	$a0 Variable_protObj
+	jal	Object.copy
+	jal	Variable_init
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# String
+	# Object_class:
+	# It is a param:x:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:v
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label104
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label104:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Variable
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp init
+	jalr		$t1
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
+Term.lam:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# new__class
+	la	$a0 Lambda_protObj
+	jal	Object.copy
+	jal	Lambda_init
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a param:x:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:l
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label105
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label105:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp init
+	jalr		$t1
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Term.app:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# new__class
+	la	$a0 App_protObj
+	jal	Object.copy
+	jal	App_init
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Expr
+	# Object_class:
+	# It is a param:e1:1
+	lw	$a0 16($fp)
+	addiu	$a1 $fp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# Object_class:
+	# It is a param:e2:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:a
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label106
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label106:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::App
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp init
+	jalr		$t1
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 8
+	jalr		$ra
+Term.i:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const35
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label107
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label107:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp var
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:x
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Variable
+	# Object_class:
+	# It is a let var:x
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label108
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label108:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp lam
+	jalr		$t1
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Term.k:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const35
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label109
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label109:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp var
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const36
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label110
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label110:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp var
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:x
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Lambda
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:y
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Variable
+	# Object_class:
+	# It is a let var:x
+	lw	$a0 16($sp)
+	addiu	$a1 $sp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label111
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label111:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp lam
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label112
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label112:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp lam
+	jalr		$t1
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Term.s:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const35
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label113
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label113:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp var
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const36
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label114
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label114:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp var
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const37
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label115
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label115:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp var
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:x
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Lambda
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:y
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Lambda
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:z
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:x
+	lw	$a0 24($sp)
+	addiu	$a1 $sp 24
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Variable
+	# Object_class:
+	# It is a let var:z
+	lw	$a0 20($sp)
+	addiu	$a1 $sp 20
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label116
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label116:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# App
+	# dispatch_class
+	# First eval param
+	# Variable
+	# Object_class:
+	# It is a let var:y
+	lw	$a0 24($sp)
+	addiu	$a1 $sp 24
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Variable
+	# Object_class:
+	# It is a let var:z
+	lw	$a0 24($sp)
+	addiu	$a1 $sp 24
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label117
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label117:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label118
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label118:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label119
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label119:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp lam
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label120
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label120:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp lam
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label121
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label121:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Term
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp lam
+	jalr		$t1
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Main.beta_reduce:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const38
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label122
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label122:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label123
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label123:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# Let expr class
+	# eval init
+	# bool_const_class:0
+	la	$a0 bool_const0
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# no_expr_class
+	move	$a0 $zero
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# block_class
+	# loop_class
+	# start label
+label124:
+	# eval pred
+	# comp_class
+	# Object_class:
+	# It is a let var:done
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	# move ACC  to T1
+	lw	$t1 12($a0)
+	# load True
+	la	$a0 bool_const1
+	# if T1 == false, jumpto finish
+	beq	$t1 $zero label126
+	# load false
+	la	$a0 bool_const0
+	# finish
+label126:
+	lw	$t1 12($a0)
+	# t1==0, then jump to finish
+	beq	$t1 $zero label125
+	# block_class
+	# assign_class
+	# first eval expression 
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label127
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label127:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]8
+	lw	$t1 32($t1)
+	# jmptp beta
+	jalr		$t1
+	# Now find the lvalue.
+	# It is a let variable.new_expr
+	sw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	 # cond_class
+	# eval pred
+	# eq_class
+	# eval e1 and push
+	# Object_class:
+	# It is a let var:new_expr
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# eval e2
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# pop e1 to t1, move e2 to t2
+	addiu	$sp $sp 4
+	lw	$t1 0($sp)
+	move	$t2 $a0
+	la	$a0 bool_const1
+	beq	$t1 $t2 label130
+	la	$a0 bool_const0
+label130:
+	# -----
+	# extract 
+	lw	$t1 12($a0)
+	# beq jump else
+	beq	$t1 $zero label128
+	# eval then
+	# assign_class
+	# first eval expression 
+	# bool_const_class:1
+	la	$a0 bool_const1
+	# Now find the lvalue.
+	# It is a let variable.done
+	sw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	b	label129
+	# eval else
+label128:
+	# block_class
+	# assign_class
+	# first eval expression 
+	# Object_class:
+	# It is a let var:new_expr
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# Now find the lvalue.
+	# It is a param.e
+	sw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const39
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label131
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label131:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label132
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label132:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+label129:
+	# jump to start
+	b	label124
+label125:
+	move	$a0 $zero
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label133
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label133:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
+Main.eval_class:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const40
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label134
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label134:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const41
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label135
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label135:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const23
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label136
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label136:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Main.closure_class:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const42
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label137
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label137:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const43
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label138
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label138:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const44
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label139
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label139:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const45
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label140
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label140:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const46
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label141
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label141:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const47
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label142
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label142:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const48
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label143
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label143:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const23
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label144
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label144:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
+Main.gen_code:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# new__class
+	la	$a0 LambdaListRef_protObj
+	jal	Object.copy
+	jal	LambdaListRef_init
+	# if obj = void
+	bne	$a0 $zero label145
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label145:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListRef
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp reset
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# block_class
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const49
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label146
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label146:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label147
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label147:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const50
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label148
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label148:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const51
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label149
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label149:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label150
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label150:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]14
+	lw	$t1 56($t1)
+	# jmptp eval_class
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label151
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label151:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]15
+	lw	$t1 60($t1)
+	# jmptp closure_class
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const52
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label152
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label152:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const53
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label153
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label153:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# VarList
+	# new__class
+	la	$a0 VarList_protObj
+	jal	Object.copy
+	jal	VarList_init
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# LambdaListRef
+	# Object_class:
+	# It is a let var:cl
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a param:e:0
+	lw	$a0 12($fp)
+	addiu	$a1 $fp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label154
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label154:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const54
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label155
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label155:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# loop_class
+	# start label
+label156:
+	# eval pred
+	# comp_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cl
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label158
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label158:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListRef
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp isNil
+	jalr		$t1
+	# move ACC  to T1
+	lw	$t1 12($a0)
+	# load True
+	la	$a0 bool_const1
+	# if T1 == false, jumpto finish
+	beq	$t1 $zero label159
+	# load false
+	la	$a0 bool_const0
+	# finish
+label159:
+	lw	$t1 12($a0)
+	# t1==0, then jump to finish
+	beq	$t1 $zero label157
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cl
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label160
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label160:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListRef
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]4
+	lw	$t1 16($t1)
+	# jmptp headE
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cl
+	lw	$a0 8($sp)
+	addiu	$a1 $sp 8
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label161
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label161:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListRef
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]5
+	lw	$t1 20($t1)
+	# jmptp headC
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Let expr class
+	# eval init
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cl
+	lw	$a0 12($sp)
+	addiu	$a1 $sp 12
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label162
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label162:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListRef
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]6
+	lw	$t1 24($t1)
+	# jmptp headN
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:cl
+	lw	$a0 16($sp)
+	addiu	$a1 $sp 16
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label163
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label163:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::LambdaListRef
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp removeHead
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# Int
+	# Object_class:
+	# It is a let var:n
+	lw	$a0 4($sp)
+	addiu	$a1 $sp 4
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# VarList
+	# Object_class:
+	# It is a let var:e
+	lw	$a0 16($sp)
+	addiu	$a1 $sp 16
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# LambdaListRef
+	# Object_class:
+	# It is a let var:cl
+	lw	$a0 24($sp)
+	addiu	$a1 $sp 24
+	jal	_GenGC_Assign
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is a let var:c
+	lw	$a0 20($sp)
+	addiu	$a1 $sp 20
+	jal	_GenGC_Assign
+	# if obj = void
+	bne	$a0 $zero label164
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label164:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Lambda
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]13
+	lw	$t1 52($t1)
+	# jmptp gen_closure_code
+	jalr		$t1
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	addiu	$sp $sp 4
+	# jump to start
+	b	label156
+label157:
+	move	$a0 $zero
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const50
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label165
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label165:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	addiu	$sp $sp 4
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 4
+	jalr		$ra
+Main.main:
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
+	addiu	$fp $sp 4
+	move	$s0 $a0
+	# evaluating expression and put it to ACC
+	# block_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label166
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label166:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	# if obj = void
+	bne	$a0 $zero label167
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label167:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label168
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label168:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label169
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label169:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	# if obj = void
+	bne	$a0 $zero label170
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label170:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label171
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label171:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label172
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label172:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	# if obj = void
+	bne	$a0 $zero label173
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label173:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Expr
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]7
+	lw	$t1 28($t1)
+	# jmptp print_self
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# String
+	# string_const_class:
+	la	$a0 str_const1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label174
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label174:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]3
+	lw	$t1 12($t1)
+	# jmptp out_string
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label175
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label175:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label176
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label176:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label177
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label177:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label178
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label178:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label179
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label179:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label180
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label180:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label181
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label181:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label182
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label182:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]13
+	lw	$t1 52($t1)
+	# jmptp beta_reduce
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label183
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label183:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label184
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label184:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label185
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label185:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label186
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label186:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label187
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label187:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label188
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label188:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]13
+	lw	$t1 52($t1)
+	# jmptp beta_reduce
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label189
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label189:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label190
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label190:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label191
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label191:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label192
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label192:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]16
+	lw	$t1 64($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label193
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label193:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label194
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label194:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label195
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label195:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label196
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label196:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label197
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label197:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label198
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label198:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label199
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label199:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label200
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label200:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]16
+	lw	$t1 64($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label201
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label201:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label202
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label202:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label203
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label203:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label204
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label204:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label205
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label205:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label206
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label206:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label207
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label207:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label208
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label208:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label209
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label209:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label210
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label210:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label211
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label211:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label212
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label212:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label213
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label213:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label214
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label214:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label215
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label215:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label216
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label216:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label217
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label217:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label218
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label218:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]16
+	lw	$t1 64($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label219
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label219:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]10
+	lw	$t1 40($t1)
+	# jmptp i
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label220
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label220:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label221
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label221:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label222
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label222:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label223
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label223:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label224
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label224:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]11
+	lw	$t1 44($t1)
+	# jmptp k
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# App
+	# dispatch_class
+	# First eval param
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label225
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label225:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# Expr
+	# dispatch_class
+	# First eval param
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label226
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label226:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]12
+	lw	$t1 48($t1)
+	# jmptp s
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label227
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label227:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label228
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label228:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label229
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label229:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]9
+	lw	$t1 36($t1)
+	# jmptp app
+	jalr		$t1
+	sw	$a0 0($sp)
+	addiu	$sp $sp -4
+	# next eval the obj in dispatch_class
+	# Object_class:
+	# It is self
+	move	$a0 $s0
+	# if obj = void
+	bne	$a0 $zero label230
+	la	$a0 str_const0
+	li	$t1 1
+	jal	_dispatch_abort
+label230:
+	# obj != void; Find dispatch table
+	# now locate the method in the dispatch table::Main
+	# t1 = self.dispTab
+	lw	$t1 8($a0)
+	# load this method in table
+	# t1 = dispTab[]16
+	lw	$t1 64($t1)
+	# jmptp gen_code
+	jalr		$t1
+	# int_const_class:0
+	la	$a0 int_const1
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 12
+	addiu	$sp $sp 0
+	jalr		$ra
 
 # end of generated code

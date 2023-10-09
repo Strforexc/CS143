@@ -1,2 +1,64 @@
+start
+install_basic_classes
+Add basic classTable... 
+End 
+Now let's build inheritence graph
+Main parent is Object
+A parent is Object
+B parent is A
+check ring ablout Main
+check ring ablout A
+check ring ablout B
+Now Lets install Method ...
+Current Class:Main
+Adding method : main
+Current Class:Object
+Adding method : abort
+Adding method : type_name
+Adding method : copy
+Current Class:B
+Adding method : foo
+Current Class:A
+Adding method : foo
+Current Class:Int
+Current Class:Bool
+Current Class:IO
+Adding method : out_string
+Adding method : out_int
+Adding method : in_string
+Adding method : in_int
+Current Class:String
+Adding method : length
+Adding method : concat
+Adding method : substr
+Check Method type :Main
+Check Method type :Object
+Check Method type :B
+Check Method type :A
+Check Method type :Int
+Check Method type :Bool
+Check Method type :IO
+Check Method type :String
+Adding attribute :b
+Checking attribute: b:B
+Checking attribute:b end
+Checking method :main
+testing... 
+checking Statuc dispatch type foo
 filename:line
+testing... end
+Checking method :foo
+Add a:Int into Objecttable
+Add b:B into Objecttable
+Add c:A into Objecttable
+Add d:B into Objecttable
+testing... 
+testing... end
+Checking method :foo
+Add a:Int into Objecttable
+Add b:B into Objecttable
+Add c:A into Objecttable
+Add d:B into Objecttable
+testing... 
+testing... end
 Compilation halted due to static semantic errors.
